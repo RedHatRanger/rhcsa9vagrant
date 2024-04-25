@@ -34,3 +34,5 @@ TODO
 
 
 Special Thanks to: https://github.com/gitmpr for providing the original Vagrantfile.  I've optimized it to most up-to-date version of Rocky 9 optimized for use with Virtualbox and Windows 10/11.
+
+Please refer to the official Vagrant documentation here: https://developer.hashicorp.com/vagrant/tutorials/getting-started/getting-started-boxes
