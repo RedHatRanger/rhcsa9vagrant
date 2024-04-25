@@ -15,7 +15,7 @@ Vagrant lab for practicing for the rhcsa 9.
     
 The vagrant script will set up 3 Rocky 9 VMs: ansible, node1, and node2. 
 
-In three separate terminals you want to execute the following commands to ssh into the boxes
+In three separate terminals, you want to execute the following commands to ssh into the boxes:
 
 "vagrant ssh ansible"
 
@@ -25,6 +25,8 @@ In three separate terminals you want to execute the following commands to ssh in
 
 From there, you can change the settings in /etc/ssh/sshd_config, change root password, and so forth.
 
+TO STOP ALL RUNNING VMs, RUN "vagrant halt"
+TO DELETE (BLOW AWAY) ALL VMs, RUN "vagrant destroy"
 
 TODO
 - This has only been tested on Windows 11. This should also work fine with Linux distros as well...
