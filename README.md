@@ -26,6 +26,7 @@ In three separate terminals, you want to execute the following commands to ssh i
 From there, you can change the settings in /etc/ssh/sshd_config, change root password, and so forth.
 
 TO STOP ALL RUNNING VMs, RUN "vagrant halt"
+
 TO DELETE (BLOW AWAY) ALL VMs, RUN "vagrant destroy"
 
 TODO
