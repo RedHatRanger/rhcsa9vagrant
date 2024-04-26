@@ -38,7 +38,7 @@ cd Text-To-PDF-master
 ```
 podman build -t myapp .
 ```
-* To check: ```podman image ls``` or ```podman images```: \
+* To check: Type ```podman image ls``` or ```podman images```: \
 ![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/5210ba14-17a5-4f4f-bc0d-00d3efe570e4)
 
 SUCCESS!!
