@@ -3,7 +3,7 @@
 # RHCSA 9 Lab - Vagrant Practice Lab using Rocky 9.3
 
 # How to use this lab
-- install virtualbox
+- install virtualbox (https://download.virtualbox.org/virtualbox/7.0.16/VirtualBox-7.0.16-162802-Win.exe)
 - install vagrant
 - Open a PowerShell Terminal Window
   ```
