@@ -31,12 +31,17 @@ vagrant ssh node2
 
 From there, you can change the settings in /etc/ssh/sshd_config, change root password, and so forth.
 
-TO STOP ALL RUNNING VMs, RUN "vagrant halt"
-
-TO DELETE (BLOW AWAY) ALL VMs, RUN "vagrant destroy"
+TO STOP ALL RUNNING VMs, RUN
+```
+vagrant halt
+```
+TO DELETE (BLOW AWAY) ALL VMs, RUN
+```
+vagrant destroy
+```
 
 TODO
-- This has only been tested on Windows 11. This should also work fine with Linux distros as well...
+- This has only been tested on Windows 11. This should also work fine with Linux distros as well...but you will need to use the commands in the Vagrantfile for libvirt instead...I will soon be uploading that version, so stay tuned!
 
 
 Special Thanks to: https://github.com/gitmpr for providing the original Vagrantfile.  I've optimized it to most up-to-date version of Rocky 9 for use with Virtualbox and Windows 10/11.
