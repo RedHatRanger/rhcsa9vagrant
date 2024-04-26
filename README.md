@@ -41,6 +41,10 @@ TO STOP ALL RUNNING VMs, RUN
 ```
 vagrant halt
 ```
+TO REBOOT ALL THE VMs, RUN
+```
+vagrant reload
+```
 TO DELETE (BLOW AWAY) ALL VMs, RUN
 ```
 vagrant destroy
