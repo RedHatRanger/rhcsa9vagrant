@@ -21,17 +21,21 @@ Hostname: node1.example.com
 nmcli con
 ```
 
-Option 1: EASY Graphical
-```sudo nmtui``` (GUI Configuration)   
+Option 1: EASY (GUI Configuration)
+```
+nmtui
+```
 
-Option 2: One-liner command
-```nmcli con mod eth1 ipv4.method manual ipv4.addresses 172.24.40.40/24 ipv4.gateway 172.24.40.1 ipv4.dns 172.24.40.1```   
+Option 2: One-liner Command:
+```
+nmcli con mod eth1 ipv4.method manual ipv4.addresses 172.24.40.40/24 ipv4.gateway 172.24.40.1 ipv4.dns 172.24.40.1
+```   
 
 * Then:
 ```
 nmcli con down eth1 && nmcli con up eth1
 ```
-* Use ```ip addr``` to confirm the IPs are correct.  Then ```ssh root@node1``` 
+* Use ```ip addr``` to confirm the IPs are correct.  Then ```ssh root@172.24.40.40``` 
 
 * NOTE: *IF YOU ARE HAVING PROBLEMS WITH SSH, run* ```vim /etc/ssh/sshd_config```
 ```
@@ -40,8 +44,10 @@ Change:
   Pubkeyauthentication yes
   PasswordAuthentication yes. 
 ```
-
   
 ### Additional comment:
 It is possible to edit existing connection using ```nmtui``` tool which can be easier. 
 Also when using GUI there is also graphical interface for it.
+
+* Next, to set the hostname: ```hostnamectl set-hostname node1.example.com```
+* Type ```exit``` and ```ssh root@node1.example.com``` 
