@@ -1,4 +1,4 @@
-# Configure block device to use VDO on LVM
+# Configure a block device to use VDO on LVM
 
 ### QUESTION #22 - VDO on LVM
 Create a VDO named vdo1 of size 50Gb and mount it at /vdo_m. 
