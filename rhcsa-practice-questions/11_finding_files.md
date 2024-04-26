@@ -25,7 +25,8 @@ find /etc -type f -maxdepth 1 -mtime +180 -exec cp {} /var/tmp/pvt \;
 ### QUESTION #11 (Part 2): 
 
 ```
-Find all files and directories which is created by a user "natasha" in to this system and copy it into a "/root/natashafiles" directory.
+Find all files and directories which is created by the user "natasha" in this system, then
+copy them into the ```/root/natashafiles``` directory.
 ```
 
 ***
