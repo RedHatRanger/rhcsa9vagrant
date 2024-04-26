@@ -1,7 +1,7 @@
 $hostsfile = <<-SCRIPT
-echo "192.168.99.9    ansible" >> /etc/hosts
-echo "192.168.99.10   node1" >> /etc/hosts
-echo "192.168.99.11   node2" >> /etc/hosts
+echo "192.168.99.10   ansible" >> /etc/hosts
+echo "192.168.99.11   node1" >> /etc/hosts
+echo "192.168.99.12   node2" >> /etc/hosts
 SCRIPT
 
 Vagrant.configure("2") do |config|
@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
       vb.cpus = "2"
     end
     ansible.vm.provision "hostsfile setup", type: "shell", inline: $hostsfile
-    ansible.vm.network :private_network, ip: "192.168.99.9"
+    ansible.vm.network :private_network, ip: "192.168.99.10"
     end
 
 
@@ -34,7 +34,7 @@ Vagrant.configure("2") do |config|
       vb.memory = "2048"
       vb.cpus = "2"
     end
-    node1.vm.network :private_network, ip: "192.168.99.10"
+    node1.vm.network :private_network, ip: "192.168.99.11"
     node1.vm.provision "hostsfile setup", type: "shell", inline: $hostsfile
   end
 
@@ -48,7 +48,7 @@ Vagrant.configure("2") do |config|
       vb.cpus = "2"
     end
     node2.vm.provision "hostsfile setup", type: "shell", inline: $hostsfile
-    node2.vm.network :private_network, ip: "192.168.99.11"
+    node2.vm.network :private_network, ip: "192.168.99.12"
   end
 end
 
