@@ -19,16 +19,24 @@ yum install @”Container Management"
 * Then, switch to the account of user that will be running the container. It is assumed that user named `andrew` exists on the system \
 ![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/3c976edc-3aec-4a0a-b247-ccfec11b62b7)
 
-* Authenticate if you have a private registry with images to work with. 
-To let anyone do the exercise public repository is used through the rest of steps
+```
+cd /home/andrew
+```
+```
+wget https://github.com/sachinyadav3496/Text-To-PDF/archive/refs/heads/master.zip
+```
+```
+unzip master.zip
+```
+```
+rm -rf master.zip
+```
+```
+cd Text-To-PDF-master
 ``` 
-$ podman login 
 ```
-* Create the container
+podman build -t myapp
 ```
-$ podman create -d -v /home/user/webfiles:/usr/local/apache2/htdocs -p 8080:80 --name user_httpd docker.io/library/httpd
-```
-* Generate service configuration
 ```
 $ sudo podman generate systemd user_httpd > ~/.config/systemd/user/user_httpd.service
 ```
