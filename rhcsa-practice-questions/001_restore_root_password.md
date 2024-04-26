@@ -19,6 +19,7 @@ and log into the system.
 
 * Find the line starting with *linux16*. At the end of that line add ```rd.break``` or ```init=/bin/bash``` and press ```CTRL+x``` simultaneously to restart the 
 system with new option. \
+
 ![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/12bd0a03-c3a2-4621-a5a6-873cdb740722)
 
 * ***For RHCSA8 only*** - You should also remove existing parameters **ro** and **crashkernel=...**.
