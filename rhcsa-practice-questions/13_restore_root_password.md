@@ -1,4 +1,4 @@
-*** On Node2 ***
+***On Node2***
 # Restore root password on Node2 / Breaking into the System
 
 ### QUESTION #13:
