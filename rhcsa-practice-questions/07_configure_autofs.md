@@ -3,8 +3,8 @@
 
 ### QUESTION #7
 Configure autofs to automount the home directories of netuserX user. Note the following: 
-- netuserX home directory is exported via NFS, which is available on classroom.example.com (172.25.254.254) and your NFS-exports directory is /netdir for netuser, 
-- netuserX's home directory is classroom.example.com:/home/guests/netuserX, 
+- netuserX home directory is exported via NFS, which is available on node1.example.com (172.25.254.254) and your NFS-exports directory is /netdir for netuser, 
+- netuserX's home directory is node1.example.com:/home/guests/netuserX, 
 - netuserX's home directory should be automounted autofs service. 
 - home directories must be writable by their users. 
 - password for netuser is ```ablerate```. 
@@ -34,52 +34,30 @@ vim /etc/auto.master
 ```
 vim /etc/auto.misc
 ```
+* Insert the line ```netuser1       -fstype=nfs,rw,sync     node1.example.com:/home/guests/netuser```
+* It should look something like this:
+![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/b800a31c-9c7d-4837-b1cf-befe10b2feb5)
 
-
-
-
-
-
-
-
-
-* Then we have to create config file for **autofs** that holds configuration. 
-
+* Start and Enable the autofs service:
 ```
-vi /etc/auto.master.d/home.autofs
-# and put below content (start point for indirect mounts  -  conf file for this specific mount)
-/home/guests /etc/auto.home
+systemctl enable --now autofs
 ```
 
-* As we mention config file in the previous step we have to create it:
-
+* You may have to open up the nfs ports on the Node1 server:
 ```
-vi /etc/auto.home
-# put below contents there
-* -rw,sync classroom.example.com:/home/guests/&
+firewall-cmd --permanent --add-service nfs
+firewall-cmd --permanent --add-service rpc-bind
+firewall-cmd --permanent --add-service mountd
+firewall-cmd --reload
+``` 
+
+* Then run the showmount command:
 ```
-
-using wildcard * sign as a first parameter and & as the same in path on remote server will make sure that any user that is logged 
-using LDAP will have its name used as parameter for mounting.
-
-* Make sure that the service **autofs** is enabled and started:
-
+showmount -e node1.example.com
 ```
-systemctl enable autofs.service
-systemctl start autofs.service
-```
-
-* Just SSH locally with user that is supposed to exist on LDAP server and check the home directory:
-
-```
-ssh ldapuser5@localhost
-cd
-pwd  # it should be /home/guests/ldapuser5
-```
+* It should look something like this:
+![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/4298cc9c-c7be-49d5-86ab-149c92cf2da2)
 
 
-### Additional comment:
-
-**autofs** is working in user space - and mounting network shares via **/etc/fstab** is using root context
-
-Name of the config file in **/etc/auto.master.d** is not important - the only important thing is that is must have **.autofs** suffix
+SUCCESS!!
+   
