@@ -1,4 +1,4 @@
-#  Find files with specific properties
+#  Find files using specific parameters
 
 ### QUESTION #11 (Part 1):
 Find all the files in the ```/etc``` (not subdirectories) where the files were modified more than 180 days ago, then
