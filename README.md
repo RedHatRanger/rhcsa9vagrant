@@ -48,7 +48,7 @@ TO DELETE (BLOW AWAY) ALL VMs, RUN
 vagrant destroy
 ```
 
-My "To do" list:
+My "To do" List:
 - This has only been tested on Windows 11. This should also work fine with Linux distros as well...but you will need to use the commands in the Vagrantfile for libvirt instead...I will soon be uploading that version, so stay tuned!
 
 
