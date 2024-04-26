@@ -33,8 +33,13 @@ nmcli con down eth1 && nmcli con up eth1
 ```
 * Use ```ip addr``` to confirm the IPs are correct.  Then ```ssh root@servera``` 
 
-* NOTE: *IF YOU ARE HAVING PROBLEMS WITH SSH, run* ```vim /etc/ssh/sshd_config``` Change PermitRootLogin to yes, pubkeyauthentication yes, and PasswordAuthentication yes. 
-
+* NOTE: *IF YOU ARE HAVING PROBLEMS WITH SSH, run* ```vim /etc/ssh/sshd_config```
+  Change
+```
+  PermitRootLogin to yes
+  Pubkeyauthentication yes
+  PasswordAuthentication yes. 
+```
 
   
 ### Additional comment:
