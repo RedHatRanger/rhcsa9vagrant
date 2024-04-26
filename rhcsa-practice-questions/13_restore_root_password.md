@@ -3,7 +3,7 @@
 It can be preliminary task for starting Your exam. It is crucial to know this procedure by heart. 
 
 ### Question:
-```You do not know the root password on Node2, but You have physical access to the machine. Create a new root password and log into the system.```
+You do not know the root password on Node2, but You have physical access to the machine. Create a new root password and log into the system.
 
 ***
 (scroll down for an answer)
@@ -30,13 +30,13 @@ password.
 * In order to finish the task **SELinux** must be taken care of. If not, contents of ***/etc/shadow*** will be messed up. There are
 two options:
 
-OPTION #1:
+OPTION #1: EASY
 ```
- load_policy -i 
+ /usr/sbin/load_policy -i 
  chcon -t shadow_t /etc/shadow
 ```
 
-OPTION #2:
+OPTION #2: TAKES LONGER TO ON STARTUP
 Create /.autorelabel which will force a relabel on the next boot (and automatically reboot again to apply the fix):
 ```
 touch /.autorelabel
