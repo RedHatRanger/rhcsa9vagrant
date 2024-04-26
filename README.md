@@ -54,7 +54,7 @@ My "To do" List:
   config.vm.provision "shell", inline: <<-SHELL \
  sudo yum -y groupinstall @"GNOME Desktop" \
  sudo systemctl set-default graphical.target \
- sudo systemctl start graphical.target \
+ sudo systemctl isolate graphical.target \
 SHELL
 
 
