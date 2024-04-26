@@ -12,12 +12,14 @@ Download containerfile from https://github.com/sachinyadav3496/Text-To-PDF/archi
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 ### ANSWER #20:
-* First, you will need to ```yum install @”Container Management"```
-* Then, switch to the account of user that will be running the container.
+* First, you will need to run
+```
+yum install @”Container Management"
+```
+* Then, switch to the account of user that will be running the container. \
 It is assumed that user named `andrew` exists on the system
-```
-# su - user
-```
+![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/3c976edc-3aec-4a0a-b247-ccfec11b62b7)
+
 * Authenticate if you have a private registry with images to work with. 
 To let anyone do the exercise public repository is used through the rest of steps
 ``` 
