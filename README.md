@@ -21,9 +21,13 @@ In three separate terminals, you want to execute the following commands to ssh i
 vagrant ssh ansible
 ```
 
-"vagrant ssh node1"
+```
+vagrant ssh node1
+```
 
-"vagrant ssh node2"
+```
+vagrant ssh node2
+```
 
 From there, you can change the settings in /etc/ssh/sshd_config, change root password, and so forth.
 
