@@ -11,3 +11,9 @@ And the user directory ```/opt/processed``` to container directory ```/opt/outgo
 * The service should be named ```myapp``` and should automatically start a system reboot without any manual intervention. 
 
 ### ANSWER #21:
+```
+mkdir /opt/file
+```
+```
+mkdir /opt/processed
+```
