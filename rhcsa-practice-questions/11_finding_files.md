@@ -2,7 +2,7 @@
 
 ### QUESTION #11 (Part 1):
 ```
-Find All Files in ***/etc*** (not subdirectories) that where modified more than 180 days ago, then
+Find all the files in the ```/etc``` (not subdirectories) where the files were modified more than 180 days ago, then
 copy all of them to a directory /var/tmp/pvt
 ```
 
@@ -51,3 +51,14 @@ vim /opt/filesearch.sh
 ``` 
 ![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/a9be0bb8-dc84-47f4-b99d-8c89b366ff49)
 
+* Don’t forget to give the .sh file execute permissions: 
+```
+chmod 755 /opt/file-search.sh
+```
+
+NOTE: If you want to be able to run the script from any terminal: 
+```
+cp /opt/file-search.sh /usr/local/bin/
+```
+
+SUCCESS!!
