@@ -15,13 +15,23 @@ Configure autofs to automount the home directories of netuserX user. Note the fo
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-### Answer:
+### ANSWER #7:
 
-* First we have to install **autofs** for usage:
+* First, you need to install “nfs-utils” and “autofs”:
 
 ```
-yum install -y autofs
+yum install -y nfs-utils autofs
 ```
+```
+vim /etc/auto.master
+```
+* Add the line ```/netdir /etc/auto.misc``` below the ```/misc``` line:
+![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/e0b9c51f-9e0a-483f-b054-12efac7280aa)
+
+
+
+
+
 
 * Then we have to create config file for **autofs** that holds configuration. 
 
