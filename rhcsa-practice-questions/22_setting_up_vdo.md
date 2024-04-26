@@ -63,47 +63,38 @@ lvcreate --type vdo --name VDO1 --size 5GB --virtualsize 50GB VG1
 ```
 ![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/b35fccec-e011-4f16-90ac-462bce1dc4fe)
 
+* You can run ```lsblk``` to check your work:
+![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/a77aca02-80c9-43d2-ad96-40c80c90d5b0)
 
-
-
-
-
-
-
-
-* Creating VDO is easy:
-
+* From here you need to format the filesystem according to what the exam states:
 ```
-vdo create --name=SOME_NAME --device=/dev/BLOCK_DEVICE --vdoLogicalSize=SIZE
+mkfs.xfs -K /dev/nvme0n3
+# or
+mkfs.ext4 -E nodiscard /dev/nvme0n3
 ```
 
-* size should be different depending on the type of objects stored. For containers the multiplier of size can be up to
-**10 times** than size of block device. For object storage it can be up to **3 times**. So eg. for **20GB** device we want to 
-use for object storage we can set the size of VDO to **60GB**. 
-
-* when creating VDO we do not want to discard blocks when making the filesystem. So use proper switch (see man pages) for specific 
+* NOTE: when creating VDO we do not want to discard blocks when making the filesystem. So use proper switch (see man pages) for specific 
 type of filesystem being created.
 
-```
-mkfs.xfs -K /dev/LINK
-# or
-mkfs.ext4 -E nodiscard /dev/LINK
-```
-
-after this make sure to refresh registers:
-
+* After this make sure to refresh registers:
 ```
 udevadm settle
 ```
 
-* mounting of VDO is simple but requires adding additional properties to ***/etc/fstab*** file when doing it:
+* The last step is to mount the VDO logical volume and it needs to be persistent in ```/etc/fstab```:
+```
+mkdir /vdo_m
+```
+```
+vim /etc/fstab
+```
+```
+/dev/VG1/VDO1 /vdo_m     xfs      defaults 0 0
+```
+* It should look like this:
+![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/248196ad-9e4a-4e8c-888c-f99f9d34d045)
 
-```
-UUID=smething  /mount_point   FS_TYPE  _netdev,x-systemd.device-timeout=0,x-systemd.requires=vdo.service 0 0 
-```
+SUCCESS!!
 
 ### Additional comment:
-
-We require over **500MB** of RAM for every TB of storage to apply VDO.
-
-The commands to check status and size of VDOs are:  **vdo** and **vdostats**
+* The commands to check status and size of VDOs are:  **vdo** and **vdostats**
