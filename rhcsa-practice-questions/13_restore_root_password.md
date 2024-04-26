@@ -2,7 +2,7 @@
 
 ### QUESTION #13:
 You do not know the root password on Node2, but You have physical access to the machine. Create a new root password and log into the system.
-(It can be preliminary task for starting Your exam. It is crucial to know this procedure by heart.)
+ (It can be preliminary task for starting Your exam. It is crucial to know this procedure by heart.)
 ***
 (scroll down for an answer)
 
