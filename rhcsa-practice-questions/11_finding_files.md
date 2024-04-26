@@ -2,7 +2,7 @@
 
 ### QUESTION #11 (Part 1):
 Find all the files in the ```/etc``` (not subdirectories) where the files were modified more than 180 days ago, then
-copy all of them to a directory /var/tmp/pvt
+copy all of them to the ```/var/tmp/pvt``` directory
 
 ***
 (scroll down for an answer)
