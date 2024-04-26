@@ -1,3 +1,4 @@
+***On Node2***
 # Containers
 
 ### QUESTION #20:
@@ -37,31 +38,6 @@ cd Text-To-PDF-master
 ```
 podman build -t myapp .
 ```
-```
-$ sudo podman generate systemd user_httpd > ~/.config/systemd/user/user_httpd.service
-```
-* Enable and start the service. You need to be logged in as the user, switching to it is not enough
-```
-$ systemctl --user enable --now user_httpd.service
-```
-* Enable linger, otherwise start of the container would happen when the user logs in
-```
-$ loginctl enable-linger
-```
+* To check: ```podman image ls``` or ```podman images``` 
 
-* Add SELinux permissions to the catalog
-```
-# semanage fcontext -at container_file_t "/home/user/webfiles(/.*)?"
-# restorecon -vR /home/user/webfiles
-```
-Alternatively, while creating the container you could configure volume and let podman take care of setting the context up for you.
-Syntax looks as follows:
-```
-$ podman run -v <src>:<dst>:z <image>
-```
-
-* Add port to the firewall
-```
-# firewall-cmd --add-port=8080/tcp --permanent
-# firewall-cmd --reload
-```
+SUCCESS!!
