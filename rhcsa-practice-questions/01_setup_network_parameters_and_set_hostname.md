@@ -2,9 +2,11 @@
 ### QUESTION #1:
 ```
 Configure TCP/IP and "hostname" as following:  
-IP Address:172.24.40.40/24 
-Gateway172.24.40.1 
-DNS:172.24.40.1 
+IP Address: 172.24.40.40/24 
+Gateway: 172.24.40.1 
+DNS: 172.24.40.1
+
+Hostname: node1.example.com 
 ```
 
 (scroll down for an answer)
