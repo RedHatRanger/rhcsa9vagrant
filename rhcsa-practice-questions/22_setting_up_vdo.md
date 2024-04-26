@@ -14,14 +14,27 @@ Create a VDO named vdo1 of size 50Gb and mount it at /vdo_m.
 * **VDO** is a way to provide deduplication and compression of data on the disc. Worth read material can be found
 <a href="https://hobo.house/2018/09/13/using-vdo-on-centos-rhel7-for-storage-efficiency/">here</a>.
 
-* Configuring system to use it is starting with installation of proper kernel modules and drivers and then running
-installed service:
+* First, attach storage to your physical or virtual machine. Then, run:
+```
+lsblk
+```
+```
+yum -y update
+```
+```
+init 6
+```
+
+* Install ```lvm2```, ```vdo```, and ```kmod-kvdo```.  Then create the volume group: 
 
 ```
-yum -y install vdo kmod-kvdo 
-systemctl enable vdo.service
-systemctl start vdo.service
+yum -y install lvm2 vdo kmod-kvdo
+``` 
 ```
+systemctl enable --now vdo
+```
+
+
 
 * Creating VDO is easy:
 
