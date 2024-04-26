@@ -20,7 +20,7 @@ yum install @”Container Management"
 ![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/3c976edc-3aec-4a0a-b247-ccfec11b62b7)
 
 ```
-cd /home/andrew
+ssh andrew@localhost
 ```
 ```
 wget https://github.com/sachinyadav3496/Text-To-PDF/archive/refs/heads/master.zip
