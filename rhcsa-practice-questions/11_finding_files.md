@@ -2,7 +2,8 @@
 
 ### QUESTION #11 (Part 1):
 ```
-Find All Files in ***/etc*** (not subdirectories) that where modified more than 180 days ago. Copy all of them to a directory /var/tmp/pvt
+1) Find All Files in ***/etc*** (not subdirectories) that where modified more than 180 days ago.
+2) Copy all of them to a directory /var/tmp/pvt
 ```
 
 ***
