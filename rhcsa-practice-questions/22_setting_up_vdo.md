@@ -38,8 +38,18 @@ systemctl enable --now vdo
 ```
 df -h
 ```
-* In this example ```DexTutor``` uses ```/dev/nvme0n3``` as the target device.  You can use whatever comes up that's not mounted in ```df -h```
+* In this example ```DexTutor``` uses ```/dev/nvme0n3``` as the target device.  You can use whatever comes up that's not mounted in ```df -h```:
+```
+pvcreate /dev/nvme0n3
+```
 
+![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/109dacd5-2b49-4a3a-907b-afd042a06f34)
+
+
+
+* Next create the volume group ```VG1``` using ```vgcreate```:
+
+ 
 
 
 
