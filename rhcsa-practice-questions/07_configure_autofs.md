@@ -1,4 +1,5 @@
-# Configure autofs
+*On Node1*
+# Configure autofs on Node1
 
 ### QUESTION #7
 Configure autofs to automount the home directories of netuserX user. Note the following: 
@@ -27,7 +28,12 @@ vim /etc/auto.master
 ```
 * Add the line ```/netdir /etc/auto.misc``` below the ```/misc``` line:
 ![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/e0b9c51f-9e0a-483f-b054-12efac7280aa)
-
+```
+:wq
+```
+```
+vim /etc/auto.misc
+```
 
 
 
