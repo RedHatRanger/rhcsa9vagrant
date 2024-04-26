@@ -35,6 +35,11 @@ yum -y install lvm2 vdo kmod-kvdo
 ```
 systemctl enable --now vdo
 ```
+```
+df -h
+```
+* In this example ```DexTutor``` uses ```/dev/nvme0n3``` as the target device.  You can use whatever comes up that's not mounted in ```df -h```
+
 
 
 
