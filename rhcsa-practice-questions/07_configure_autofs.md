@@ -39,6 +39,10 @@ vim /etc/auto.misc
 
 
 
+
+
+
+
 * Then we have to create config file for **autofs** that holds configuration. 
 
 ```
