@@ -90,6 +90,7 @@ vim /etc/fstab
 ```
 ```
 /dev/VG1/VDO1 /vdo_m     xfs      defaults 0 0
+:wq
 ```
 * It should look like this:
 ![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/248196ad-9e4a-4e8c-888c-f99f9d34d045)
