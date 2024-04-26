@@ -25,11 +25,13 @@ yum -y update
 init 6
 ```
 
-* Install ```lvm2```, ```vdo```, and ```kmod-kvdo```.  Then create the volume group: 
+* After reboot, install ```lvm2```, ```vdo```, and ```kmod-kvdo```.  Then create the volume group: 
 
 ```
 yum -y install lvm2 vdo kmod-kvdo
-``` 
+```
+![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/a44b80b3-536e-48ad-a9c7-77ee3cdf33bb)
+ 
 ```
 systemctl enable --now vdo
 ```
