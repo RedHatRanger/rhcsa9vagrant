@@ -1,4 +1,4 @@
-*** On Node1 ***
+***On Node1***
 #  Find files using specific parameters
 
 ### QUESTION #11 (Part 1):
