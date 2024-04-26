@@ -1,5 +1,5 @@
 # RHCSA 9 Vagrant
-# Updated on 2024-04-25
+# Updated on 2024-04-26
 # RHCSA 9 Lab - Vagrant Practice lab using Rocky 9.
 
 Vagrant lab for practicing for the rhcsa 9. 
