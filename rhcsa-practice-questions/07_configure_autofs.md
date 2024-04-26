@@ -26,7 +26,7 @@ yum install -y nfs-utils autofs
 ```
 vim /etc/auto.master
 ```
-* Add the line ```/netdir /etc/auto.misc``` below the ```/misc``` line:
+* Add the line ```/netdir /etc/auto.misc``` below the ```/misc``` line: \
 ![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/e0b9c51f-9e0a-483f-b054-12efac7280aa)
 ```
 :wq
@@ -55,7 +55,7 @@ firewall-cmd --reload
 ```
 showmount -e node1.example.com
 ```
-* It should look something like this:
+* It should look something like this: \
 ![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/4298cc9c-c7be-49d5-86ab-149c92cf2da2)
 
 
