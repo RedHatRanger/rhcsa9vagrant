@@ -17,7 +17,9 @@ The vagrant script will set up 3 Rocky 9 VMs: ansible, node1, and node2.
 
 In three separate terminals, you want to execute the following commands to ssh into the boxes:
 
-"vagrant ssh ansible"
+'''
+vagrant ssh ansible
+'''
 
 "vagrant ssh node1"
 
