@@ -1,4 +1,4 @@
-# rhcsa9vagrant
+# RHCSA 9 Vagrant
 # Updated on 2024-04-24
 # RHCSA 9 Lab - Vagrant Practice lab using Rocky 9.
 
