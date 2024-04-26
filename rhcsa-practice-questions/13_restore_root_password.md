@@ -1,17 +1,15 @@
 # Restore root password / Breaking into a System
 
-It can be preliminary task for starting Your exam. It is crucial to know this procedure by heart. 
-
-### Question:
+### QUESTION #13:
 You do not know the root password on Node2, but You have physical access to the machine. Create a new root password and log into the system.
-
+(It can be preliminary task for starting Your exam. It is crucial to know this procedure by heart.)
 ***
 (scroll down for an answer)
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-### Answer:
+### ANSWER #13:
 
 * During boot time when GRUB loader screen is presented press ```e``` key. That will open an editor with current kernel boot options.
 ![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/088aaa78-f42f-48fe-a477-bbaccb781839)
