@@ -51,10 +51,10 @@ vagrant destroy
 My "To do" List:
 - This has only been tested on Windows 11. This should also work fine with Linux distros as well...but you will need to use the commands in the Vagrantfile for libvirt instead...I will soon be uploading that version, so stay tuned!
 - Investigate using this to get GUI working on the vagrant boxes:
-  config.vm.provision "shell", inline: <<-SHELL
- sudo yum -y groupinstall "GNOME Desktop"
- sudo systemctl set-default graphical.target
- sudo systemctl start graphical.target
+  config.vm.provision "shell", inline: <<-SHELL \
+ sudo yum -y groupinstall "GNOME Desktop" \
+ sudo systemctl set-default graphical.target \
+ sudo systemctl start graphical.target \
 SHELL
 
 
