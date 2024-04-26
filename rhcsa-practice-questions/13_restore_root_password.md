@@ -24,8 +24,8 @@ system with the new option. \
 * Type ```mount -o remount,rw /sysroot```. This actually gets You Read-Write access to the filesystem. */sysroot* folder is Your 
 normal ***/*** hierarchy.
 * Type ```chroot /sysroot``` to make this folder new root directory.
-* Now it is time to change the root password (that is what we are here for right?) - type ***passwd*** and provide new
-password.
+* Now it is time to change the root password (that is what we are here for right?) - type ```passwd``` and provide the new
+password for root.
 * In order to finish the task **SELinux** must be taken care of. If not, contents of ***/etc/shadow*** will be messed up. There are
 two options:
 
