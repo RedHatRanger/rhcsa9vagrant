@@ -1,8 +1,6 @@
 # Red Hat Enterprise Linux RHCSA 9 Vagrant Lab for Exam EX200
 # Updated on 2024-04-26
-# RHCSA 9 Lab - Vagrant Practice lab using Rocky 9.
-
-Vagrant lab for practicing for the rhcsa 9. 
+# RHCSA 9 Lab - Vagrant Practice Lab using Rocky 9.3
 
 # How to use this lab
 - install virtualbox
