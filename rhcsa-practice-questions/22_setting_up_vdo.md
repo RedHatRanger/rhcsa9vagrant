@@ -42,14 +42,24 @@ df -h
 ```
 pvcreate /dev/nvme0n3
 ```
-
 ![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/109dacd5-2b49-4a3a-907b-afd042a06f34)
 
 
-
 * Next create the volume group ```VG1``` using ```vgcreate```:
+```
+vgcreate VG1 /dev/nvme0n3
+```
+![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/bbefd14d-b9a4-4b7b-8989-760ef62e4d18)
 
- 
+
+```
+vgs
+```
+![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/2c89323d-1811-463a-a955-4165d54fca0c)
+
+
+
+
 
 
 
