@@ -50,4 +50,6 @@ touch /.autorelabel
 ### Additional comment:
 
 It is possible to edit startup parameters of the kernel from the command line and make it persistent. Just edit **/etc/default/grub**
-file and after that make sure to run ```grub2-mkconfig > /boot/grub2/grub.cfg``` in order to apply the changes (for old **BIOS** config). For the **UEFI** computers the final file is **/boot/efi/EFI/redhat/grub.cfg**, or in this case **/boot/efi/EFI/rocky/grub.cfg**.
+file and after that make sure to run ```grub2-mkconfig > /boot/efi/EFI/rocky/grub.cfg```
+
+SUCCESS!!
