@@ -42,7 +42,7 @@ loginctl enable-linger
 * Now it will show that it will linger: \
 ![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/08312c87-7e04-4d05-98d0-0badfeef5f63)
 
-* Next, we need to create a folder in the user’s directory called “~/.config/systemd/user":
+* Next, we need to create a folder in the user’s directory called ```~/.config/systemd/user```:
 ```
 mkdir -p ~/.config/systemd/user
 ```
