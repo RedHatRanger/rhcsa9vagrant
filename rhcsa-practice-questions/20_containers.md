@@ -35,7 +35,7 @@ rm -rf master.zip
 cd Text-To-PDF-master
 ``` 
 ```
-podman build -t myapp
+podman build -t myapp .
 ```
 ```
 $ sudo podman generate systemd user_httpd > ~/.config/systemd/user/user_httpd.service
