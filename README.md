@@ -8,8 +8,12 @@ Vagrant lab for practicing for the rhcsa 9.
 - install virtualbox
 - install vagrant
 - Open a PowerShell Terminal Window
-- make a directory in your home folder called "vagrant"
-- cd ~/vagrant
+  ```
+  mkdir ~/vagrant
+  ```
+  ```
+  cd ~/vagrant
+  ```
 - Clone this repo to the "vagrant" directory
 - run ```vagrant up``` inside this directory and it will automatically build off of the Vagrantfile:
     
