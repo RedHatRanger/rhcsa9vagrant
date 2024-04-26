@@ -34,8 +34,8 @@ vim /etc/auto.master
 ```
 vim /etc/auto.misc
 ```
-* Insert the line ```netuser1       -fstype=nfs,rw,sync     node1.example.com:/home/guests/netuser```
-* It should look something like this:
+* Insert the line ```netuser1       -fstype=nfs,rw,sync     node1.example.com:/home/guests/netuser``` \
+* It should look something like this: \
 ![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/b800a31c-9c7d-4837-b1cf-befe10b2feb5)
 
 * Start and Enable the autofs service:
