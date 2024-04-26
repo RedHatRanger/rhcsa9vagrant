@@ -1,9 +1,7 @@
 # Configure block device to use VDO
 
-PURE RHCSA 8 QUESTION!
-
-### Question:
-Apply **VDO** (Virtual Data Optimizer) to the block device.
+### QUESTION #22 - VDO
+Create a VDO named vdo1 of size 50Gb and mount it at /vdo_m. 
 
 ***
 (scroll down for an answer)
@@ -11,7 +9,7 @@ Apply **VDO** (Virtual Data Optimizer) to the block device.
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-### Answer:
+### ANSWER #22:
 
 * **VDO** is a way to provide deduplication and compression of data on the disc. Worth read material can be found
 <a href="https://hobo.house/2018/09/13/using-vdo-on-centos-rhel7-for-storage-efficiency/">here</a>.
