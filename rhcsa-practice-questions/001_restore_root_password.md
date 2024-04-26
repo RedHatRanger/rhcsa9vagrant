@@ -1,4 +1,4 @@
-# Restore root password
+# Restore root password / Breaking into a System
 
 It can be preliminary task for starting Your exam. It is crucial to know this procedure by heart. 
 
