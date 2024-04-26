@@ -11,7 +11,7 @@ Vagrant lab for practicing for the rhcsa 9.
 - make a directory in your home folder called "vagrant"
 - cd ~/vagrant
 - Clone this repo to the "vagrant" directory
-- run "vagrant up" inside this directory and it will automatically build off of the Vagrantfile:
+- run ```vagrant up``` inside this directory and it will automatically build off of the Vagrantfile:
     
 The vagrant script will set up 3 Rocky 9 VMs: ansible, node1, and node2. 
 
