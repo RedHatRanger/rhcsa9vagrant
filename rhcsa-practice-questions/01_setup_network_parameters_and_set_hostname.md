@@ -16,7 +16,7 @@ Hostname: node1.example.com
 ### ANSWER #1:
 * We use the network manager CLI ```nmcli``` or ```nmtui``` to perform this action.
 
-To check which connections are active:
+* To check which connections are active:
 ```
 nmcli con
 ```
@@ -33,7 +33,7 @@ nmcli con down eth1 && nmcli con up eth1
 ```
 Use ```ip addr``` to confirm the IPs are correct.  Then ```ssh root@servera``` 
 
-IF YOU ARE HAVING PROBLEMS WITH SSH: 
+*IF YOU ARE HAVING PROBLEMS WITH SSH:* 
 ```vim /etc/ssh/sshd_config```
 Change PermitRootLogin to yes, pubkeyauthentication yes, and PasswordAuthentication yes. 
 
