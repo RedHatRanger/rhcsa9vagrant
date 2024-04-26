@@ -57,6 +57,14 @@ vgs
 ```
 ![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/2c89323d-1811-463a-a955-4165d54fca0c)
 
+* Run “lvcreate” specifying the type as “vdo” and give it name “VDO1”:
+```
+lvcreate --type vdo --name VDO1 --size 5GB --virtualsize 50GB VG1
+```
+![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/b35fccec-e011-4f16-90ac-462bce1dc4fe)
+
+
+
 
 
 
