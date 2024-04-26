@@ -1,4 +1,4 @@
-# RHCSA 9 Vagrant (Exam EX200)
+# Red Hat Enterprise Linux RHCSA 9 Vagrant Lab for Exam EX200
 # Updated on 2024-04-26
 # RHCSA 9 Lab - Vagrant Practice lab using Rocky 9.
 
