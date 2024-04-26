@@ -11,10 +11,10 @@ Download containerfile from https://github.com/sachinyadav3496/Text-To-PDF/archi
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-### Answer:
-
-* Switch to the account of user that will be running the container.
-It is assumed that user named `user` exists on the system
+### ANSWER #20:
+* First, you will need to ```yum install @”Container Management"```
+* Then, switch to the account of user that will be running the container.
+It is assumed that user named `andrew` exists on the system
 ```
 # su - user
 ```
