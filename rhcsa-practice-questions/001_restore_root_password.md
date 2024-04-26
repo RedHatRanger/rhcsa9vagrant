@@ -15,6 +15,8 @@ and log into the system.
 ### Answer:
 
 * During boot time when GRUB loader screen is presented press *e* key. That will open an editor with current kernel boot options.
+* ![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/088aaa78-f42f-48fe-a477-bbaccb781839)
+
 * Find the line starting with ***linux16***. At the end of that line add **rd.break** and press ***Ctrl-x*** to restart the 
 system with new option.
 * ***For RHCSA8 only*** - You should also remove existing parameters **ro** and **crashkernel=...**.
