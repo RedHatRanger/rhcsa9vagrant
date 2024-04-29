@@ -10,8 +10,9 @@ Set The Cron Job for the user "Natasha" that should runs daily every 1 minute lo
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 ### Answer #6:
-
+* Run the crontab command: \
 ```crontab -e -u natasha``` \
+
 ![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/e47480e7-66a3-4785-b2f5-71585acac866)
 
 * As usual it is wise to check what we have already in the system. To see **crontab** we just issue:
