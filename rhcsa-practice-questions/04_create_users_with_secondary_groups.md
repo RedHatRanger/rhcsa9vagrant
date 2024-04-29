@@ -27,8 +27,6 @@ useradd -G sysadm harry
 useradd -G sysadm natasha
 useradd sarah -s /sbin/nologin
 
-for i in {harry, natasha, sarah}; do passwd $i; done
-OR
 passwd harry  # provide password for harry
 passwd natasha   # provide password for natasha
 passwd sarah   # provide password for sarah
@@ -36,6 +34,13 @@ passwd sarah   # provide password for sarah
 
 ![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/db1ef9b2-80da-49c2-8a62-457bec9303bf)
 
+* Be sure to run “passwd” for all users to assign passwords.  You can alternatively run
+  these commands in a loop: ```for i in {harry,natasha}; do useradd –G sysadm $i; done```
+  and the same for the passwd command. 
+
+Next, we need to search for the binary path of the command useradd so we can update the sudoers file: 
+
+“visudo” 
 
 * To make sure what groups the users belong to here are the commands:
 
