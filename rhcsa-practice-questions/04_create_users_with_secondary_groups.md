@@ -43,9 +43,8 @@ passwd sarah   # provide password for sarah
 id harry
 id natasha
 id sarah
-
+```
 * You can try to login as **sarah** but it should not work:
-
 ```
 su - sarah
 ```
