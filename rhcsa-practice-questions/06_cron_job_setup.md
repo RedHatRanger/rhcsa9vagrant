@@ -11,14 +11,8 @@ Set The Cron Job for the user "Natasha" that should runs daily every 1 minute lo
 
 ### Answer #6:
 
-* 
-
-```
-yum install sysstat
-systemctl enable sysstat
-systemctl start sysstat
-```
-
+```crontab -e -u natasha```
+![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/e47480e7-66a3-4785-b2f5-71585acac866)
 
 * As usual it is wise to check what we have already in the system. To see **crontab** we just issue:
 
