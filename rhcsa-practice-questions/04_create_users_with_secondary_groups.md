@@ -71,7 +71,7 @@ harry ALL=(ALL) NOPASSWD: /usr/bin/passwd
 
 
 ### Note: You can alternatively:
-If you just did useradd harry and useradd natasha, you can modify their memberships:
+If you just performed ```useradd harry``` and ```useradd natasha``` only, you can modify their memberships:
 ```
 usermod -aG sysadm harry
 usermod -aG sysadm natasha
