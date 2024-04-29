@@ -55,12 +55,11 @@ su - sarah
 visudo
 ```
 ADD THIS LINE BELOW THE %wheel LINE: <br/>
-![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/59088040-65da-47b6-9b1b-c8c7cc7cc6e2)
-
-
 ```
 %sysadm ALL=(ALL) /usr/sbin/useradd
 ```
+![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/59088040-65da-47b6-9b1b-c8c7cc7cc6e2)
+
 and
 ```
 harry ALL=(ALL) NOPASSWD: /usr/bin/passwd
