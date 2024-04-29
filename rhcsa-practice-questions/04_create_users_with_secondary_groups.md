@@ -66,9 +66,10 @@ harry ALL=(ALL) NOPASSWD: /usr/bin/passwd
 ```
 ![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/4189c358-47f3-4d24-ac75-04f0e9a68d84)
 
-* So Harry can change passwords without sudo privileges. 
+* So Harry can change passwords without sudo privileges (TO BE USED WITH CAUTION!!)
 
-
+* SUCCESS!!
+<br/><br/>
 
 ### Note: You can alternatively:
 If you just performed ```useradd harry``` and ```useradd natasha``` only, you can modify their memberships:
