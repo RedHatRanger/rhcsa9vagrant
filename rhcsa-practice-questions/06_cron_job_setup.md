@@ -1,7 +1,7 @@
 # Add entry to cron
 
-### Question:
-Create a cron job running as ***root***, starting at ***11PM every day*** and writing a report on daily system resource consumption in the **/var/log/consumption.log** file.
+### Question #6:
+Set The Cron Job for the user "Natasha" that should runs daily every 1 minute local time and executes "Ex200 Testing" with logger. 
 
 ***
 (scroll down for an answer)
@@ -9,9 +9,9 @@ Create a cron job running as ***root***, starting at ***11PM every day*** and wr
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-### Answer:
+### Answer #6:
 
-* Command use to gather system statistics is called **sar** and may not be installed on the system. So first what we have to do is install it and then enable the service:
+* 
 
 ```
 yum install sysstat
