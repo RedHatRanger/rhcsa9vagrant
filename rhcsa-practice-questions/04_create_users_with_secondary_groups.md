@@ -57,8 +57,6 @@ visudo
 ADD THIS LINE BELOW THE %wheel LINE: <br/>
 ![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/59088040-65da-47b6-9b1b-c8c7cc7cc6e2)
 
-![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/4189c358-47f3-4d24-ac75-04f0e9a68d84)
-
 
 ```
 %sysadm ALL=(ALL) /usr/sbin/useradd
@@ -67,6 +65,8 @@ and
 ```
 harry ALL=(ALL) NOPASSWD: /usr/bin/passwd
 ```
+![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/4189c358-47f3-4d24-ac75-04f0e9a68d84)
+
 * So Harry can change passwords without sudo privileges. 
 
 
