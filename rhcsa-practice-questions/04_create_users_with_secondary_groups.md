@@ -38,10 +38,6 @@ passwd sarah   # provide password for sarah
   these commands in a loop: ```for i in {harry,natasha}; do useradd –G sysadm $i; done```
   and the same for the passwd command. 
 
-Next, we need to search for the binary path of the command useradd so we can update the sudoers file: 
-
-“visudo” 
-
 * To make sure what groups the users belong to here are the commands:
 
 ```
@@ -53,6 +49,13 @@ id sarah
 ```
 su - sarah
 ```
+
+* Next, we need to search for the binary path of the command useradd so we can update the sudoers file: 
+```
+visudo
+```
+
+
 
 ### Note: You can alternatively:
 If you just did useradd harry and useradd natasha, you can modify their memberships:
