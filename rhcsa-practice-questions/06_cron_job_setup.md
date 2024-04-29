@@ -13,6 +13,7 @@ Set The Cron Job for the user "Natasha" that should runs daily every 1 minute lo
 * Run the crontab command: <br/>
 ```
 crontab -e -u natasha
+:wq
 ```
 
 ![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/e47480e7-66a3-4785-b2f5-71585acac866)
@@ -44,6 +45,7 @@ crontab -e -u natasha
 ```
 ```
 23 14 * * * /bin/echo "hello"
+:wq
 ```
 ```
 crontab -l natasha
