@@ -26,15 +26,11 @@ groupadd sysadm
 useradd -G sysadm harry
 useradd -G sysadm natasha
 useradd sarah -s /sbin/nologin
-OR
-usermod -aG sysadm harry
-usermod -aG sysadm natasha
-
 
 for i in {harry, natasha, sarah}; do passwd $i; done
 OR
-passwd harry  # provide password for andrew
-passwd natasha   # provide password for susan
+passwd harry  # provide password for harry
+passwd natasha   # provide password for natasha
 passwd sarah   # provide password for sarah
 ```
 
@@ -53,3 +49,8 @@ id sarah
 ```
 su - sarah
 ```
+
+### Note: You can alternatively:
+If you just did useradd harry and useradd natasha, you can modify their memberships:
+usermod -aG sysadm harry
+usermod -aG sysadm natasha
