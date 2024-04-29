@@ -37,7 +37,7 @@ Configure a task: plan to run echo hello command at 14:23 every day.
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-### Answer #6 Part 1:
+### Answer #6 Part 2:
 * Run the crontab command: <br/>
 ```
 crontab -e -u natasha
@@ -50,6 +50,8 @@ crontab -l natasha
 ```
 
 * SUCCESS!!
+
+
 
 ### Additional comment:
 
