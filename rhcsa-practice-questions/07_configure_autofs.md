@@ -2,7 +2,7 @@
 # Configure autofs on Node1
 
 ### QUESTION #7
-Configure autofs to automount the home directories of netuserX user. Note the following: 
+Configure autofs to automount the home directories of netuser1 user. Note the following: 
 - netuser1's home directory is exported via NFS, which is available on node1.mydomain.com and your NFS-exports directory is /netdir for netuser1, 
 - netuser1's home directory is node1.mydomain.com:/home/guests/netuserX, 
 - netuser1's home directory should be automounted autofs service. 
@@ -38,6 +38,7 @@ Configure autofs to automount the home directories of netuserX user. Note the fo
 
 * Start and Enable the autofs service:
 ```
+[root@node1 ~]# systemctl restart autofs
 [root@node1 ~]# systemctl enable --now autofs
 ```
 
