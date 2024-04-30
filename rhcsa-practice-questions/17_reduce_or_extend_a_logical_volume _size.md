@@ -107,7 +107,7 @@ tmpfs                             tmpfs    178M    0       178M    0%      /run/
 /dev/mapper/wgroup-wshare         ext4    273M    2.1M    252M    1%      /mnt/wshare
 ```
 
-* Run ```lvextend -r -L +100M /dev/mapper/wgroup-wshare``` with the -r flag to resize:
+* Run ```lvextend -r -L +100M /dev/mapper/wgroup-wshare``` with the -r flag to resize the volume as you extend it:
 ```
 [root@node2 ~]# lvextend -r -L +100M /dev/mapper/wgroup-wshare
 Rounding size to boundary between physical extents: 104.00 MiB.
