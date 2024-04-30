@@ -6,7 +6,7 @@ IP Address: 172.24.40.40/24
 Gateway: 172.24.40.1 
 DNS: 172.24.40.1
 
-Hostname: node1.example.com 
+Hostname: node1.mydomain.com 
 ```
 
 (scroll down for an answer)
@@ -37,17 +37,19 @@ nmcli con down eth1 && nmcli con up eth1
 ```
 * Use ```ip addr``` to confirm the IPs are correct.  Then ```ssh root@172.24.40.40``` 
 
-* NOTE: *IF YOU ARE HAVING PROBLEMS WITH SSH, run* ```vim /etc/ssh/sshd_config```
+* NOTE: *IF YOU ARE HAVING PROBLEMS WITH SSH, run*
 ```
+vim /etc/ssh/sshd_config
+```
+
 Change:
   PermitRootLogin to yes
   Pubkeyauthentication yes
   PasswordAuthentication yes. 
-```
   
 ### Additional comment:
 It is possible to edit existing connection using ```nmtui``` tool which can be easier. 
 Also when using GUI there is also graphical interface for it.
 
-* Next, to set the hostname: ```hostnamectl set-hostname node1.example.com```
-* Type ```exit``` and ```ssh root@node1.example.com``` 
+* Next, to set the hostname: ```hostnamectl set-hostname node1.mydomain.com```
+* Type ```exit``` and ```ssh root@node1.mydomain.com``` 
