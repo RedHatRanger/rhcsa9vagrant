@@ -67,4 +67,73 @@ Logical volume wgroup/wshare successfully resized.
 [root@node2 ~]# mount -a
 ```
 
-TO BE CONTINUED...
+* Recheck all the mounted partitions:
+```
+[root@node2 ~]# df -h
+Filesystem                        Size    Used    Avail   Use%    Mounted on
+devtmpfs                          867M    0       867M    0%      /dev
+tmpfs                             887M    0       887M    0%      /dev/shm
+tmpfs                             355M    5.1M    350M    2%      /run
+/dev/mapper/rhel_192-root         8.0G    1.6G    6.5G    20%     /
+/dev/vda1                         1014M   220M    795M    22%     /boot
+tmpfs                             178M    0       178M    0%      /run/user/0
+/dev/mapper/wgroup-wshare         273M    2.1M    252M    1%      /mnt/wshare
+```
+
+* To check your shrunken logical volume, re-run "lvs":
+```
+[root@node2 ~]# lvs
+LV      VG      Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+root    rhel_192 -wi-ao---- <8.00g                                                    
+swap    rhel_192 -wi-ao---- 1.00g                                                    
+wshare  wgroup  -wi-ao----  304.00m                                                    
+```
+* It should be around 300MB.....
+
+* SUCCESS!!
+
+
+# The Test may also ask you to extend the logical volume.  In that case:
+* NOW THE REVERSE, resize it to 400MB:
+```
+[root@node2 ~]# df -Th
+Filesystem                        Type    Size    Used    Avail   Use%    Mounted on
+devtmpfs                          devtmpfs 867M    0       867M    0%      /dev
+tmpfs                             tmpfs    887M    0       887M    0%      /dev/shm
+tmpfs                             tmpfs    355M    5.1M    350M    2%      /run
+/dev/mapper/rhel_192-root         xfs      8.0G    1.6G    6.5G    20%     /
+/dev/vda1                         xfs      1014M   220M    795M    22%     /boot
+tmpfs                             tmpfs    178M    0       178M    0%      /run/user/0
+/dev/mapper/wgroup-wshare         ext4    273M    2.1M    252M    1%      /mnt/wshare
+```
+
+* Run ```lvextend -r -L +100M /dev/mapper/wgroup-wshare``` with the -r flag to resize:
+```
+[root@node2 ~]# lvextend -r -L +100M /dev/mapper/wgroup-wshare
+Rounding size to boundary between physical extents: 104.00 MiB.
+Size of Logical volume wgroup/wshare changed from 304.00 MiB (38 extents) to 408.00 MiB (51 extents).
+Logical volume wgroup/wshare successfully resized.
+resize2fs 1.46.5 (30-Dec-2021)
+Filesystem at /dev/mapper/wgroup-wshare is mounted on /mnt/wshare; on-line resizing required
+old_desc_blocks = 3, new_desc_blocks = 4
+The filesystem on /dev/mapper/wgroup-wshare is now 417792 (1k) blocks long.
+
+[root@node2 ~]# df -h
+Filesystem                        Size    Used    Avail   Use%    Mounted on
+devtmpfs                          867M    0       867M    0%      /dev
+tmpfs                             887M    0       887M    0%      /dev/shm
+tmpfs                             355M    5.1M    350M    2%      /run
+/dev/mapper/rhel_192-root         8.0G    1.6G    6.5G    20%     /
+/dev/vda1                         1014M   220M    795M    22%     /boot
+tmpfs                             178M    0       178M    0%      /run/user/0
+/dev/mapper/wgroup-wshare         378M    2.3M    349M    1%      /mnt/wshare
+
+[root@node2 ~]# lvs
+LV      VG      Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+root    rhel_192 -wi-ao---- <8.00g                                                    
+swap    rhel_192 -wi-ao---- 1.00g                                                    
+wshare  wgroup  -wi-ao----  408.00m  
+```
+
+
+
