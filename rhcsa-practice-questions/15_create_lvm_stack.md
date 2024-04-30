@@ -77,7 +77,7 @@ The partition table has been altered.
 Calling ioctl() to re-read partition table.
 Syncing disks.
 ```
-# Don't forget to run "partprobe /dev/vdb" to update the File Table:
+* Lastly, don't forget to run "partprobe /dev/vdb" to update the File Table:
 ```
 [root@node2 ~]# partprobe /dev/vdb
 ```
@@ -95,53 +95,75 @@ Device     Boot Start     End Sectors Size Id Type
 /dev/vdb1        2048 1026047 1024000 500M 8e Linux LVM
 ```
 
-# Note: if the output for label/partition table contains **DOS** in any way then the partition table was configured using **MBR**. 
-If there is anything else - **GPT**. **It is crucial to not mix them on one device (creating MBR partitions on GPT and vice versa)!**
-
-
-
 * When we got the partition the first step is to create **physical partition**: 
 
 ```
-pvcreate /dev/PARTITION_IDENTIFIER
-# check if it was created
-pvdisplay
+[root@node2 ~]# pvcreate /dev/vdb1
+  Physical volume "/dev/vdb1" successfully created.
+```
+```
+[root@node2 ~]# vgcreate -s 8M wgroup /dev/vdb1
+  Volume group "wgroup" successfully created
+```
+```
+[root@node2 ~]# lvcreate -l 50 -n wshare /dev/wgroup
+  Logical volume "wshare" created.
+```
+* To confirm you can type "lvs" to view the LVM you created:
+```
+[root@node2 ~]# lvs
+LV     VG      Attr       LSize  Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+root   rhel_192 -wi-ao---- <8.00g                                                    
+swap   rhel_192 -wi-ao---- 1.00g                                                    
+wshare wgroup  -wi-a----- 200.00m
+```
+* Don’t forget to format using ```mkfs.ext4 /dev/wgroup/wshare```:
+```
+[root@node2 ~]# mkfs.ext4 /dev/wgroup/wshare
+mke2fs 1.46.5 (30-Dec-2021)
+Discarding device blocks: done                            
+Creating filesystem with 409600 1k blocks and 102400 inodes
+Filesystem UUID: dc2bedb3-e528-4c92-8ea3-a3c0619d769f
+Superblock backups stored on blocks: 
+  8193, 24577, 40961, 57345, 73729, 204801, 221185, 401409
+Allocating group tables: done                            
+Writing inode tables: done                            
+Creating journal (8192 blocks): done
+Writing superblocks and filesystem accounting information: done   
+```
+* Next, we will create an auto mount point in /etc/fstab:
+```
+[root@node2 ~]# vim /etc/fstab
+
+# /etc/fstab
+# Created by anaconda on Fri Dec 30 16:18:12 2022
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+/dev/mapper/rhel_192-root /                       xfs     defaults        0 0
+UUID=0efecb9e-7ecd-47e0-ad64-507f7c994e18 /boot  xfs     defaults        0 0
+/dev/mapper/rhel_192-swap none                    swap    defaults        0 0
+/dev/wgroup/wshare       /mnt/wshare              ext4    defaults        0 0
+
+
+:wq
+```
+* Run ```mount -a``` to mount the /etc/fstab mounts:
+```
+[root@node2 ~]# mount -a
+[root@node2 ~]# df -h
+Filesystem                      Size  Used Avail Use% Mounted on
+devtmpfs                        867M    0  867M   0% /dev
+tmpfs                           887M    0  887M   0% /dev/shm
+tmpfs                           355M  5.1M  350M   2% /run
+/dev/mapper/rhel_192-root       8.0G  1.6G  6.5G  20% /
+/dev/vda1                       1014M  220M  795M  22% /boot
+tmpfs                           178M    0  178M   0% /run/user/0
+/dev/mapper/wgroup-wshare       365M   14K  341M   1% /mnt/wshare
 ```
 
-* Physical partition can be assigned to the **volume group**.
-
-```
-vgcreate -s 16M datacontainer /dev/PARTITION_IDENTIFIER
-# check if it was created
-vgdisplay
-```
-
-* Now it is time to create **logical volume** (notice **-l switch** that allows specifying extents number):
-
-```
-lvcreate -l 50 -n datacopy datacontainer
-# check if it was created
-lvdisplay
-```
-
-* Creating filesystem can be done with **mkfs** with **type** flag or with specialized tool like below:
-
-```
-mkfs.vfat /dev/datacontainer/datacopy
-```
-
-* Now we create mount point for it and we provide entry in **fstab** file to make it permanent:
-
-```
-mkdir /datasource
-# get UUID for created logical volume
-blkid
-# edit /etc/fstab and append there below line
-UUID=UUUID_IDENTIFIER_COPIED_FROM_BLKID  /datasource vfat  defaults   0 0    
-```
-
-* Save the file and check if everything works:
-
-```
-mount -a
-```
+* SUCCESS!!
