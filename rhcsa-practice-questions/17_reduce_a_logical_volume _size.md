@@ -5,7 +5,7 @@
 ### QUESTION #17:
 Resize your wshare logical volume you created in Lab #15, it should be approx 300MB ( note -> only size accepted from 270mb to 290mb).  
 
-Note: In the real world, there could be losses of data, so you MUST BACKUP YOUR DATA before doing this operation!
+# Note: In the real world, there could be losses of data, so you MUST BACKUP YOUR DATA before doing this operation!
 
 ***
 (scroll down for an answer)
