@@ -12,7 +12,7 @@ Set The Cron Job for the user "Natasha" that should runs daily every 1 minute lo
 ### Answer #6 Part 1:
 * Run the crontab command: <br/>
 ```
-crontab -e -u natasha
+[root@node1 ~]# crontab -e -u natasha
 * * * * * /usr/bin/logger "Ex200 Testing"
 :wq
 ```
@@ -22,7 +22,7 @@ crontab -e -u natasha
 * As usual it is wise to check what we have already in the system. To see **crontab** we just issue:
 
 ```
-crontab -l
+[root@node1 ~]# crontab -l
 ```
 
 * if there are no jobs scheduled then we get information about it.
@@ -42,14 +42,12 @@ Configure a task: plan to run echo hello command at 14:23 every day.
 ### Answer #6 Part 2:
 * Run the crontab command: <br/>
 ```
-crontab -e -u natasha
-```
-```
+[root@node1 ~]# crontab -e -u natasha
 23 14 * * * /bin/echo "hello"
 :wq
 ```
 ```
-crontab -l natasha
+[root@node1 ~]# crontab -l natasha
 ```
 
 * SUCCESS!!
