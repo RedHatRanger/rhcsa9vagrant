@@ -22,8 +22,6 @@ Configure autofs to automount the home directories of netuserX user. Note the fo
 
 ```
 [root@node1 ~]# yum install -y nfs-utils autofs
-```
-```
 [root@node1 ~]# vim /etc/auto.master
 ```
 * Add the line ```/netdir /etc/auto.misc``` below the ```/misc``` line: \
