@@ -17,7 +17,7 @@ Configure your system to synchronize the time to the Ansible Workstation, ```ans
 [root@node1 ~]# yum install chrony
 [root@node1 ~]# vim /etc/chrony.conf
 ```
-* Comment out the 'pool' line and add this line below it:
+* Comment out the 'pool' line and add this 'server' line below it:
 ```
 #pool 2.rhel.pool.ntp.org iburst
 server ansible.mydomain.com iburst maxpoll 16
