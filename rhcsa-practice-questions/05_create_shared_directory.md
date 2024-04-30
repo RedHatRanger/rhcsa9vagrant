@@ -6,7 +6,8 @@ Create a collaborative directory /shared/sysadm with the following characteristi
     - Group ownership of /shared/sysadm is sysadm. \
     - The directory should be readable, writable, and accessible to member of sysadm, but not to any other user. \
     - (It is understood that root has access to all files and directories on the system.) \
-    - Files created in /shared/sysadm automatically have group ownership set to the sysadm group. 
+    - Files created in /shared/sysadm automatically have group ownership set to the sysadm group. \
+    - Finally, we will add two users to the group to give them access to the shared folder.
     
 ***
 (scroll down for an answer)
