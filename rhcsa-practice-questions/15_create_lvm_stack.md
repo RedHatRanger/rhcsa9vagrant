@@ -63,7 +63,7 @@ First sector (2048-10485759, default 2048): 2048
 Last sector, +/-sectors or +/-size{K,M,G,T,P} (2048-10485759, default 10485759): +500M
 Created a new partition 1 of type 'Linux' and of size 500 MiB.
 ```
-* Change the type to 8E for Linux LVM partitions (he made a mistake and had to type "8E"):
+* Change the type to 8E for Linux LVM partitions:
 ```
 Command (m for help): t
 Selected partition 1
