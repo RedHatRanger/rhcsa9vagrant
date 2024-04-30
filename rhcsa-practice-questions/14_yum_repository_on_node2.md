@@ -30,6 +30,9 @@ name=app
 baseurl=http://ansible.mydomain.com/rocky/x86_64/AppStream
 enabled=1
 gpgcheck=0
+
+
+:wq
 ```
 
 ```
