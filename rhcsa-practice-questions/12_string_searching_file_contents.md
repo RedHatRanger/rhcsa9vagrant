@@ -11,7 +11,7 @@ Find all strings "ich" from "/usr/share/dict/words" file and copy those strings 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 ### ANSWER #12:
-* The ```find``` command provides what is needed:
+* The ```grep``` command provides what is needed:
 ```
 [root@node1 ~]# grep ich /usr/share/dict/words > /root/lines
 ```
