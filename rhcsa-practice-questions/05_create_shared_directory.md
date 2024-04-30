@@ -16,8 +16,7 @@ Create a collaborative directory /shared/sysadm with the following characteristi
 
 ### ANSWER #5: 
 
-* As mentioned above - creation of user is covered in question ***008***. Also it is always worth mentioning that in the questions related to
-creating something it is better to actually create everything before we delve deeper into configuration (folders/files/users/groups/partitions)
+* As mentioned above - creation of user was covered in Lab ***04_create_users_with_secondary_groups***.
 
 * First we create a directory which is pretty straightforward (however creating user-related folders in root hierarchy is not a good idea)
 
