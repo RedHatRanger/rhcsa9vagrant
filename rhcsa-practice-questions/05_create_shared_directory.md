@@ -1,3 +1,5 @@
+***On Node1***
+
 # Create a shared directory by group
 
 ### QUESTION #5: 
