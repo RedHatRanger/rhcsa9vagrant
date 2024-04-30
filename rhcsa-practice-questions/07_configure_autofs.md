@@ -38,20 +38,20 @@ Configure autofs to automount the home directories of netuserX user. Note the fo
 
 * Start and Enable the autofs service:
 ```
-systemctl enable --now autofs
+[root@node1 ~]# systemctl enable --now autofs
 ```
 
-* You may have to open up the nfs ports:
+* You may have to open up the nfs ports on the Ansible server:
 ```
-firewall-cmd --permanent --add-service nfs
-firewall-cmd --permanent --add-service rpc-bind
-firewall-cmd --permanent --add-service mountd
-firewall-cmd --reload
+[root@ansible ~]# firewall-cmd --permanent --add-service nfs
+[root@ansible ~]# firewall-cmd --permanent --add-service rpc-bind
+[root@ansible ~]# firewall-cmd --permanent --add-service mountd
+[root@ansible ~]# firewall-cmd --reload
 ``` 
 
-* Then run the showmount command:
+* Then run the showmount command on Node1:
 ```
-showmount -e node1.mydomain.com
+[root@node1 ~]# showmount -e node1.mydomain.com
 ```
 * It should look something like this: \
 ![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/4298cc9c-c7be-49d5-86ab-149c92cf2da2)
