@@ -21,15 +21,15 @@ Create the following users, groups, and group membership:
 * The answer is pretty straightforward therefore I will provide just the commands: 
 
 ```
-groupadd sysadm
+[root@node1 ~]# groupadd sysadm
 
-useradd -G sysadm harry
-useradd -G sysadm natasha
-useradd sarah -s /sbin/nologin
+[root@node1 ~]# useradd -G sysadm harry
+[root@node1 ~]# useradd -G sysadm natasha
+[root@node1 ~]# useradd sarah -s /sbin/nologin
 
-passwd harry  # provide password for harry
-passwd natasha   # provide password for natasha
-passwd sarah   # provide password for sarah
+[root@node1 ~]# passwd harry  # provide password for harry
+[root@node1 ~]# passwd natasha   # provide password for natasha
+[root@node1 ~]# passwd sarah   # provide password for sarah
 ```
 
 ![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/db1ef9b2-80da-49c2-8a62-457bec9303bf)
@@ -41,18 +41,18 @@ passwd sarah   # provide password for sarah
 * To make sure what groups the users belong to here are the commands:
 
 ```
-id harry
-id natasha
-id sarah
+[root@node1 ~]# id harry
+[root@node1 ~]# id natasha
+[root@node1 ~]# id sarah
 ```
 * You can try to login as **sarah** but it should not work:
 ```
-su - sarah
+[root@node1 ~]# su - sarah
 ```
 
 * Next, we need to search for the binary path of the command useradd so we can update the sudoers file: 
 ```
-visudo
+[root@node1 ~]# visudo
 ```
 ADD THIS LINE BELOW THE %wheel LINE: <br/>
 ```
@@ -74,6 +74,6 @@ harry ALL=(ALL) NOPASSWD: /usr/bin/passwd
 ### Note: You can alternatively:
 If you just performed ```useradd harry``` and ```useradd natasha``` only, you can modify their memberships:
 ```
-usermod -aG sysadm harry
-usermod -aG sysadm natasha
+[root@node1 ~]# usermod -aG sysadm harry
+[root@node1 ~]# usermod -aG sysadm natasha
 ```
