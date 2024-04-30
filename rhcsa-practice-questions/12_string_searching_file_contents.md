@@ -1,6 +1,5 @@
 ***On Node1***
-
-
+#  Search for string values and export them to a file.
 
 ### QUESTION #12:
 Find all strings "ich" from "/usr/share/dict/words" file and copy those strings in a /root/lines file. 
