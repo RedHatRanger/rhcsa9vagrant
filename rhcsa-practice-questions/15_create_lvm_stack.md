@@ -8,7 +8,7 @@ Create an LVM name wshare from wgroup volume group. Note the following: \
     - PE size should be 8MB \
     - LVM size should be 50 extents \
     - Format with "ext4" file system and mount it under /mnt/wshare. And it should auto mount after next reboot \
-    - (Exam may have you setup filesystem - vfat, xfs) \
+    - (Exam may have you setup filesystem - vfat, xfs)
 
 ***
 (scroll down for an answer)
