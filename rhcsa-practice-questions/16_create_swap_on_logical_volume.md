@@ -43,7 +43,7 @@ Last sector, +/-sectors or +/-size{K,M,G,T,P} (1026048-10485759, default 1048575
 Created a new partition 2 of type 'Linux' and of size 400 MiB.
 ```
 
-* Change the partition type to swap, then “w” to write it:
+* Change the partition type to "t" for type, "2" for partition 2, "82" for swap, then “w” to write it:
 
 ```
 Command (m for help): t
@@ -52,30 +52,65 @@ Hex code or alias (type L to list all): 82
 Changed type of partition 'Linux' to 'Linux swap / Solaris'.
 ```
 
-* Don’t forget to run partrobe:
+* Don’t forget to run partprobe:
 ```
 [root@node2 ~]# partprobe /dev/vdb
 ```
-
-
-
-
-* To make swap changes permanent as usual ***/etc/fstab*** must be edited:
-
+Format the new swap partition on vdb2, then add it to the main swap:
+[root@node2 ~]# mkswap /dev/vdb2
+Setting up swapspace version 1, size = 400 MiB (419426304 bytes)
+no label, UUID=9abc60cf-9d66-4d3a-8ffe-218770ee99ad
 ```
-vi /etc/fstab
-/dev/vg/lv_swap2 swap swap defaults 0 0
+[root@node2 ~]# swapon /dev/vdb2
 ```
 
-* It is good to check if everything works - the best way is to reboot the system (if possible) and after that issuing:
+* Type “blkid” to find the UUID #:
+```
+[root@node2 ~]# blkid | grep vdb2
+/dev/vdb2: UUID="9abc60cf-9d66-4d3a-8ffe-218770ee99ad" TYPE="swap" PARTUUID="d0ae2e9f-02"
+```
 
+* To make swap changes permanent as usual ***/etc/fstab*** must be changed:
+```
+# /etc/fstab
+# Created by anaconda on Fri Dec 30 16:18:12 2022
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+/dev/mapper/rhel_192-root /                       xfs     defaults        0 0
+UUID=0efecb9e-7ecd-47e0-ad64-507f7c994e18 /boot  xfs     defaults        0 0
+/dev/mapper/rhel_192-swap none                    swap    defaults        0 0
+/dev/mapper/wgroup-wshare /mnt/wshare             ext4    defaults        0 0
+UUID=9abc60cf-9d66-4d3a-8ffe-218770ee99ad swap    swap    defaults        0 0
+```
 
 ```
-swapon -s
+[root@node2 ~]# systemctl daemon-reload
+```
+
+* Run “mount -a” to mount the swap partition:
+```
+[root@node2 ~]# mount -a
+```
+
+* Run the ```swapon -s``` command to add the swap volume to the main swap volume:
+ 
+```
+[root@node2 ~]# swapon -s
+Filename                                Type        Size    Used    Priority
+/dev/dm-1                               partition   1048572 0       -1
+/dev/vdb2                               partition   409596  0       -2
+```
+* To check swap/memory statistics:
+```
 free -k
 ```
 
-which will show swap/memory statistics.
+* SUCCESS!!
 
 
 ### Additional comment:
