@@ -1,6 +1,6 @@
 ***On Node2***
 
-# Reduce the size of an LV
+# Reduce the size of a Logical Volume (LV)
 
 ### QUESTION #17:
 Resize your wshare logical volume you created in Lab #15, it should be approx 300MB ( note -> only size accepted from 270mb to 290mb).  
