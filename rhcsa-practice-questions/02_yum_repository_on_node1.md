@@ -3,8 +3,8 @@
 # Configure the yum repository for Node1
 
 ### QUESTION #2:
-Configure your servera VM repository installed the packages distribution is available via YUM: 
-    - BaseOS     url = http://ansible.mydomain.com/rocky/x86_64/BaseOS 
+Configure your servera VM repository installed the packages distribution is available via YUM: \
+    - BaseOS     url = http://ansible.mydomain.com/rocky/x86_64/BaseOS \
     - AppStream  url = http://ansible.mydomain.com/rocky/x86_64/AppStream 
 
 ***
