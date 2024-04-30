@@ -43,7 +43,7 @@ Configure autofs to automount the home directories of netuserX user. Note the fo
 systemctl enable --now autofs
 ```
 
-* You may have to open up the nfs ports on the Node1 server:
+* You may have to open up the nfs ports:
 ```
 firewall-cmd --permanent --add-service nfs
 firewall-cmd --permanent --add-service rpc-bind
