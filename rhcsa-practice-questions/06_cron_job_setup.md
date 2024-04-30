@@ -13,6 +13,7 @@ Set The Cron Job for the user "Natasha" that should runs daily every 1 minute lo
 * Run the crontab command: <br/>
 ```
 crontab -e -u natasha
+* * * * * /usr/bin/logger "Ex200 Testing"
 :wq
 ```
 
