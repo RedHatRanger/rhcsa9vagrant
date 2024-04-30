@@ -13,12 +13,11 @@ Download containerfile from https://github.com/sachinyadav3496/Text-To-PDF/archi
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 ### ANSWER #20:
-* First, you will need to run
+* First, you will need to install the Container Management Group packages:
 ```
 [root@node2 ~]# yum install @”Container Management"
 ```
-* Then, switch to the account of user that will be running the container. It is assumed that user named `andrew` exists on the system \
-![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/3c976edc-3aec-4a0a-b247-ccfec11b62b7)
+* Then, switch to the account of user that will be running the container (It is assumed that user named `andrew` exists on the system):
 
 ```
 [root@node2 ~]# ssh andrew@localhost
