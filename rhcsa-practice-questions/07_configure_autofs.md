@@ -3,7 +3,7 @@
 
 ### QUESTION #7
 Configure autofs to automount the home directories of netuserX user. Note the following: 
-- netuser1's home directory is exported via NFS, which is available on node1.mydomain.com and your NFS-exports directory is /netdir for netuser, 
+- netuser1's home directory is exported via NFS, which is available on node1.mydomain.com and your NFS-exports directory is /netdir for netuser1, 
 - netuser1's home directory is node1.mydomain.com:/home/guests/netuserX, 
 - netuser1's home directory should be automounted autofs service. 
 - home directories must be writable by their users. 
