@@ -1,7 +1,7 @@
 # Create swap partition
 
-### Question:
-Create a logical volume of **200MB** called **lv_swap2** and add it permanently to the current swap space.
+### QUESTION #16: 
+Create a swap partition of 400MB and make it available permanent. 
 
 ***
 (scroll down for an answer)
