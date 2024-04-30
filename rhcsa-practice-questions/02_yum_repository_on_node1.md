@@ -15,7 +15,6 @@ Configure your servera VM repository installed the packages distribution is avai
 
 ### ANSWER #2:
 
-ANSWER #2:
 ```
 [root@node1 ~]# vim /etc/yum.repos.d/pkgs.repo
 
