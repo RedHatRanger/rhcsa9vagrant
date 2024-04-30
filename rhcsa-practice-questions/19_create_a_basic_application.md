@@ -52,6 +52,7 @@ if [ -d ~/.bashrc.d ]; then
         fi
     done
 fi
+
 /usr/local/bin/rhcsa
 
 
