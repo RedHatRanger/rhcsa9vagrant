@@ -139,7 +139,7 @@ wshare  wgroup  -wi-ao----  408.00m
 
 ### Additional Comments: 
 IF YOU DO NOT ADD THE -r FLAG, THEN YOU WILL HAVE TO RUN EITHER OF THESE NEXT TWO COMMANDS,
-DEPENDING ON IF IT IS XFS OR EXT4 (the hashtags in front are for demo as to not actually run these commands):
+DEPENDING ON IF IT IS XFS OR EXT4:
 ```
 [root@node2 ~]# xfs_growfs /dev/mapper/wgroup-wshare
 [root@node2 ~]# resize2fs /dev/mapper/wgroup-wshare
