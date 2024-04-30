@@ -2,10 +2,10 @@
 
 ### QUESTION #5: 
 
-Create a collaborative directory /shared/sysadm with the following characteristics: 
-    - Group ownership of /shared/sysadm is sysadm. 
-    - The directory should be readable, writable, and accessible to member of sysadm, but not to any other user. 
-    - (It is understood that root has access to all files and directories on the system.) 
+Create a collaborative directory /shared/sysadm with the following characteristics: \
+    - Group ownership of /shared/sysadm is sysadm. \
+    - The directory should be readable, writable, and accessible to member of sysadm, but not to any other user. \
+    - (It is understood that root has access to all files and directories on the system.) \
     - Files created in /shared/sysadm automatically have group ownership set to the sysadm group. 
     
 ***
