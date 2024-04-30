@@ -43,7 +43,7 @@ Last sector, +/-sectors or +/-size{K,M,G,T,P} (1026048-10485759, default 1048575
 Created a new partition 2 of type 'Linux' and of size 400 MiB.
 ```
 
-* Change the partition type to "t" for type, "2" for partition 2, "82" for swap, then “w” to write it:
+* Change the partition: "t" for type, "2" for partition 2, "82" for swap, then “w” to write it:
 
 ```
 Command (m for help): t
