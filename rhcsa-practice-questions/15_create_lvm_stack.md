@@ -50,7 +50,7 @@ Created a new DOS disklabel with disk identifier 0x04aee29f.
 Command (m for help): 
 ```
 
-* We will type "n", then "p", and then "+500M" (we get this by multiplying 8 x 50):
+* We will type "n", then "p", and then "+500M":
 ```
 Command (m for help): n
 Partition type
