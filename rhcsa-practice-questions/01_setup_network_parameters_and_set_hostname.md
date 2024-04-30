@@ -18,28 +18,28 @@ Hostname: node1.mydomain.com
 
 * To check which connections are active:
 ```
-nmcli con
+[root@node1 ~]# nmcli con
 ```
 
 Option 1: EASY (GUI Configuration)
 ```
-nmtui
+[root@node1 ~]# nmtui
 ```
 
 Option 2: One-liner Command:
 ```
-nmcli con mod eth1 ipv4.method manual ipv4.addresses 172.24.40.40/24 ipv4.gateway 172.24.40.1 ipv4.dns 172.24.40.1
+[root@node1 ~]# nmcli con mod eth1 ipv4.method manual ipv4.addresses 172.24.40.40/24 ipv4.gateway 172.24.40.1 ipv4.dns 172.24.40.1
 ```   
 
 * Then:
 ```
-nmcli con down eth1 && nmcli con up eth1
+[root@node1 ~]# nmcli con down eth1 && nmcli con up eth1
 ```
 * Use ```ip addr``` to confirm the IPs are correct.  Then ```ssh root@172.24.40.40``` 
 
 * NOTE: *IF YOU ARE HAVING PROBLEMS WITH SSH, run*
 ```
-vim /etc/ssh/sshd_config
+[root@node1 ~]# vim /etc/ssh/sshd_config
 ```
 
 Change:
