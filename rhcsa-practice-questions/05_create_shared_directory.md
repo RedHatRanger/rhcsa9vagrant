@@ -54,6 +54,6 @@ given the same permissions like to group owner of the folder/file. We've already
 
 ### Additional comment:
 
-*It is possible to change user's primary group for the current session using **newgrp** command.
+* It is possible to change user's primary group for the current session using **newgrp** command.
 
 
