@@ -22,7 +22,7 @@ Set The Cron Job for the user "Natasha" that should runs daily every 1 minute lo
 * As usual it is wise to check what we have already in the system. To see **crontab** we just issue:
 
 ```
-[root@node1 ~]# crontab -l
+[root@node1 ~]# crontab -l natasha
 ```
 
 * if there are no jobs scheduled then we get information about it.
