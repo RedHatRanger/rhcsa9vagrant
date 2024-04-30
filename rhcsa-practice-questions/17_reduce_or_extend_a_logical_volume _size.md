@@ -15,7 +15,7 @@ Resize your wshare logical volume you created in Lab #15, it should be approx 30
 
 ### ANSWER #17:
 
-* Run "lvs" to check your logical volumes and then check wshare to see if it is mounted as "ext4":
+* Run ```lvs``` to check your logical volumes and then check wshare to see if it is mounted as "ext4":
 ```
 [root@node2 ~]# lvs
 LV      VG      Attr       LSize Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
