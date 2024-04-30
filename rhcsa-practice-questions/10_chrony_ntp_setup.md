@@ -1,4 +1,6 @@
-# Configure Chrony for Time Synchronization for **Node1**
+***On Node1***
+
+# Configure Chrony for Time Synchronization
 
 ### QUESTION #10:
 Configure your system to synchronize the time to the Ansible Workstation, ```ansible.mydomain.com```. 
