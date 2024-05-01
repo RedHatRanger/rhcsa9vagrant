@@ -15,10 +15,17 @@ Configure autofs to automount the home directories of remoteuserx user. Note the
 
 ### ANSWER #7:
 
-* First, you need to install ```autofs```:
+* First, you will need to create the NFS user:
+```
+[root@ansible ~]# groupadd -g 1234 autofsusers
+[root@ansible ~]# useradd -d /ourhome/remoteuserx -u 1234 -g autofsusers remoteuserx  
+[root@ansible ~]# passwd remoteuserx
+```
+
+* Then, you need to install ```autofs``` and ```nfs-utils```:
 
 ```
-[root@node1 ~]# yum install -y autofs
+[root@node1 ~]# yum install -y autofs nfs-utils
 [root@node1 ~]# systemctl enable --now autofs
 [root@node1 ~]# vim /etc/auto.master.d/aa.autofs
 
