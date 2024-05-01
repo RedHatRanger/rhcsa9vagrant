@@ -3,8 +3,8 @@
 # Fix SELinux Port Issues
 
 ### QUESTION #3:
-FIX SELINUX PORT ISSUES: \
-- In your system, httpd service has some files in /var/www/html (do not change or alter files)  \
+FIX SELINUX PORT ISSUES: 
+- In your system, httpd service has some files in /var/www/html (do not change or alter files)  
 - solve the problem, httpd service of your system having some issues, service is not running on port 82. 
 
 ***
