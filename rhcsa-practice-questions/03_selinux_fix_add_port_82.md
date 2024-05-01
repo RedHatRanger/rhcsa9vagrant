@@ -57,36 +57,11 @@ jabber_interserver_port_t      tcp      5269, 5280
 * As you can see the file context is ```http_port_t``` so lets add port 82 to the list.
 * If you are unsure or if you forget you can lookup the syntax in the ```/etc/ssh/sshd_config``` file:
 ```
-[root@node1 ~]# cat /etc/ssh/sshd_config
-
-#       $OpenBSD: sshd_config,v 1.104 2021/07/02 05:11:21 dtucker Exp $
-
-# This is the sshd server system-wide configuration file.  See
-# sshd_config(5) for more information.
-
-# This sshd was compiled with PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
-
-# The strategy used for options in the default sshd_config shipped with
-# OpenSSH is to specify options with their default value where
-# possible, but leave them commented.  Uncommented options override the
-# default value.
-
-# To modify the system-wide sshd configuration, create a  *.conf  file under
-#  /etc/ssh/sshd_config.d/  which will be automatically included below
-Include /etc/ssh/sshd_config.d/*.conf
-
-# If you want to change the port on a SELinux system, you have to tell
-# SELinux about this change.
+[root@node1 ~]# cat /etc/ssh/sshd_config | grep semanage
 # semanage port -a -t ssh_port_t -p tcp #PORTNUMBER
-#
-#Port 22
-#AddressFamily any
-#ListenAddress 0.0.0.0
-#ListenAddress ::
-
-
-:q!
+root@node1:~# 
 ```
+
 * As you can see they give you the ```semanage port -a -t http_port_t -p tcp 82``` information in there,
 so now we'll just have to apply it:
 
