@@ -3,7 +3,8 @@
 # Create a tar archive of a file
 
 ### QUESTION #8
-Create a tar archive of "/etc/" Directory with .bz2 extension. Tar archive named "myetcbackup.tar" should be placed in "/root/" Directory. 
+Create a tar archive of "/etc/" Directory with .bz2 extension: \
+- Tar archive named "myetcbackup.tar.bz2" should be placed in "/root/" Directory. 
  
 
 ***
@@ -47,16 +48,18 @@ tar: Removing leading '/' from member names
 * OR if the question asks you to use .xz, use -J instead for compression:
 ```
 [root@node1 ~]# tar -cvJf /root/myetcbackup.tar.xz /etc/
-tar: Removing leading '/' from member names
+tar: Removing leading `/' from member names
 /etc/
 /etc/mtab
 /etc/fstab
 /etc/crypttab
-/etc/lvm/
-/etc/lvm/devices/
-/etc/lvm/devices/system.devices
-/etc/lvm/archive/
-/etc/lvm/archive/rhel_192_00000-1332621048.vg
+/etc/resolv.conf
+/etc/dnf/
+/etc/dnf/modules.d/
+/etc/dnf/aliases.d/
+/etc/dnf/dnf.conf
+/etc/dnf/modules.defaults.d/
+/etc/dnf/plugins/
 ```
 
 * SUCCESS!!
