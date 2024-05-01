@@ -17,8 +17,6 @@ Create a VDO named vdo1 of size 50Gb and mount it at /vdo_m.
 * First, attach storage to your physical or virtual machine. Then, run:
 ```
 lsblk
-```
-```
 yum -y update
 ```
 ```
