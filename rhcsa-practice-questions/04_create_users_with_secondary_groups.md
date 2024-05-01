@@ -52,8 +52,6 @@ PASS_WARN_AGE   7
 [root@node1 ~]# passwd sarah   # provide password for sarah
 ```
 
-![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/db1ef9b2-80da-49c2-8a62-457bec9303bf)
-
 * Be sure to run “passwd” for all users to assign passwords.  You can alternatively run
   these commands in a loop: ```for i in {harry,natasha}; do useradd –G sysadm $i; done```
   and the same for the passwd command. 
@@ -61,10 +59,9 @@ PASS_WARN_AGE   7
 * To make sure what groups the users belong to here are the commands:
 
 ```
-[root@node1 ~]# id harry
-[root@node1 ~]# id natasha
-[root@node1 ~]# id sarah
+[root@node1 ~]# id {harry,natasha,sarah}
 ```
+
 * You can try to login as **sarah** but it should not work:
 ```
 [root@node1 ~]# su - sarah
