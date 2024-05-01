@@ -15,9 +15,9 @@ Configure autofs to automount the home directories of remoteuserx user. Note the
 
 ### ANSWER #7:
 
-### BEFORE YOU BEGIN THIS LAB, PLEASE START WITH ```LAB 00_ansible-nfs_server_configuration``` AND SETUP NFS ON THAT MACHINE ###
+###  * BEFORE YOU BEGIN THIS LAB, PLEASE START WITH ```LAB 00_ansible-nfs_server_configuration``` AND SETUP NFS ON THAT MACHINE ###
 
-* First, you will need to create the NFS user (On the exam it may already be created):
+* You will need to create an NFS test user (On the exam it may already be created):
 ```
 [root@ansible ~]# groupadd -g 1234 autofsusers
 [root@ansible ~]# useradd -d /ourhome/remoteuserx -u 1234 -g autofsusers remoteuserx  
