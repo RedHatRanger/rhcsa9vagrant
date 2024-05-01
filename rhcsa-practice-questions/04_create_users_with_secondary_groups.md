@@ -3,8 +3,7 @@
 # Create users and assign them to secondary groups
 
 ### QUESTION #4:
-Create the following users, groups, and group membership: 
-  - Set the default maximum number of days that all users have before they have to change their passwords to 20 days. 
+Set the default maximum number of days a password may be used to 20 days, then create the following users, groups, and group membership: 
   - A group named sysadm.
   - A user "harry" who belongs to sysadm as a secondary group.
   - A user "natasha" who belongs to sysadm as a secondary group.
