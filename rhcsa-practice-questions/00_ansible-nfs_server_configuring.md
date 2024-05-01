@@ -34,3 +34,15 @@
 [root@ansible ~]# exportfs -avr
 ```
 
+* Configure the firewall:
+```
+[root@ansible ~]# firewall-cmd --add-service={nfs,mountd,rpc-bind} --permanent
+[root@ansible ~]# firewall-cmd --reload
+```
+
+* Create netuserx for Lab #7:
+```
+[root@ansible ~]# groupadd -g 1234 autofsusers
+[root@ansible ~]# useradd -d /shared/userautofs01 -u 1234 -g autofsusers userautofs01 
+[root@ansible ~]# passwd userautofs01
+```
