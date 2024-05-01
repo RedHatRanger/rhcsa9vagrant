@@ -8,7 +8,9 @@ IP Address: 172.24.40.40/24
 Gateway: 172.24.40.1 
 DNS: 172.24.40.1
 
-Hostname: node1.mydomain.com 
+Hostname: node1.mydomain.com
+
+Note: for this lab you will need to revert everything back once this is complete or you won't have Internet acccess for this machine. 
 ```
 
 (scroll down for an answer)
