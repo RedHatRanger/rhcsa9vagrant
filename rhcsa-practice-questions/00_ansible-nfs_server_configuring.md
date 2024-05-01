@@ -19,7 +19,7 @@
 [root@ansible ~]# chmod 777 /shared
 ```
 
-* Configure the ```/etc/exports`` file for sharing with Node1:
+* Configure the ```/etc/exports``` file for sharing with Node1:
 ```
 [root@ansible ~]# vim /etc/exports
 
