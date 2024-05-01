@@ -49,7 +49,7 @@ root@node1:~#
 * As usual it is wise to check what we have already in the system. To see **crontab** we just issue:
 
 ```
-[root@node1 ~]# crontab -l natasha
+[root@node1 ~]# crontab -lu natasha
 ```
 
 * if there are no jobs scheduled then we get information about it.
