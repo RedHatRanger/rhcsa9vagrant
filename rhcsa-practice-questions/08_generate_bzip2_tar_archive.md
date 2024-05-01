@@ -16,7 +16,7 @@ Create a tar archive of "/etc/" Directory with .bz2 extension. Tar archive named
 
 * Use the -j to handle bz2 compression:
 ```
-[root@node1 ~]# tar -cvjf myetcbackup.tar.bz2 /etc/
+[root@node1 ~]# tar -cvjf /root/myetcbackup.tar.bz2 /etc/
 tar: Removing leading '/' from member names
 /etc/
 /etc/mtab
@@ -31,7 +31,7 @@ tar: Removing leading '/' from member names
 
 * OR if the question asks you to use gzip, use -z instead for compression:
 ```
-[root@node1 ~]# tar -cvzf myetcbackup.tar.gz /etc/
+[root@node1 ~]# tar -cvzf /root/myetcbackup.tar.gz /etc/
 tar: Removing leading '/' from member names
 /etc/
 /etc/mtab
