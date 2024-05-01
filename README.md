@@ -16,6 +16,9 @@
 - Unzip the contents and cut and paste them to the "vagrant directory
 - Delete the .zip file and the empty folder you extracted everything from
 - Run ```vagrant up``` inside this directory and it will automatically build off of the Vagrantfile:
+```
+vagrant up
+```
     
 The vagrant script will set up 3 Rocky 9 VMs: ansible, node1, and node2. 
 
