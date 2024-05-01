@@ -24,11 +24,23 @@ Configure autofs to automount the home directories of netuser1 user. Note the fo
 [root@node1 ~]# yum install -y nfs-utils autofs
 [root@node1 ~]# vim /etc/auto.master
 ```
-* Add the line ```/netdir /etc/auto.misc``` below the ```/misc``` line: \
-![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/e0b9c51f-9e0a-483f-b054-12efac7280aa)
+* Add the line ```/netdir /etc/auto.misc``` below the ```/misc``` line.  Comment out the ```/misc``` and ```/net``` lines : \
 ```
+# Sample auto.master file
+# This is a 'master' automounter map and it has the following format:
+# mount-point [map-type,format]:map [options]
+# For details of the format look at auto.master(5).
+#
+#/misc /etc/auto.misc
+/netdir /etc/auto.misc
+
+#/net   -hosts
+
+
 :wq
 ```
+
+* Next edit the /etc/auto.misc file:
 ```
 [root@node1 ~]# vim /etc/auto.misc
 ```
