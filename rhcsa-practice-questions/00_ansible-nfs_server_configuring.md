@@ -23,7 +23,7 @@
 ```
 [root@ansible ~]# vim /etc/exports
 
-/shared 10.10.10.93(rw,sync,no_root_squash)
+/shared 192.168.99.11(rw,sync,no_root_squash)
 
 
 :wq
