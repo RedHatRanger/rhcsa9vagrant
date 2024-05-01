@@ -2,9 +2,9 @@
 # Configure autofs on Node1
 
 ### QUESTION #7
-Configure autofs to automount the home directories of remoteuserx user. Note the following: \
-   - remoteuserx directory is exported via NFS, which is available on classroom.example.com (192.168.13.162) and your NFS-exports directory is /ourhome/remoteuserx for remoteuserx, \
-   - remoteuserx's home directory should be automounted using autofs service. \
+Configure autofs to automount the home directories of remoteuserx user. Note the following: 
+   - remoteuserx directory is exported via NFS, which is available on classroom.example.com (192.168.13.162) and your NFS-exports directory is /ourhome/remoteuserx for remoteuserx, 
+   - remoteuserx's home directory should be automounted using autofs service. 
    - home directories must be writable by their users. 
  
 ***
