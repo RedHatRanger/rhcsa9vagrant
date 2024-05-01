@@ -37,7 +37,7 @@ Configure autofs to automount the home directories of remoteuserx user. Note the
 :wq
 ```
 
-* Next edit the /etc/auto.misc file and add the ```/ourhome/remoteuserx``` line:
+* Next edit the ```/etc/auto.misc``` file and add the ```/ourhome/remoteuserx``` line:
 ```
 [root@node1 ~]# vim /etc/auto.misc
 
