@@ -18,20 +18,11 @@ Configure autofs to automount the home directories of remoteuserx user. Note the
 * First, you need to install “nfs-utils” and “autofs”:
 
 ```
-[root@node1 ~]# yum install -y nfs-utils autofs
-[root@node1 ~]# vim /etc/auto.master
-```
-* Add the line ```/netdir /etc/auto.misc``` below the ```/misc``` line.  Comment out the ```/misc``` and ```/net``` lines : \
-```
-# Sample auto.master file
-# This is a 'master' automounter map and it has the following format:
-# mount-point [map-type,format]:map [options]
-# For details of the format look at auto.master(5).
-#
-#/misc /etc/auto.misc
-/netdir /etc/auto.misc
-
-#/net   -hosts
+[root@node1 ~]# yum install -y autofs
+[root@node1 ~]# systemctl restart autofs
+[root@node1 ~]# systemctl enable autofs
+[root@node1 ~]# vim /etc/auto.master.d/aa.autofs
+/-      /etc/auto.misc
 
 
 :wq
