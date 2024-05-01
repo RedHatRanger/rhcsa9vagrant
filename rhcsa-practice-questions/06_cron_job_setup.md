@@ -44,15 +44,23 @@ root@node1:~#
 :wq
 ```
 
-![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/e47480e7-66a3-4785-b2f5-71585acac866)
+* Let's set another cron job an echo "Hello World" message which will go off at 2:30pm every day:
+```
+[root@node1 ~]# crontab -eu natasha
 
-* As usual it is wise to check what we have already in the system. To see **crontab** we just issue:
+* * * * * /bin/logger "Ex200 Testing"
+30 14 * * * /bin/echo "Hello World"
 
+:wq 
+```
+
+* Now let's see what cron jobs are setup under user natasha:
 ```
 [root@node1 ~]# crontab -lu natasha
+* * * * *    /usr/bin/logger "Ex200 Testing"
+30 14 * * * /bin/echo "Hello World"
 ```
 
-* if there are no jobs scheduled then we get information about it.
 
 * SUCCESS!!
 <br/><br/><br/><br/>
