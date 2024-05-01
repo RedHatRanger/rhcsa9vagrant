@@ -19,11 +19,11 @@
 [root@ansible ~]# chmod 777 /shared
 ```
 
-* Configure the ```/etc/exports`` file:
+* Configure the ```/etc/exports`` file for sharing with Node1:
 ```
 [root@ansible ~]# vim /etc/exports
 
-/shared 192.168.99.11(rw,sync,no_root_squash)
+/ourhome/remoteuserx 192.168.99.11(rw,sync,no_root_squash)
 
 
 :wq
@@ -42,7 +42,7 @@
 
 * Create netuserx for Lab #7:
 ```
-[root@ansible ~]# groupadd -g 1234 remoteuserx
-[root@ansible ~]# useradd -d /ourhome/remo -u 1234 -g remoteuserx userautofs01 
-[root@ansible ~]# passwd userautofs01
+[root@ansible ~]# groupadd -g 1234 autofsusers
+[root@ansible ~]# useradd -d /ourhome/remoteuserx -u 1234 -g autofsusers remoteuserx  
+[root@ansible ~]# passwd remoteuserx
 ```
