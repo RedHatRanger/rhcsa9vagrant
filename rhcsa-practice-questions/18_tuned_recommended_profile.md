@@ -25,8 +25,7 @@ Complete!
 
 * Start and enable the ```tuned``` service:
 ```
-[root@node2 ~]# systemctl start tuned
-[root@node2 ~]# systemctl enable tuned
+[root@node2 ~]# systemctl enable --now tuned
 ```
 
 * Run ```tuned-adm list```:
