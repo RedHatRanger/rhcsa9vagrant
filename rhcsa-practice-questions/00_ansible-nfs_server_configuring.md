@@ -15,7 +15,7 @@
 
 * Setup the shared directory: 
 ```
-[root@ansible ~]# mkdir /shared
+[root@ansible ~]# mkdir -p /ourhome/remoteuserx
 [root@ansible ~]# chmod 777 /shared
 ```
 
