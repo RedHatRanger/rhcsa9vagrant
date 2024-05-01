@@ -42,7 +42,7 @@
 
 * Create netuserx for Lab #7:
 ```
-[root@ansible ~]# groupadd -g 1234 autofsusers
-[root@ansible ~]# useradd -d /shared/userautofs01 -u 1234 -g autofsusers userautofs01 
+[root@ansible ~]# groupadd -g 1234 remoteuserx
+[root@ansible ~]# useradd -d /ourhome/remo -u 1234 -g remoteuserx userautofs01 
 [root@ansible ~]# passwd userautofs01
 ```
