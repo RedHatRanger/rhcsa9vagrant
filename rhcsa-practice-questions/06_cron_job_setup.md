@@ -14,7 +14,7 @@ Set The Cron Job for the user "Natasha" that should runs daily every 1 minute lo
 ### Answer #6 Part 1:
 * You may reference the syntax setting up cron tasks by running:
 ```
-root@node1:~# cat /etc/crontab
+[root@node1 ~]# cat /etc/crontab
 SHELL=/bin/bash
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
 MAILTO=root
