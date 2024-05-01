@@ -57,7 +57,8 @@ jabber_interserver_port_t      tcp      5269, 5280
 * As you can see the file context is ```http_port_t``` so lets add port 82 to the list.
 * If you are unsure or if you forget you can lookup the syntax in the ```/etc/ssh/sshd_config``` file:
 ```
-root@rhel:~# cat /etc/ssh/sshd_config
+[root@node1 ~]# cat /etc/ssh/sshd_config
+
 #       $OpenBSD: sshd_config,v 1.104 2021/07/02 05:11:21 dtucker Exp $
 
 # This is the sshd server system-wide configuration file.  See
@@ -86,7 +87,8 @@ Include /etc/ssh/sshd_config.d/*.conf
 
 :q!
 ```
-* We will run ```semanage port -a -t http_port_t -p tcp 82```:
+* As you can see they give you the ```semanage port -a -t http_port_t -p tcp 82``` information in there,
+so now we'll just have to apply it:
 
 ```
 [root@node1 ~]# semanage port -a -t http_port_t -p tcp 82
