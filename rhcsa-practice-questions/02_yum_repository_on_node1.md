@@ -3,7 +3,7 @@
 # Configure the yum repository for Node1
 
 ### QUESTION #2:
-Configure your Node1 VM repository installed the packages distribution is available via YUM: \
+Configure Your Node1 VM repository installed the packages distribution is available via YUM: \
     - baseos url=https://download.rockylinux.org/pub/rocky/8/BaseOS/x86_64/os/ \
     - appstream url=https://download.rockylinux.org/pub/rocky/8/AppStream/x86_64/os/
 
