@@ -54,8 +54,9 @@ http_port_t                    tcp      80, 81, 443, 488, 8008, 8009, 8443, 9000
 jabber_interserver_port_t      tcp      5269, 5280
 ```
 
-* As you can see the file context is ```http_port_t``` so lets add port 82 to the list:
-* We will run ```semanage port -a -t http_port_t -p tcp 82```
+* As you can see the file context is ```http_port_t``` so lets add port 82 to the list.
+* If you are unsure or if you forget you can lookup the syntax in the ```/etc/ssh/sshd_config``` file.
+* We will run ```semanage port -a -t http_port_t -p tcp 82```:
 
 ```
 [root@node1 ~]# semanage port -a -t http_port_t -p tcp 82
