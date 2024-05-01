@@ -36,7 +36,7 @@ success
 ```
 * Finally, to get time synchronization working:
 ```
-[root@node1 ~]# systemctl enable chronyd
+[root@node1 ~]# timedatectl set-ntp true
 ```
 * You may check your work by running:
 ```
