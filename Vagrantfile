@@ -1,7 +1,7 @@
 $hostsfile = <<-SCRIPT
-echo "192.168.99.10   ansible" >> /etc/hosts
-echo "192.168.99.11   node1" >> /etc/hosts
-echo "192.168.99.12   node2" >> /etc/hosts
+echo "192.168.99.10   ansible.mydomain.com   ansible" >> /etc/hosts
+echo "192.168.99.11   node1.mydomain.com     node1" >> /etc/hosts
+echo "192.168.99.12   node2.mydomain.com     node2" >> /etc/hosts
 SCRIPT
 
 Vagrant.configure("2") do |config|
@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
   config.vm.define :ansible do |ansible|
     ansible.vm.box = "generic/rocky9"
     config.vm.box_version = "4.3.12"
-    ansible.vm.hostname = "ansible"
+    ansible.vm.hostname = "ansible.mydomain.com"
     ansible.vm.provider "virtualbox" do |vb|
       vb.memory = "2048"
       vb.cpus = "2"
@@ -29,7 +29,7 @@ Vagrant.configure("2") do |config|
   config.vm.define :node1 do |node1|
     node1.vm.box = "generic/rocky9"
     config.vm.box_version = "4.3.12"
-    node1.vm.hostname = "node1"
+    node1.vm.hostname = "node1.mydomain.com"
     node1.vm.provider "virtualbox" do |vb|
       vb.memory = "2048"
       vb.cpus = "2"
@@ -42,7 +42,7 @@ Vagrant.configure("2") do |config|
   config.vm.define :node2 do |node2|
     node2.vm.box = "generic/rocky9"
     config.vm.box_version = "4.3.12"
-    node2.vm.hostname = "node2"
+    node2.vm.hostname = "node2.mydomain.com"
     node2.vm.provider "virtualbox" do |vb|
       vb.memory = "2048"
       vb.cpus = "2"
