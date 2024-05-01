@@ -14,7 +14,7 @@ Create a tar archive of "/etc/" Directory with .bz2 extension. Tar archive named
 
 ### ANSWER #8:
 
-* Use the -j to handle bz2 compression:
+* Use the -j to handle .bz2 compression:
 ```
 [root@node1 ~]# tar -cvjf /root/myetcbackup.tar.bz2 /etc/
 tar: Removing leading '/' from member names
@@ -29,7 +29,7 @@ tar: Removing leading '/' from member names
 /etc/lvm/archive/rhel_192_00000-1332621048.vg
 ```
 
-* OR if the question asks you to use gzip, use -z instead for compression:
+* OR if the question asks you to use .gz for compression, use -z instead:
 ```
 [root@node1 ~]# tar -cvzf /root/myetcbackup.tar.gz /etc/
 tar: Removing leading '/' from member names
@@ -43,3 +43,20 @@ tar: Removing leading '/' from member names
 /etc/lvm/archive/
 /etc/lvm/archive/rhel_192_00000-1332621048.vg
 ```
+
+* OR if the question asks you to use .xz, use -J instead for compression:
+```
+[root@node1 ~]# tar -cvJf /root/myetcbackup.tar.xz /etc/
+tar: Removing leading '/' from member names
+/etc/
+/etc/mtab
+/etc/fstab
+/etc/crypttab
+/etc/lvm/
+/etc/lvm/devices/
+/etc/lvm/devices/system.devices
+/etc/lvm/archive/
+/etc/lvm/archive/rhel_192_00000-1332621048.vg
+```
+
+* SUCCESS!!
