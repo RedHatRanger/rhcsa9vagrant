@@ -15,12 +15,11 @@ Configure autofs to automount the home directories of remoteuserx user. Note the
 
 ### ANSWER #7:
 
-* First, you need to install “nfs-utils” and “autofs”:
+* First, you need to install ```autofs```:
 
 ```
 [root@node1 ~]# yum install -y autofs
-[root@node1 ~]# systemctl restart autofs
-[root@node1 ~]# systemctl enable autofs
+[root@node1 ~]# systemctl enable --now autofs
 [root@node1 ~]# vim /etc/auto.master.d/aa.autofs
 /-      /etc/auto.misc
 
