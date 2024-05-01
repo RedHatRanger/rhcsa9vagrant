@@ -25,6 +25,9 @@ Create the following users, groups, and group membership:
 
 ```
 vim /etc/login.defs
+.
+.
+.
 # Password aging controls:
 #
 #       PASS_MAX_DAYS   Maximum number of days a password may be used.
