@@ -3,7 +3,8 @@
 # Add entry to cron
 
 ### Question #6 Part 1:
-Set The Cron Job for the user "Natasha" that should runs daily every 1 minute local time and executes "Ex200 Testing" with logger. 
+- Set a Cron Job for the user "Natasha" which runs daily every minute local time, and executes "Ex200 Testing" with logger.
+- Set another Cron Job for the user "Nastasha" which runs daily at 2:30pm local time, and executes "Hello World".
 
 ***
 (scroll down for an answer)
@@ -11,7 +12,7 @@ Set The Cron Job for the user "Natasha" that should runs daily every 1 minute lo
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-### Answer #6 Part 1:
+### Answer #6:
 * You may reference the syntax setting up cron tasks by running:
 ```
 [root@node1 ~]# cat /etc/crontab
@@ -58,30 +59,6 @@ MAILTO=root
 [root@node1 ~]# crontab -lu natasha
 * * * * *    /usr/bin/logger "Ex200 Testing"
 30 14 * * * /bin/echo "Hello World"
-```
-
-
-* SUCCESS!!
-<br/><br/><br/><br/>
-
-### Question #6 Part 2:
-Configure a task: plan to run echo hello command at 14:23 every day. 
-
-***
-(scroll down for an answer)
-
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-### Answer #6 Part 2:
-* Run the crontab command: <br/>
-```
-[root@node1 ~]# crontab -eu natasha
-23 14 * * * /bin/echo "hello"
-:wq
-```
-```
-[root@node1 ~]# crontab -l natasha
 ```
 
 * SUCCESS!!
