@@ -21,14 +21,14 @@ Configure your servera VM repository installed the packages distribution is avai
 [BaseOS]
 name=base
 baseurl=http://ansible.mydomain.com/rocky/x86_64/BaseOS
-enabled=1
 gpgcheck=0
+enabled=1
 
 [AppStream]
 name=app
 baseurl=http://ansible.mydomain.com/rocky/x86_64/AppStream
-enabled=1
 gpgcheck=0
+enabled=1
 
 
 :wq
