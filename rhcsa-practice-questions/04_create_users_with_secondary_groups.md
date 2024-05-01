@@ -4,14 +4,15 @@
 
 ### QUESTION #4:
 Create the following users, groups, and group membership: 
+  - Set the default maximum number of days that all users have before they have to change their passwords to 20 days. 
   - A group named sysadm.
   - A user "harry" who belongs to sysadm as a secondary group.
   - A user "natasha" who belongs to sysadm as a secondary group.
   - A user "sarah" who does not have access to an interactive shell & who is not a member of sysadm group.
   - "harry", "natasha", and "sarah" should all have the password of "password".
   - "sysadm" group has access to add users to the server.
-  - "harry" user has access to set password for users without asking sudo password 
-
+  - "harry" user has access to set password for users without asking sudo password
+  
 ***
 (scroll down for an answer)
 
@@ -23,8 +24,23 @@ Create the following users, groups, and group membership:
 * The answer is pretty straightforward therefore I will provide just the commands: 
 
 ```
-[root@node1 ~]# groupadd sysadm
+vim /etc/login.defs
+# Password aging controls:
+#
+#       PASS_MAX_DAYS   Maximum number of days a password may be used.
+#       PASS_MIN_DAYS   Minimum number of days allowed between password changes.
+#       PASS_MIN_LEN    Minimum acceptable password length.
+#       PASS_WARN_AGE   Number of days warning given before a password expires.
+#
+PASS_MAX_DAYS   20
+PASS_MIN_DAYS   0
+PASS_WARN_AGE   7
 
+
+:wq
+```
+```
+[root@node1 ~]# groupadd sysadm
 [root@node1 ~]# useradd -G sysadm harry
 [root@node1 ~]# useradd -G sysadm natasha
 [root@node1 ~]# useradd sarah -s /sbin/nologin
