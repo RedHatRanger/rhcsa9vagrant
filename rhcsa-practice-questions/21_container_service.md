@@ -17,13 +17,13 @@ And the user directory ```/opt/processed``` to container directory ```/opt/outgo
 
 ### ANSWER #21:
 ```
-[root@node2 ~]# mkdir /opt/file
-[root@node2 ~]# mkdir /opt/processed
-[root@node2 ~]# chown andrew:andrew /opt/file
-[root@node2 ~]# chown andrew:andrew /opt/processed
+[root@node2 ~]# mkdir /opt/file /opt/processed
+[root@node2 ~]# chown andrew:andrew /opt/file /opt/processed
+[root@node2 ~]# loginctl enable-linger andrew
 [root@node2 ~]# ssh andrew@localhost
 [andrew@node2 ~]$ podman run -d --name myapp -v /opt/file/:/opt/incoming:Z -v /opt/processed/:/opt/outgoing:Z
 [andrew@node2 ~]$ podman ps
+
 CONTAINER ID   IMAGE                           COMMAND                  CREATED         STATUS          PORTS                 NAMES
 af03e63960ad   localhost/myapp                 /usr/bin/run-http...    3 seconds ago   Up 3 seconds                            mycontainer
 ```
@@ -45,31 +45,6 @@ Sessions=5
 IdleHint=no
 IdleSinceHint=1682224288866742
 IdleSinceHintMonotonic=3017922428
-Linger=no
-```
-
-* Currently, this user cannot add persistent services, so we need to fix that:
-```
-[andrew@node2 ~]$ loginctl enable-linger
-```
-
-* Now it will show that it will linger: 
-```
-[andrew@node2 ~]$ loginctl show-user andrew
-UID=1002
-GID=1002
-Name=andrew
-Timestamp=Sun 2023-04-23 09:54:45 IST
-TimestampMonotonic=2614502454
-RuntimePath=/run/user/1002
-Service=user@1002.service
-Slice=user-1002.slice
-Display=5
-State=active
-Sessions=5
-IdleHint=no
-IdleSinceHint=1682224304866742
-IdleSinceHintMonotonic=3033922428
 Linger=yes
 ```
 
