@@ -3,6 +3,7 @@
 # Add entry to cron
 
 ### Question #6 Part 1:
+Use Cron to setup two scheduled tasks:
 - Set a Cron Job for the user "Natasha" which runs daily every minute local time, and executes "Ex200 Testing" with logger.
 - Set another Cron Job for the user "Nastasha" which runs daily at 2:30pm local time, and executes "Hello World".
 
