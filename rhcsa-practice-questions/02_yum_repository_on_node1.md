@@ -4,8 +4,8 @@
 
 ### QUESTION #2:
 Configure your servera VM repository installed the packages distribution is available via YUM: \
-    - BaseOS     url = http://ansible.mydomain.com/rocky/x86_64/BaseOS \
-    - AppStream  url = http://ansible.mydomain.com/rocky/x86_64/AppStream 
+    - baseos url=https://download.rockylinux.org/pub/rocky/8/BaseOS/x86_64/os/ \
+    - appstream url=https://download.rockylinux.org/pub/rocky/8/AppStream/x86_64/os/
 
 ***
 (scroll down for an answer)
@@ -20,13 +20,13 @@ Configure your servera VM repository installed the packages distribution is avai
 
 [BaseOS]
 name=base
-baseurl=http://ansible.mydomain.com/rocky/x86_64/BaseOS
+baseurl=https://download.rockylinux.org/pub/rocky/8/BaseOS/x86_64/os/
 gpgcheck=0
 enabled=1
 
 [AppStream]
 name=app
-baseurl=http://ansible.mydomain.com/rocky/x86_64/AppStream
+baseurl=https://download.rockylinux.org/pub/rocky/8/AppStream/x86_64/os/
 gpgcheck=0
 enabled=1
 
