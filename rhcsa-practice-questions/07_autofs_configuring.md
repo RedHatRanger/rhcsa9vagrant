@@ -2,14 +2,11 @@
 # Configure autofs on Node1
 
 ### QUESTION #7
-Configure autofs to automount the home directories of netuser1 user. Note the following: 
-- netuser1's home directory is exported via NFS, which is available on node1.mydomain.com and your NFS-exports directory is /netdir for netuser1, 
-- netuser1's home directory is node1.mydomain.com:/home/guests/netuserX, 
-- netuser1's home directory should be automounted autofs service. 
-- home directories must be writable by their users. 
-- password for netuser is ```ablerate```. 
+Configure autofs to automount the home directories of remoteuserx user. Note the following: \
+   - remoteuserx directory is exported via NFS, which is available on classroom.example.com (192.168.13.162) and your NFS-exports directory is /ourhome/remoteuserx for remoteuserx, \
+   - remoteuserx's home directory should be automounted using autofs service. \
+   - home directories must be writable by their users. 
  
-
 ***
 (scroll down for an answer)
 
