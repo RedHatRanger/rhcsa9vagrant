@@ -20,14 +20,14 @@ Configure Your Node2 VM repository installed the packages distribution is availa
 [root@node2 ~]# vim /etc/yum.repos.d/pkg.repo
 
 [BaseOS]
-name=base
-baseurl=http://ansible.mydomain.com/rocky/x86_64/BaseOS
+name=BaseOS
+baseurl=https://download.rockylinux.org/pub/rocky/8/BaseOS/x86_64/os/
 gpgcheck=0
 enabled=1
 
 [AppStream]
-name=app
-baseurl=http://ansible.mydomain.com/rocky/x86_64/AppStream
+name=AppStream
+baseurl=https://download.rockylinux.org/pub/rocky/8/AppStream/x86_64/os/
 gpgcheck=0
 enabled=1
 
