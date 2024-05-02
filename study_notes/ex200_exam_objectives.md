@@ -75,7 +75,7 @@ RHCSA exam candidates should be able to accomplish the tasks below without assis
 - Set enforcing and permissive modes for SELinux
 - List and identify SELinux file and process context
 - Restore default file contexts
-- Manage SELinux port labels 
+- Manage SELinux port labels <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/03_selinux_fix_add_port_82.md">Lab #3</a>
 - Use boolean settings to modify system SELinux settings
 - Diagnose and address routine SELinux policy violations
 
