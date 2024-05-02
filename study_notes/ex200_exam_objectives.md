@@ -43,9 +43,9 @@ RHCSA exam candidates should be able to accomplish the tasks below without assis
 ### Create and configure file systems
 - Create, mount, unmount, and use vfat, ext4, and xfs file systems
 - Mount and unmount network file systems using NFS
-- Configure autofs
-- Extend existing logical volumes
-- Create and configure set-GID directories for collaboration
+- Configure autofs (SEE LAB #7)
+- Extend existing logical volumes (SEE LAB #15)
+- Create and configure set-GID directories for collaboration (SEE LAB #5)
 - Diagnose and correct file permission problems
 
 ### Deploy, configure, and maintain systems
