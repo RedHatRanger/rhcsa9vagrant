@@ -80,7 +80,7 @@ RHCSA exam candidates should be able to accomplish the tasks below without assis
 - Diagnose and address routine SELinux policy violations
 
 ### Manage containers
-- Find and retrieve container images from a remote registry
+- Find and retrieve container images from a remote registry (SEE LAB #20)
 - Inspect container images
 - Perform container management using commands such as podman and skopeo
 - Build a container from a Containerfile
