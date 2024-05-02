@@ -4,7 +4,7 @@ RHCSA exam candidates should be able to accomplish the tasks below without assis
 ### Understand and use essential tools
 - Access a shell prompt and issue commands with correct syntax
 - Use input-output redirection (>, >>, |, 2>, etc.)
-- Use grep and regular expressions to analyze text (SEE LAB #12)
+- Use grep and regular expressions to analyze text <a href="https://www.w3schools.com/">LAB #12</a>
 - Access remote systems using SSH (SEE LAB #21)
 - Log in and switch users in multiuser targets
 - Archive, compress, unpack, and uncompress files using tar, gzip, and bzip2 (SEE LAB #8)
