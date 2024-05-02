@@ -14,7 +14,7 @@ Create a soft link for /var/log/messages in the /root directory.
 
 * This is pretty straight forward, but you need to know that the source file you are referencing comes first,
 then the location you want to put it.
-***THE SYNTAX IS*** ```ln -s <src> <dst>```
+* ***THE SYNTAX IS*** ```ln -s <src> <dst>```
 
 ```
 [root@node2 ~]# ln -s /var/log/messages /root
