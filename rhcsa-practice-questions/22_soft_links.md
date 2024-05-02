@@ -17,8 +17,7 @@ then the location you want to put it.
 
 ```
 [root@node2 ~]# ln -s /var/log/messages /root
-[root@node2 ~]# alias ll='ls -l --color=auto'
-[root@node2 ~]# ll /root
+[root@node2 ~]# ls -l /root
 -rw-r--r--. 1 root root  591 Nov  2  2022 google-cloud.repo
 lrwxrwxrwx. 1 root root   17 May  2 19:06 messages -> /var/log/messages
 -rw-r--r--. 1 root root   54 May  2 19:04 post-run.log
