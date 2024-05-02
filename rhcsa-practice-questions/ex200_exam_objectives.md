@@ -84,10 +84,10 @@ RHCSA exam candidates should be able to accomplish the tasks below without assis
 - Inspect container images <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/20_container_building.md">LAB #20</a>
 - Perform container management using commands such as podman and skopeo <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/20_container_building.md">LAB #20</a>
 - Build a container from a Containerfile <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/20_container_building.md">LAB #20</a>
-- Perform basic container management such as running, starting, stopping, and listing running containers (SEE LAB #21)
-- Run a service inside a container (SEE LAB #21)
-- Configure a container to start automatically as a systemd service (SEE LAB #21)
-- Attach persistent storage to a container (SEE LAB #21)
+- Perform basic container management such as running, starting, stopping, and listing running containers <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/21_container_service.md">LAB #21</a>
+- Run a service inside a container <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/21_container_service.md">LAB #21</a>
+- Configure a container to start automatically as a systemd service <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/21_container_service.md">LAB #21</a>
+- Attach persistent storage to a container <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/21_container_service.md">LAB #21</a>
 - As with all Red Hat performance-based exams, configurations must persist after reboot without intervention. 
 
 ## ***Red Hat reserves the right to add, modify, and remove objectives. Such changes will be made public in advance through revisions to this document:***
