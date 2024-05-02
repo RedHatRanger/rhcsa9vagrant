@@ -68,6 +68,6 @@ MAILTO=root
 
 ### Additional comments:
 
-The log file does not need to exist - it will be created automatically. \
-Of course **root** user can edit crontab of every user with flag **-u** **specifying user name**. \
-It is worth remembering that there are **/etc/cron.allow** and **/etc/cron.deny**. 
+* The log file does not need to exist - it will be created automatically. \
+* Of course **root** user can edit crontab of every user with flag **-u** **specifying user name**. \
+* It is worth remembering that there are **/etc/cron.allow** and **/etc/cron.deny**. 
