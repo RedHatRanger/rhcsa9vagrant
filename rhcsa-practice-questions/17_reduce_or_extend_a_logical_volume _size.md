@@ -5,8 +5,9 @@
 ### QUESTION #17:
 Resize your wshare logical volume you created in Lab #15, it should be approx 300MB ( note -> only size accepted from 270mb to 290mb).  
 
-***Note: In the real world, there could be losses of data, so YOU MUST BACKUP YOUR DATA before doing this operation!*** \
-Reducing the LVM may or may not be on the actual exam, but it is good to know how to do anyway.  You will more likely see LVEXTEND.
+***Note: In the real world, there could be losses of data, so YOU MUST BACKUP YOUR DATA before doing this operation!*** 
+<br/><br/>
+LVMREDUCE may or may not be on the actual exam, but it is good to know how to do anyway.  You will more likely see LVEXTEND.
 
 ***
 (scroll down for an answer)
