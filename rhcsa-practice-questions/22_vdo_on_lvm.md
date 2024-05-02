@@ -2,6 +2,7 @@
 
 ### QUESTION #22 - VDO on LVM
 Create a VDO named vdo1 of size 50Gb and mount it at /vdo_m. 
+  - This may or may not be on the actual exam, but you may still attempt it anyway.
 
 ***
 (scroll down for an answer)
