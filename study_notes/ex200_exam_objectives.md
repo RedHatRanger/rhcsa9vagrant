@@ -10,7 +10,7 @@ RHCSA exam candidates should be able to accomplish the tasks below without assis
 - Archive, compress, unpack, and uncompress files using tar, gzip, and bzip2 (SEE LAB #8)
 - Create and edit text files (ALL THE LABS PRETTY MUCH)
 - Create, delete, copy, and move files and directories (ALL THE LABS PRETTY MUCH)
-- Create hard and soft links (ln -s <src> <dst>) (SEE LAB #22)
+- Create hard and soft links <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/22_soft_links.md">LAB #22</a>
 - List, set, and change standard ugo/rwx permissions
 - Locate, read, and use system documentation including man, info, and files in /usr/share/doc
 
