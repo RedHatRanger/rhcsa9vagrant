@@ -21,7 +21,7 @@ And the user directory ```/opt/processed``` to container directory ```/opt/outgo
 [root@node2 ~]# chown andrew:andrew /opt/files /opt/processed
 [root@node2 ~]# loginctl enable-linger andrew
 [root@node2 ~]# ssh andrew@localhost
-[andrew@node2 ~]$ podman run -d --name myapp -v /opt/files/:/opt/incoming:Z -v /opt/processed/:/opt/outgoing:Z
+[andrew@node2 ~]$ podman run -d --name myapp -v /opt/files/:/opt/incoming:Z -v /opt/processed/:/opt/outgoing:Z myapp
 [andrew@node2 ~]$ podman ps
 
 CONTAINER ID   IMAGE                           COMMAND                  CREATED         STATUS          PORTS                 NAMES
