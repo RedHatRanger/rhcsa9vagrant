@@ -80,10 +80,10 @@ RHCSA exam candidates should be able to accomplish the tasks below without assis
 - Diagnose and address routine SELinux policy violations
 
 ### Manage containers
-- Find and retrieve container images from a remote registry (SEE LAB #20)
-- Inspect container images (SEE LAB #20)
-- Perform container management using commands such as podman and skopeo (SEE LAB #20)
-- Build a container from a Containerfile (SEE LAB #20)
+- Find and retrieve container images from a remote registry <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/20_container_building.md">LAB #20</a>
+- Inspect container images <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/20_container_building.md">LAB #20</a>
+- Perform container management using commands such as podman and skopeo <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/20_container_building.md">LAB #20</a>
+- Build a container from a Containerfile <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/20_container_building.md">LAB #20</a>
 - Perform basic container management such as running, starting, stopping, and listing running containers (SEE LAB #21)
 - Run a service inside a container (SEE LAB #21)
 - Configure a container to start automatically as a systemd service (SEE LAB #21)
