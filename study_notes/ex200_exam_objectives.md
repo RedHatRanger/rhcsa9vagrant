@@ -4,13 +4,13 @@ RHCSA exam candidates should be able to accomplish the tasks below without assis
 ### Understand and use essential tools
 - Access a shell prompt and issue commands with correct syntax
 - Use input-output redirection (>, >>, |, 2>, etc.)
-- Use grep and regular expressions to analyze text
-- Access remote systems using SSH
+- Use grep and regular expressions to analyze text (SEE LAB #12)
+- Access remote systems using SSH (SEE LAB #21)
 - Log in and switch users in multiuser targets
 - Archive, compress, unpack, and uncompress files using tar, gzip, and bzip2 (SEE LAB #8)
 - Create and edit text files (ALL THE LABS PRETTY MUCH)
 - Create, delete, copy, and move files and directories (ALL THE LABS PRETTY MUCH)
-- Create hard and soft links (ln -s <src> <dst>)
+- Create hard and soft links (ln -s <src> <dst>) (SEE LAB #22)
 - List, set, and change standard ugo/rwx permissions
 - Locate, read, and use system documentation including man, info, and files in /usr/share/doc
 
@@ -26,10 +26,10 @@ RHCSA exam candidates should be able to accomplish the tasks below without assis
 - Interrupt the boot process in order to gain access to a system
 - Identify CPU/memory intensive processes and kill processes
 - Adjust process scheduling
-- Manage tuning profiles
+- Manage tuning profiles (SEE LAB #18)
 - Locate and interpret system log files and journals
 - Preserve system journals
-- Start, stop, and check the status of network services (systemctl start/stop/status/enable/disable <service>)
+- Start, stop, and check the status of network services
 - Securely transfer files between systems
 
 ### Configure local storage
@@ -49,7 +49,7 @@ RHCSA exam candidates should be able to accomplish the tasks below without assis
 - Diagnose and correct file permission problems
 
 ### Deploy, configure, and maintain systems
-- Schedule tasks using at and cron
+- Schedule tasks using at and cron (SEE LAB #6)
 - Start and stop services and configure services to start automatically at boot
 - Configure systems to boot into a specific target automatically
 - Configure time service clients
