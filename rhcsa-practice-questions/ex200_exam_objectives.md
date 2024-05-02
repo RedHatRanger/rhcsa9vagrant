@@ -63,10 +63,10 @@ RHCSA exam candidates should be able to accomplish the tasks below without assis
 - Restrict network access using firewall-cmd/firewall
 
 ### Manage users and groups
-- Create, delete, and modify local user accounts
-- Change passwords and adjust password aging for local user accounts
+- Create, delete, and modify local user accounts <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/04_create_users_with_secondary_groups.md">Lab #4</a>
+- Change passwords and adjust password aging for local user accounts <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/04_create_users_with_secondary_groups.md">Lab #4</a>
 - Create, delete, and modify local groups and group memberships
-- Configure superuser access
+- Configure superuser access <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/04_create_users_with_secondary_groups.md">Lab #4</a>
 
 ### Manage security
 - Configure firewall settings using firewall-cmd/firewalld
