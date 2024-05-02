@@ -25,7 +25,7 @@ And the user directory ```/opt/processed``` to container directory ```/opt/outgo
 [andrew@node2 ~]$ podman ps
 
 CONTAINER ID   IMAGE                           COMMAND                  CREATED         STATUS          PORTS                 NAMES
-af03e63960ad   localhost/myapp                 /usr/bin/run-http...    3 seconds ago   Up 3 seconds                            mycontainer
+af03e63960ad   localhost/myapp                 /usr/bin/run-http...    3 seconds ago   Up 3 seconds                           myapp
 ```
 
 * Let's see if Andrew has the right permissions to have Linger:
@@ -56,8 +56,8 @@ Linger=yes
 
 * We need to generate the service file in that directory: 
 ```
-[andrew@node2 user]$ podman generate systemd --name mycontainer --files --new
-/home/andrew/.config/systemd/user/container-mycontainer.service
+[andrew@node2 user]$ podman generate systemd --name myapp --new --files
+/home/andrew/.config/systemd/user/container-myapp.service
 [andrew@node2 user]$
 ```
 
