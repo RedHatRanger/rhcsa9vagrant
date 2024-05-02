@@ -7,7 +7,7 @@ RHCSA exam candidates should be able to accomplish the tasks below without assis
 - Use grep and regular expressions to analyze text <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/12_grep_search_string_and_redirect.md">LAB #12</a>
 - Access remote systems using SSH (SEE LAB #21)
 - Log in and switch users in multiuser targets
-- Archive, compress, unpack, and uncompress files using tar, gzip, and bzip2 (SEE LAB #8)
+- Archive, compress, unpack, and uncompress files using tar, gzip, and bzip2 <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/08_tar_bz2_tar_tgz_archive.md">LAB #8</a>
 - Create and edit text files (ALL THE LABS PRETTY MUCH)
 - Create, delete, copy, and move files and directories (ALL THE LABS PRETTY MUCH)
 - Create hard and soft links <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/22_soft_links.md">LAB #22</a>
