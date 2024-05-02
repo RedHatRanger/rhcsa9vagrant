@@ -7,10 +7,10 @@ RHCSA exam candidates should be able to accomplish the tasks below without assis
 - Use grep and regular expressions to analyze text
 - Access remote systems using SSH
 - Log in and switch users in multiuser targets
-- Archive, compress, unpack, and uncompress files using tar, gzip, and bzip2
-- Create and edit text files (vim /path/to/file or touch /path/to/file)
-- Create, delete, copy, and move files and directories
-- Create hard and soft links
+- Archive, compress, unpack, and uncompress files using tar, gzip, and bzip2 (SEE LAB #8)
+- Create and edit text files (ALL THE LABS PRETTY MUCH)
+- Create, delete, copy, and move files and directories (ALL THE LABS PRETTY MUCH)
+- Create hard and soft links (ln -s <src> <dst>)
 - List, set, and change standard ugo/rwx permissions
 - Locate, read, and use system documentation including man, info, and files in /usr/share/doc
 
