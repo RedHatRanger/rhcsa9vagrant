@@ -57,9 +57,9 @@ RHCSA exam candidates should be able to accomplish the tasks below without assis
 - Modify the system bootloader
 
 ### Manage basic networking
-- Configure IPv4 and IPv6 addresses
-- Configure hostname resolution
-- Configure network services to start automatically at boot
+- Configure IPv4 and IPv6 addresses <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/01_setup_network_parameters_and_set_hostname.md">Lab #1</a>
+- Configure hostname resolution <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/01_setup_network_parameters_and_set_hostname.md">Lab #1</a>
+- Configure network services to start automatically at boot <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/01_setup_network_parameters_and_set_hostname.md">Lab #1</a>
 - Restrict network access using firewall-cmd/firewall
 
 ### Manage users and groups
@@ -75,7 +75,7 @@ RHCSA exam candidates should be able to accomplish the tasks below without assis
 - Set enforcing and permissive modes for SELinux
 - List and identify SELinux file and process context
 - Restore default file contexts
-- Manage SELinux port labels
+- Manage SELinux port labels 
 - Use boolean settings to modify system SELinux settings
 - Diagnose and address routine SELinux policy violations
 
