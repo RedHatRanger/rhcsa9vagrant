@@ -81,14 +81,14 @@ RHCSA exam candidates should be able to accomplish the tasks below without assis
 
 ### Manage containers
 - Find and retrieve container images from a remote registry (SEE LAB #20)
-- Inspect container images
-- Perform container management using commands such as podman and skopeo
-- Build a container from a Containerfile
-- Perform basic container management such as running, starting, stopping, and listing running containers
-- Run a service inside a container
-- Configure a container to start automatically as a systemd service
-- Attach persistent storage to a container
-- As with all Red Hat performance-based exams, configurations must persist after reboot without intervention.
+- Inspect container images (SEE LAB #20)
+- Perform container management using commands such as podman and skopeo (SEE LAB #20)
+- Build a container from a Containerfile (SEE LAB #20)
+- Perform basic container management such as running, starting, stopping, and listing running containers (SEE LAB #21)
+- Run a service inside a container (SEE LAB #21)
+- Configure a container to start automatically as a systemd service (SEE LAB #21)
+- Attach persistent storage to a container (SEE LAB #21)
+- As with all Red Hat performance-based exams, configurations must persist after reboot without intervention. 
 
 ## ***Red Hat reserves the right to add, modify, and remove objectives. Such changes will be made public in advance through revisions to this document:***
 https://www.redhat.com/en/services/training/ex200-red-hat-certified-system-administrator-rhcsa-exam?section=objectives
