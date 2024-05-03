@@ -121,7 +121,7 @@ realtime =none                   extsz=4096 blocks=0, rtextents=0
 
 ### QUESTION #15.2:
 Extend the Logical Volume you created, LV1 by 2GB.  Here is what you will learn:
-
+<br/><br/>
 Again, DexTutor's tutorial can be found <a href="https://www.youtube.com/watch?v=N3HFDvV-d-w">here</a>
 ***
 (scroll down for an answer)
@@ -152,8 +152,14 @@ log      =internal log           bsize=4096 blocks=2560, version=2
          =                       sectsz=512 sunit=0 blks, lazy-count=1
 realtime =none                   extsz=4096 blocks=0, rtextents=0
 data blocks changed from 2097152 to 2621440
+[root@node2 ~]#
+[root@node2 ~]# lvs
+LV  VG    Attr       LSize    Pool   Origin   Data%   Meta%  Move Log Cpy%Sync Convert
+LV1 VG1   -wi-a--    10.00g                                                    
+[root@node2 ~]#
 ```
 
+* But, let's say we want to make the size 2GB larger:
 
 
 
