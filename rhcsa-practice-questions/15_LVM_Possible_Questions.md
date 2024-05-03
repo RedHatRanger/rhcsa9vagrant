@@ -76,18 +76,6 @@ LV     VG     Attr      LSize  Pool Origin Data Metax Move Log Cy Sync Convert
 LV1    VG1    wi-a--    8.00g
 ```
 
-[root@node2 ~]# mkfs.ext4 /dev/wgroup/wshare
-mke2fs 1.46.5 (30-Dec-2021)
-Discarding device blocks: done                            
-Creating filesystem with 409600 1k blocks and 102400 inodes
-Filesystem UUID: dc2bedb3-e528-4c92-8ea3-a3c0619d769f
-Superblock backups stored on blocks: 
-  8193, 24577, 40961, 57345, 73729, 204801, 221185, 401409
-Allocating group tables: done                            
-Writing inode tables: done                            
-Creating journal (8192 blocks): done
-Writing superblocks and filesystem accounting information: done   
-```
 * Next, we will create an auto mount point in /etc/fstab:
 ```
 [root@node2 ~]# vim /etc/fstab
@@ -104,23 +92,37 @@ Writing superblocks and filesystem accounting information: done
 /dev/mapper/rhel_192-root /                       xfs     defaults        0 0
 UUID=0efecb9e-7ecd-47e0-ad64-507f7c994e18 /boot  xfs     defaults        0 0
 /dev/mapper/rhel_192-swap none                    swap    defaults        0 0
-/dev/wgroup/wshare       /mnt/wshare              ext4    defaults        0 0
+/dev/VG1/LV1             /lv                      xfs     defaults        0 0
 
 
 :wq
 ```
-* Run ```mount -a``` to mount the /etc/fstab mounts:
+
+* Create the mountpoint and then run ```mount -a``` to mount the /etc/fstab mounts:
 ```
+[root@node2 ~]# mkdir /lv
+[root@node2 ~]# mkfs.xfs /dev/VG1/LV1
+meta-data=/dev/vg1/lv1 isize=512 agcount=4, agsize=524288 blks
+         =                       sectsz=512 attr=2, projid32bit=1
+         =                       crc=1 finobt=1, sparse=1, rmapbt=0
+data     =                       bsize=4096 blocks=2097152, imaxpct=25
+         =                       sunit=0 swidth=0 blks
+naming   =version 2              bsize=4096 ascii-ci=0, ftype=1
+log      =internal log           bsize=4096 blocks=2560, version=2
+         =                       sectsz=512 sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096 blocks=0, rtextents=0
+[root@node2 ~]# 
+[root@node2 ~]# systemctl daemon-reload
 [root@node2 ~]# mount -a
-[root@node2 ~]# df -h
-Filesystem                      Size  Used Avail Use% Mounted on
-devtmpfs                        867M    0  867M   0% /dev
-tmpfs                           007M    0  007M   0% /dev/shm
-tmpfs                           355M  5.1M  350M   2% /run
-/dev/mapper/rhel_192-root       8.0G  1.6G  6.5G  20% /
-/dev/vda1                       1014M  220M  795M  22% /boot
-tmpfs                           178M    0  178M   0% /run/user/0
-/dev/mapper/wgroup-wshare       365M   14K  341M   1% /mnt/wshare
 ```
 
 * SUCCESS!!
+
+
+
+
+
+
+
+
+
