@@ -112,7 +112,6 @@ log      =internal log           bsize=4096 blocks=2560, version=2
          =                       sectsz=512 sunit=0 blks, lazy-count=1
 realtime =none                   extsz=4096 blocks=0, rtextents=0
 [root@node2 ~]# 
-[root@node2 ~]# systemctl daemon-reload
 [root@node2 ~]# mount -a
 ```
 
@@ -159,9 +158,36 @@ LV1 VG1   -wi-a--    10.00g
 [root@node2 ~]#
 ```
 
-* But, let's say we want to make the size 2GB larger:
+* But, let's say we want to make the size 2GB larger...We only have 1016.00MB free on the Volume Group here:
+```                                          
+[root@node2 ~]# vgs
+VG  PV  LV  SN Attr   VSize   VFree
+VG1 2   1   0  wz--n- 10.99g  1016.08m
 
+[root@node2 ~]# pvs
+PV               VG  Fmt  Attr  PSize   PFree
+/dev/sdb         VG1 lvm2 a--   <6.00g    0 
+/dev/sdc         VG1 lvm2 a--   <5.00g   1016.00m
+/dev/sdd         VG1 lvm2 ---   <4.00g   4.0g
+```
 
+* Let's extend the Volume Group into our 3rd Hard Disk for 2GB more (NO NEED TO UNMOUNT ANY MOUNTED PARTITIONS):
+```
+[root@node2 ~]# vgextend VG1 /dev/sdd
+[root@localhost ~]# lvextend -r -L +2G /dev/VG1/LV1
+Size of logical volume VG1/LV1 changed from 10.8 GiB (2568 extents) to 12.8 GiB (3072 extents).
+Logical volume VG1/LV1 successfully resized.
+meta-data=/dev/mapper/VG1-LV1 isize=512 agcount=5, agsize=524288 blks
+         =                       sectsz=512 attr=2, projid32bit=1
+         =                       crc=1 finobt=1, sparse=1, rmapbt=0
+data     =                       bsize=4096 blocks=2621440, imaxpct=25
+         =                       sunit=0 swidth=8 blks
+naming   =version 2              bsize=4096 ascii-ci=0, ftype=1
+log      =internal log           bsize=4096 blocks=2560, version=2
+         =                       sectsz=512 sunit=8 blks, lazy-count=1
+realtime =none                   extsz=4096 blocks=0, rtextents=0
+data blocks changed from 2621440 to 3145728
+```
 
 
 
