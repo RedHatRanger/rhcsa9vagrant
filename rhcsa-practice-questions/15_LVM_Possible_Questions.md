@@ -1,6 +1,6 @@
 ***On Node2***
 
-# Creating a Logical Volume Size 8Gb
+# Logical Volume Management
 
 ### QUESTION #15.1:
 Create a Logical Volume named LV1 of size 8GB using the extra storage provided.  Here is what you will learn:
