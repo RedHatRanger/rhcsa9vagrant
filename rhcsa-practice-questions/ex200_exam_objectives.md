@@ -95,5 +95,8 @@ https://www.redhat.com/en/services/training/ex200-red-hat-certified-system-admin
 
 Purchase the EX200 Exam here:
 https://www.redhat.com/en/services/training/ex200-red-hat-certified-system-administrator-rhcsa-exam \
-AND here:
+AND to schedule click here:
 https://rhtapps.redhat.com/individualexamscheduler/#/
+
+* What the exam scheduler looks like:
+![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/b2f582ab-12dc-42da-900b-b0d96373bb08)
