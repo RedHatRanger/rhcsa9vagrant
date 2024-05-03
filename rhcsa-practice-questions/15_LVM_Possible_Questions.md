@@ -227,6 +227,42 @@ Again, DexTutor's tutorial can be found <a href="https://www.youtube.com/watch?v
   VG UUID               URDhJh-QMzL-mWJY-1PKT-0FNC-a2UB-A1XyvP
 ```
 
+* By default, the PE or "Physical Extents" size is 4MB, but since the question is calling for extents to be 8MB in size:
+```
+[root@node2 ~]# umount -l /lv
+[root@node2 ~]# lvchange -an /dev/VG1/LV1
+[root@node2 ~]# lvremove /dev/VG1/LV1
+  Logical volume "LV1" successfully removed
+[root@node2 ~]# vgremove VG1
+  Volume group "VG1" successfully removed
+[root@node2 ~]# vgs
+[root@node2 ~]#
+[root@node2 ~]# vgcreate -s 8MB VG1 /dev/sda
+  Volume group "VG1" successfully created
+[root@node2 ~]# vgdisplay
+  --- Volume group ---
+  VG Name               UG1
+  System ID             
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  1
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                0
+  Open LV               0
+  Max PV                1
+  Cur PV                1
+  Act PV                1
+  VG Size               5.99 GiB
+  PE Size               8.00 MiB
+  Total PE              767
+  Alloc PE / Size       0 / 0
+  Free  PE / Size       767 / 5.99 GiB
+  VG UUID               cmrSly-Yd61-aqua-mtTS-Fkcl-dN1b-NICrPJ
+```
+
+* Notice in the above output that the Extents have changed to 8MB (PE):
 
 
 
