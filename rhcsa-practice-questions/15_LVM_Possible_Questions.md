@@ -119,7 +119,7 @@ realtime =none                   extsz=4096 blocks=0, rtextents=0
 
 
 ### QUESTION #15.2:
-Extend the Logical Volume you created, LV1 by 2GB.  Here is what you will learn:
+Extend the Logical Volume you created, LV1 by 2GB. 
 <br/><br/>
 Again, DexTutor's tutorial can be found <a href="https://www.youtube.com/watch?v=N3HFDvV-d-w">here</a>
 ***
@@ -189,8 +189,43 @@ realtime =none                   extsz=4096 blocks=0, rtextents=0
 data blocks changed from 2621440 to 3145728
 ```
 
+* SUCCESS!!
 
+### QUESTION #15.3:
+Create a Logical Volume named LV2 with 10 extent where the size of each extent is 8MB.
+<br/><br/>
+Again, DexTutor's tutorial can be found <a href="https://www.youtube.com/watch?v=N3HFDvV-d-w">here</a>
+***
+(scroll down for an answer)
 
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+### ANSWER #15.3:
+
+* Let's first have a look at our volume group:
+```
+[root@node2 ~]# vdisplay
+  --- Volume group ---
+  VG Name               UG1
+  System ID             
+  Format                lvm2
+  Metadata Areas        3
+  Metadata Sequence No  5
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                1
+  Open LV               1
+  Max PV                3
+  Cur PV                3
+  Act PV                3
+  VG Size               14.99 GiB
+  PE Size               4.00 MiB
+  Total PE              3837
+  Alloc PE / Size       3072 / <12.88 GiB
+  Free  PE / Size       765 / <2.99 GiB
+  VG UUID               URDhJh-QMzL-mWJY-1PKT-0FNC-a2UB-A1XyvP
+```
 
 
 
