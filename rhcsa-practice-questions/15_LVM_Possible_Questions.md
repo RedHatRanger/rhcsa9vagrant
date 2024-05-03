@@ -121,9 +121,8 @@ realtime =none                   extsz=4096 blocks=0, rtextents=0
 
 ### QUESTION #15.2:
 Extend the Logical Volume you created, LV1 by 2GB.  Here is what you will learn:
-![image](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/47206a5d-73f3-483e-b9d6-e3f35aea26ab)
 
-DexTutor's tutorial can be found <a href="https://www.youtube.com/watch?v=N3HFDvV-d-w">here</a>
+Again, DexTutor's tutorial can be found <a href="https://www.youtube.com/watch?v=N3HFDvV-d-w">here</a>
 ***
 (scroll down for an answer)
 
