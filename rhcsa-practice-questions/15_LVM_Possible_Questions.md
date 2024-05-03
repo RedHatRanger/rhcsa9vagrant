@@ -59,7 +59,7 @@ PU           VG      Fmt    Attr    PSize   PFree
 [root@node2 ~]# vgcreate VG1 /dev/sdb /dev/sdc
   Volume group "VG1" successfully created
 [root@node2 ~]# vgs
-VG   #PU  #LV #SN Attr     USize   UFree
+VG   #PU  #LV #SN Attr     VSize   VFree
 VG1  2    0   0   wz--n-   10.99g  10.99g
 ```
 
@@ -130,6 +130,33 @@ DexTutor's tutorial can be found <a href="https://www.youtube.com/watch?v=N3HFDv
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 ### ANSWER #15.2:
+
+* We will need to check if we have to make additional space on the Volume Group, VG1 for 2GB, so lets just see what we have:
+```
+[root@node2 ~]# vgs
+VG   #PV  #LV #SN   Attr     VSize   VFree
+VG1  2    1   0     wz--n-   10.99g  2.99g
+```
+
+* This will work in this case because we have pretty close to 3GB left in the Volume Group, so we will simply use ```lvextend```:
+```
+[root@node2 ~]# lvextend -r -L +2Gb /dev/VG1/LV1
+Size of logical volume VG1/LV1 changed from 8.0 GiB (2048 extents) to 10.0 GiB (2560 extents)
+Logical volume VG1/LV1 successfully resized.
+meta-data=/dev/mapper/VG1-LV1    isize=512 agcount=4, agsize=524288 blks
+         =                       sectsz=512 attr=2, projid32bit=1
+         =                       crc=1 finobt=1, sparse=1, rmapbt=0
+data     =                       bsize=4096 blocks=2097152, imaxpct=25
+         =                       sunit=0 swidth=0 blks
+naming   =version 2              bsize=4096 ascii-ci=0, ftype=1
+log      =internal log           bsize=4096 blocks=2560, version=2
+         =                       sectsz=512 sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096 blocks=0, rtextents=0
+data blocks changed from 2097152 to 2621440
+```
+
+
+
 
 
 
