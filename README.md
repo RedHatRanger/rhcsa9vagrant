@@ -63,6 +63,8 @@ SHELL
 investigate this lab for ssh:
 https://youtu.be/WDDkDw3LI3U?si=0B42I4X_EpYB-t-q
 
+and this lab for journald persistence:
+https://youtu.be/gbzAVB8ie3Y?si=H_k48QkYJZGAbSnm
 
 Special Thanks to: https://github.com/gitmpr for providing the original Vagrantfile.  I've optimized it to most up-to-date version of Rocky 9 for use with Virtualbox and Windows 10/11.
 
