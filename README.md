@@ -60,6 +60,9 @@ My "To do" List:
  sudo systemctl isolate graphical.target \
 SHELL
 
+investigate this lab for ssh:
+https://youtu.be/WDDkDw3LI3U?si=0B42I4X_EpYB-t-q
+
 
 Special Thanks to: https://github.com/gitmpr for providing the original Vagrantfile.  I've optimized it to most up-to-date version of Rocky 9 for use with Virtualbox and Windows 10/11.
 
