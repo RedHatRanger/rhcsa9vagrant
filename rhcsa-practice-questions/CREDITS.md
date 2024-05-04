@@ -7,6 +7,8 @@ YouTuber: beanologi https://www.youtube.com/@beanologi \
 YouTuber: Tech Mate https://www.youtube.com/@tech-mate-io \
 YouTuber: Jiferrai Tech https://www.youtube.com/@jiferrai \
 YouTuber: Mr.Awesome Club 2.0 https://www.youtube.com/@Mr.AwesomeClub2.0 \
-YouTuber: Silent Solution https://www.youtube.com/playlist?list=PLiK1gcnWRMlgpXQk0PrIcbqwm4t_VIWmo
+YouTuber: Silent Solution https://www.youtube.com/playlist?list=PLiK1gcnWRMlgpXQk0PrIcbqwm4t_VIWmo \
+YouTuber: Teach Me Tech https://youtu.be/vhxn4TGgcmM?si=l69AfozjMSJiwrQk
 
-And to my dear friend, and mentor, Kyle L.
+
+And to my friend, and mentor, Kyle L.
