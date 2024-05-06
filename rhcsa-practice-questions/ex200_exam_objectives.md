@@ -12,8 +12,7 @@ RHCSA exam candidates should be able to accomplish the tasks below without assis
 - Create, delete, copy, and move files and directories (ALL THE LABS PRETTY MUCH)
 - Create hard and soft links <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/22_soft_links.md">LAB #22</a>
 - List, set, and change standard ugo/rwx permissions
-- Locate, read, and use system documentation including man, info, and files in /usr/share/doc
-
+- Locate, read, and use system documentation including man, info, and files in /usr/share/doc <a href="https://youtu.be/QOYgWxTcmjA?si=5FbtuyTdooElUfuk">(See this video)</a>
 ### Create simple shell scripts
 - Conditionally execute code (use of: if, test, [ ], etc.)
 - Use Looping constructs (for, etc.) to process file, command line input
