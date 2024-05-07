@@ -57,7 +57,7 @@ cd                          -fstype=iso9660,ro,nosuid,nodev          :/dev/cdrom
 #e2floppy                   -fstype=ext2                              :/dev/fd0
 #jaz                        -fstype=ext2                              :/dev/sdc1
 #removable                  -fstype=ext2                              :/dev/hdd
-*                           -rw,soft,intr                             192.168.99.10:/ourhome/remotueserx
+/ourhome/remoteuserx        -rw,soft,intr                             192.168.99.10:/ourhome/remotueserx
 
 
 :wq
