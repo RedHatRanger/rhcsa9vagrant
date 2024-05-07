@@ -1,7 +1,7 @@
 ***On Node2***
 # Create a Soft Link
 
-### QUESTION #22:
+### QUESTION #16:
 Create a soft link for /var/log/messages in the /root directory.
 
 ***
@@ -10,7 +10,7 @@ Create a soft link for /var/log/messages in the /root directory.
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-### ANSWER #22:
+### ANSWER #16:
 
 * This is pretty straight forward, but you need to know that the source file you are referencing comes first,
 then the location you want to put it.
