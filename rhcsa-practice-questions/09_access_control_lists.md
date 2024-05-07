@@ -10,7 +10,7 @@ Copy the file /etc/fstab to /var/tmp. Configure the permissions of /var/tmp/fsta
     - the file /var/tmp/fstab should not be execubable by anyone \
     - the user "natasha" is able to read and write /var/tmp/fstab \
     - the user "harry" can neither write nor read /var/tmp/fstab \
-    - all other users (current or future) have the ability to read /var/tmp/fstab \
+    - all other users (current or future) have the ability to read /var/tmp/fstab
 
 ***
 (scroll down for an answer)
