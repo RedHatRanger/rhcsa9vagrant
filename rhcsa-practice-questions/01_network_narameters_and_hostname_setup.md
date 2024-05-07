@@ -9,8 +9,6 @@ Gateway: 172.24.40.1
 DNS: 172.24.40.1
 
 Hostname: node1.mydomain.com
-
-Note: Still working on this one.  If you save these settings you won't have Internet access.
 ```
 
 (scroll down for an answer)
