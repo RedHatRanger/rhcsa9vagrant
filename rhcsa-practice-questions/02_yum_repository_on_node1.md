@@ -21,13 +21,13 @@ Configure Your Node1 VM repository installed the packages distribution is availa
 [BaseOS]
 name=base
 baseurl=https://download.rockylinux.org/pub/rocky/8/BaseOS/x86_64/os/
-gpgcheck=0
+gpgcheck=1
 enabled=1
 
 [AppStream]
 name=app
 baseurl=https://download.rockylinux.org/pub/rocky/8/AppStream/x86_64/os/
-gpgcheck=0
+gpgcheck=1
 enabled=1
 
 
