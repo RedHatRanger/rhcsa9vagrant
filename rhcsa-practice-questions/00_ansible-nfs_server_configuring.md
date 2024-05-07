@@ -16,14 +16,14 @@
 * Setup the shared directory: 
 ```
 [root@ansible ~]# mkdir -p /ourhome/remoteuserx
-[root@ansible ~]# chmod 777 /shared
+[root@ansible ~]# chmod 2770 /shared
 ```
 
 * Configure the ```/etc/exports``` file for sharing with Node1:
 ```
 [root@ansible ~]# vim /etc/exports
 
-/ourhome/remoteuserx 192.168.99.11(rw,sync,no_root_squash)
+/ourhome/remoteuserx 192.168.99.0/24(rw,sync,no_root_squash)
 
 
 :wq
