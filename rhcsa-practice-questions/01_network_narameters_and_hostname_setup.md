@@ -41,6 +41,24 @@ Option 2: One-liner Command:
 ```
 * Use ```ip addr``` to confirm the IPs are correct.  Then ```ssh root@172.24.40.40``` 
 
+* Next, to set the hostname:
+```
+hostnamectl set-hostname node1.mydomain.com
+```
+
+* Then type this below to update the new hostname in the terminal:
+```
+newgrp
+```
+
+* SUCCESS!!
+
+
+  
+### Additional comment:
+It is possible to edit existing connection using ```nmtui``` tool which can be easier. 
+Also when using GUI there is also graphical interface for it.
+
 * NOTE: *IF YOU ARE HAVING PROBLEMS WITH SSH, run*
 ```
 [root@node1 ~]# vim /etc/ssh/sshd_config
@@ -50,10 +68,3 @@ Change:
   PermitRootLogin to yes
   Pubkeyauthentication yes
   PasswordAuthentication yes. 
-  
-### Additional comment:
-It is possible to edit existing connection using ```nmtui``` tool which can be easier. 
-Also when using GUI there is also graphical interface for it.
-
-* Next, to set the hostname: ```hostnamectl set-hostname node1.mydomain.com```
-* Type ```exit``` and ```ssh root@node1.mydomain.com``` 
