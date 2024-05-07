@@ -3,7 +3,7 @@
 
 ### QUESTION #7 <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/00_ansible-nfs_server_configuring.md">See Lab #00</a> YOU MUST SET THIS UP PRIOR TO STARTING THIS ONE!
 Configure autofs to automount the home directories of remoteuserx user. Note the following: 
-   - remoteuserx directory is exported via NFS, which is available on ansible.mydomain.com (192.168.99.10) and your NFS-exports directory is /ourhome/remoteuserx for remoteuserx, 
+   - remoteuserx's directory is exported via NFS, which is available on ansible.mydomain.com (192.168.99.10) and your NFS-exports directory is /ourhome/remoteuserx for remoteuserx, 
    - remoteuserx's home directory should be automounted using autofs service. 
    - home directories must be writable by their users.
 ### DexTutor Tutorial can be found <a href="https://www.youtube.com/watch?v=uFpmRnAiB5k&list=PLlr7wO747mNrUoTuXhZ0REJw3hL4oWvLm&index=17">here</a> 
