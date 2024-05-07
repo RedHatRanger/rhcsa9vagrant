@@ -65,6 +65,41 @@ MAILTO=root
 * SUCCESS!!
 
 
+### Setting Up the at Command
+The at command is used to schedule commands to be executed at a particular time in the future. Here’s how to install and enable it:
+
+* Install the at package:
+```
+[root@node1 ~]# install at
+[root@node1 ~]# systemctl enable --now atd
+```
+
+* Schedule a task to run five minutes from the current time. It will create a text file in /tmp with the content "Hello, world!":
+```
+[root@node1 ~]# echo "echo 'Hello, world!' > /tmp/hello.txt" | at now + 5 minutes
+```
+
+* To list scheduled jobs:
+```
+[root@node1 ~]# atq
+```
+
+* View a specific job:
+```
+[root@node1 ~]# at -c <job number>
+```
+
+* Remove a scheduled job:
+```
+[root@node1 ~]# atrm <job number>
+```
+* For more information:
+```
+man at
+```
+
+* SUCCESS!!
+
 
 ### Additional comments:
 
