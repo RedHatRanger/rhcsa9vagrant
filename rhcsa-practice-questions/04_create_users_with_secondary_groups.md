@@ -94,3 +94,5 @@ If you just performed ```useradd harry``` and ```useradd natasha``` only, you ca
 [root@node1 ~]# usermod -aG sysadm harry
 [root@node1 ~]# usermod -aG sysadm natasha
 ```
+
+* You can set the primary group by using a little "g" instead.
