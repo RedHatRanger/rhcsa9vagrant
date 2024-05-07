@@ -58,7 +58,6 @@ Linger=yes
 ```
 [andrew@node2 user]$ podman generate systemd --name myapp --new --files
 /home/andrew/.config/systemd/user/container-myapp.service
-[andrew@node2 user]$ systemctl --user daemon-reload
 ```
 
 * Next, stop the running container:
