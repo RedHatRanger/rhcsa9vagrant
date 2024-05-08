@@ -18,7 +18,6 @@ Set a user password on the Grub bootloader to prevent the root password from bei
 [root@node2 ~]# grub2-setpassword
 Enter password:
 Confirm password:
-[root@node2 ~]#
 [root@node2 ~]# init 6
 ```
 
