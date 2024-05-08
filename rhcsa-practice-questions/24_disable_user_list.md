@@ -20,7 +20,8 @@ Disable the user list from showing up on the graphical user login (Gnome Display
 [org/gnome/login-screen]
 disable-user-list=true
 EOF
-[root@ansible ~]# init 6
+[root@ansible ~]# dconf update
+[root@ansible ~]# systemctl restart gdm
 ```
 
 * SUCCESS!!
