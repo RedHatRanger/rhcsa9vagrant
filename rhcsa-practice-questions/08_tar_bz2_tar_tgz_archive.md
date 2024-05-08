@@ -3,7 +3,7 @@
 # Create a tar archive of a file
 
 ### QUESTION #8
-Create a tar archive of "/etc/" Directory with .bz2 extension: \
+Create a tar archive of "/etc/" Directory with .bz2 extension: 
 - Tar archive named "myetcbackup.tar.bz2" should be placed in "/root/" Directory. 
  
 
