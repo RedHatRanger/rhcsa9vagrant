@@ -25,5 +25,3 @@ EOF
 ```
 
 * SUCCESS!!
-
-* SUCCESS!!
