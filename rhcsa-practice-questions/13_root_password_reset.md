@@ -1,3 +1,4 @@
+![1000008791](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/f5967b24-cef6-458f-8d5d-4f505879aca5)
 ***On Node2***
 # Restore root password on Node2 / Breaking into the System
 
