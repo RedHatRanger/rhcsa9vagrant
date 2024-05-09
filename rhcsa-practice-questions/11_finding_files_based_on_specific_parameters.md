@@ -52,4 +52,4 @@ NOTE: If you want to be able to run the script from any terminal:
 cp /opt/file-search.sh /usr/local/bin/
 ```
 
-SUCCESS!!
+* SUCCESS!!
