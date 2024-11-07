@@ -50,30 +50,31 @@ This method for resetting a root password consists of these steps:
    - Press **Ctrl+x** to boot with the modified parameters.
 
 3. **Access the Root Shell**
-   - The system now boots, but exits the process during initial ramdisk execution. If a prompt does not appear shortly, press **Enter** to see whether the prompt is obscured by kernel output.
+   - The system will boot into a single-user mode with a root shell prompt.
 
 4. **Remount the Root Filesystem**
-   - Remount the root file system with read and write capabilities. The file system is currently mounted on the `/sysroot` directory mount point.
+   - By default, the root filesystem is mounted as read-only. Remount it with read and write permissions:
      ```bash
-     switch_root:/# mount -o remount,rw /sysroot
+     mount -o remount,rw /
      ```
 
-5. **Change the Working Root Directory**
-   - Change the working root directory to `/sysroot`.
+5. **Reset the Root Password**
+   - Set a new root password by executing:
      ```bash
-     switch_root:/# chroot /sysroot
+     echo "root:newpassword" | chpasswd
      ```
+   - Follow the prompts to enter and confirm the new password.
 
-6. **Reset the Root Password**
-   - Reset the root password to a known value.
+6. **Handle SELinux Relabeling**
+   - To ensure SELinux contexts are correctly applied, create the `.autorelabel` file:
      ```bash
-     sh-4.2# echo "root:newpassword" | chpasswd
+     touch /.autorelabel
      ```
 
 7. **Force SELinux to Relabel**
    - Force SELinux to relabel during the next boot.
      ```bash
-     sh-4.2# touch /.autorelabel
+     touch /.autorelabel
      ```
 
    **Important:** The SELinux relabel in this method is required. SELinux detects whether an alternative access sequence occurred because the SELinux contexts are no longer present on the modified files. To trust the system again, SELinux will not boot until all files are properly relabeled.
@@ -118,7 +119,7 @@ In Red Hat Enterprise Linux (RHEL) 9, the process for resetting the root passwor
 5. **Reset the Root Password**
    - Set a new root password by executing:
      ```bash
-     passwd root
+     echo "root:newpassword" | chpasswd
      ```
    - Follow the prompts to enter and confirm the new password.
 
