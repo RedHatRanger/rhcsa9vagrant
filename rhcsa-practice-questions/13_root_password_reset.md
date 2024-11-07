@@ -1,4 +1,3 @@
-![1000008791](https://github.com/RedHatRanger/rhcsa9vagrant/assets/90477448/f5967b24-cef6-458f-8d5d-4f505879aca5)
 ***On Node2***
 # Restore root password on Node2 / Breaking into the System
 
@@ -113,7 +112,7 @@ In Red Hat Enterprise Linux (RHEL) 9, the process for resetting the root passwor
 5. **Reset the Root Password**
    - Set a new root password by executing:
      ```bash
-     passwd
+     passwd root
      ```
    - Follow the prompts to enter and confirm the new password.
 
@@ -124,10 +123,12 @@ In Red Hat Enterprise Linux (RHEL) 9, the process for resetting the root passwor
      ```
 
 7. **Reboot the System**
-   - Type `exec /sbin/init` to continue the boot process.
+   ![{7943B733-79E6-4A4F-9CC9-FAF8D1B495D9}](https://github.com/user-attachments/assets/cb19eda4-7fac-436d-b729-f65d945365ce)
+
+   - Type `exec /sbin/reboot -f` to continue the boot process.
    - The system will reboot and perform an SELinux relabeling, which may take some time.
 
-8. **Verify the New Root Password**
+9. **Verify the New Root Password**
    - After the system reboots, log in as `root` using the new password to confirm the reset was successful.
 
 ### Important Considerations
