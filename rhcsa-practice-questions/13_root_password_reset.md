@@ -37,7 +37,8 @@ This method for resetting a root password consists of these steps:
 
 2. **Edit the GRUB Boot Parameters**
    - Find the entry that is normally booted, and change it so that it halts execution during the initial ramdisk startup sequence.
-   - Use the cursor keys to highlight the entry that would normally be booted, and press **e**.
+   - Use the cursor keys to highlight the entry that would normally be booted, and press **e**. \
+   ![{85C2949A-91EC-444D-BF95-45DABA2BF78E}](https://github.com/user-attachments/assets/be371bea-352a-4f04-ab7d-3614e3f7d835) \
    - Use the cursor keys to move to the line that has the kernel and the kernel arguments. This line normally starts with `linux`.
    - At the end of this line, add the following parameters:
      ```
@@ -91,7 +92,8 @@ In Red Hat Enterprise Linux (RHEL) 9, the process for resetting the root passwor
    - During the boot process, when the GRUB menu appears, press any key (except **Enter**) to interrupt the automatic boot sequence.
 
 2. **Edit the GRUB Boot Parameters**
-   - Use the arrow keys to highlight the default boot entry.
+   - Use the arrow keys to highlight the default boot entry. \
+   ![{85C2949A-91EC-444D-BF95-45DABA2BF78E}](https://github.com/user-attachments/assets/be371bea-352a-4f04-ab7d-3614e3f7d835) \
    - Press **e** to edit the selected boot entry.
    - Locate the line that starts with `linux` and contains the kernel parameters.
    - At the end of this line, add the following parameters:
