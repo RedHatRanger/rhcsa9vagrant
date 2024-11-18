@@ -1,6 +1,6 @@
-# Red Hat Enterprise Linux RHCSA 9 Vagrant Lab for Exam EX200 using Rocky 9.4
+# Red Hat Enterprise Linux RHCSA 9 Vagrant Lab for Exam EX200 using Rocky 9.5
 
-# Updated on 2024-11-07
+# Updated on 2024-11-18
 
 # How to use this lab
 - install virtualbox (https://download.virtualbox.org/virtualbox/7.0.16/VirtualBox-7.0.16-162802-Win.exe)
