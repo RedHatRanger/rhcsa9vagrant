@@ -3,8 +3,8 @@
 # Updated on 2024-11-18
 
 # How to use this lab
-- install virtualbox (https://download.virtualbox.org/virtualbox/7.0.16/VirtualBox-7.0.16-162802-Win.exe)
-- install vagrant (https://releases.hashicorp.com/vagrant/2.4.1/vagrant_2.4.1_windows_amd64.msi)
+- install virtualbox (https://download.virtualbox.org/virtualbox/7.1.4/VirtualBox-7.1.4-165100-Win.exe)
+- install vagrant (https://releases.hashicorp.com/vagrant/2.4.3/vagrant_2.4.3_windows_amd64.msi)
 - Open a PowerShell Terminal Window
   ```
   mkdir ~/vagrant
