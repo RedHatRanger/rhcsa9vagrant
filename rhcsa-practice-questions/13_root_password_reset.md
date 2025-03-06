@@ -51,13 +51,8 @@ You do not know the root password on ```Node2```, but You have physical access t
    - Follow the prompts to enter and confirm the new password.
 
 <br><br>
-5. **Handle SELinux Relabeling**
-   - To ensure SELinux contexts are correctly applied, create the `.autorelabel` file:
-     ```bash
-     touch /.autorelabel
-     ```
 
-6. **Force SELinux to Relabel**
+5. **Force SELinux to Relabel**
    - Force SELinux to relabel during the next boot.
      ```bash
      touch /.autorelabel
@@ -65,10 +60,12 @@ You do not know the root password on ```Node2```, but You have physical access t
 
    **Important:** The SELinux relabel in this method is required. SELinux detects whether an alternative access sequence occurred because the SELinux contexts are no longer present on the modified files. To trust the system again, SELinux will not boot until all files are properly relabeled.
 
-7. **Reboot the System**
-   - Reboot the system by exiting from the chroot environment and from the switch_root prompt by typing `exit` twice.
+6. **Reboot the System**
+```
+exec /sbin/init
+```
 
-8. **Verify the Root Password**
+7. **Verify the Root Password**
    - Verify that the root password access is reset by either logging in as `root` or by logging in as a non-privileged user and switching to root with any method that requires entering the root password.
 
 <br><br>
