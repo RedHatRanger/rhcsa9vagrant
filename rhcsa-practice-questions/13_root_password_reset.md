@@ -1,3 +1,5 @@
+Tutorial Video Link [Here](https://www.youtube.com/watch?v=-ZH4M-VShN8)
+
 ***On Node2***
 # Reset the root password on Node2 / "Breaking into the System"
 
