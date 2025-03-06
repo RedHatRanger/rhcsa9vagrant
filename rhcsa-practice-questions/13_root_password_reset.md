@@ -22,6 +22,7 @@ You do not know the root password on ```Node2```, but You have physical access t
 
 1. **Reboot the System**
 
+<br><br>
 2. **Edit the GRUB Boot Parameters**
    - Use the cursor keys to highlight the first option, then press **e** to edit the `boot parameters`. \
    ![{85C2949A-91EC-444D-BF95-45DABA2BF78E}](https://github.com/user-attachments/assets/be371bea-352a-4f04-ab7d-3614e3f7d835)
@@ -37,23 +38,19 @@ You do not know the root password on ```Node2```, but You have physical access t
 
    - Press **Ctrl+x** to boot with the modified parameters.
 
+<br><br>
 3. **Access the Root Shell**
    - The system will boot into a single-user mode with a root shell prompt.
 
-4. **Remount the Root Filesystem**
-   - By default, the root filesystem is mounted as read-only. Remount it with read and write permissions:
-     ```bash
-     mount -o remount,rw /
-     ```
-
-5. **Reset the Root Password**
+4. **Reset the Root Password**
    - Set a new root password by executing:
      ```bash
-     echo "root:newpassword" | chpasswd
+     passwd
      ```
    - Follow the prompts to enter and confirm the new password.
 
-6. **Handle SELinux Relabeling**
+<br><br>
+5. **Handle SELinux Relabeling**
    - To ensure SELinux contexts are correctly applied, create the `.autorelabel` file:
      ```bash
      touch /.autorelabel
@@ -115,12 +112,14 @@ In Red Hat Enterprise Linux (RHEL) 9, the process for resetting the root passwor
    - To ensure SELinux contexts are correctly applied, create the `.autorelabel` file:
      ```bash
      touch /.autorelabel
+
+     # The system will reboot and perform an SELinux relabeling, which may take some time.
      ```
-
+<br><br>
 7. **Reboot the System**
-   - Type `exec /sbin/reboot -f` to continue the boot process.
-   - The system will reboot and perform an SELinux relabeling, which may take some time.
+   - Type `exec /sbin/init` to reboot.
 
+<br><br>
 9. **Verify the New Root Password**
    - After the system reboots, log in as `root` using the new password to confirm the reset was successful.
 
@@ -130,4 +129,4 @@ In Red Hat Enterprise Linux (RHEL) 9, the process for resetting the root passwor
 
 For more detailed information, refer to Red Hat's official documentation on resetting the root password in RHEL 8 and RHEL 9.
 
-SUCCESS!!
+* SUCCESS!!
