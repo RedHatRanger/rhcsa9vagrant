@@ -31,9 +31,10 @@ You do not know the root password on ```Node2```, but You have physical access t
      ```
      init=/bin/bash
 
-     # Also don't forget to change the 'ro' to 'rw' in the middle of that line.
+     # Also don't forget to change the 'ro' to 'rw' in the middle of that line.  See example screen below
      ```
-   
+
+   <br>
    ![image](https://github.com/user-attachments/assets/351f17d2-aa52-4f1e-a327-6d08382c197a)
 
    - Press **Ctrl+x** to boot with the modified parameters.
