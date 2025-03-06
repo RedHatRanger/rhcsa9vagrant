@@ -1,5 +1,5 @@
 ***On Node2***
-# Restore root password on Node2 / Breaking into the System
+# Reset the root password on Node2 / "Breaking into the System"
 
 ### QUESTION #13:
 You do not know the root password on ```Node2```, but You have physical access to the machine. Create a new root password and log into the system.
