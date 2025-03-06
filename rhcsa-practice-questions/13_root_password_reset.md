@@ -17,15 +17,7 @@ You do not know the root password on ```Node2```, but You have physical access t
 ## Objectives
 - Reset the root password.
 
-### Resetting the Root Password (RHEL 8):
-When the root password for a system is lost or forgotten, an authorized administrator can reset it. Some methods can work remotely, such as through an SSH connection, while others require physical console access.
-
-If any user is still logged in as the root account on an unlocked terminal, then use that active session to change the password. Similarly, use any accessible account that has sufficient sudo shell or passwd command access to reset the root password.
-
-A more complex method is to manually edit the `/etc/shadow` file by copying in a known password hash from any account that has sudo text editor access, or by editing the virtual machine's disk image with the `guestfish` command.
-
-#### Rescue Mode
-If the previous methods are not available or unsuccessful, then rescue mode is an alternative. An administrator with physical system access can use the anaconda installation program's rescue mode to boot from installation media or an external media device, and then use that access to change the root password. This procedure requires that either the system's disks are not encrypted or that the encryption password is known. If the firmware password is configured and known, then you can boot from alternative devices on both BIOS and UEFI firmware. The anaconda rescue mode is accessed by booting from a Red Hat Enterprise Linux 8 boot media device, such as a USB installation device, and selecting the Troubleshooting option in the boot menu.
+### Resetting the Root Password (RHEL 9):
 
 #### Resetting the Root Password without External Media
 When the external boot media method is not available or unsuccessful, an administrator can use the systemd startup sequence to halt the initial ramdisk (initramfs) startup sequence. This method requires physical console access, or access through a remote management card or KVM switch, and knowledge of passwords for disk encryption and the boot loader, if configured.
