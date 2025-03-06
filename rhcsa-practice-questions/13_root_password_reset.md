@@ -28,7 +28,9 @@ You do not know the root password on ```Node2```, but You have physical access t
    - Now, move the cursor to the 3rd line that starts with `linux`.
    - At the end of this line, add the following parameters:
      ```
-     rw.break
+     init=/bin/bash
+
+     # Also don't forget to change the 'ro' to 'rw' in the middle of that line.
      ```
    
     ![{E351477F-C3F8-4E05-B1A9-591896C4352F}](https://github.com/user-attachments/assets/46c23b4b-bd24-4dce-b3fc-3fe47c0c0bf4)
