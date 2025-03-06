@@ -42,6 +42,7 @@ You do not know the root password on ```Node2```, but You have physical access t
 3. **Access the Root Shell**
    - The system will boot into a single-user mode with a root shell prompt.
 
+<br><br>
 4. **Reset the Root Password**
    - Set a new root password by executing:
      ```bash
