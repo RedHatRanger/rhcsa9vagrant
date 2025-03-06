@@ -16,7 +16,7 @@ You do not know the root password on ```Node2```, but You have physical access t
 
 ## Objectives
 - Reset the root password using this technique: \
-![image](https://github.com/user-attachments/assets/4038fca8-a13a-4eb0-bf97-2e238f75ce57)
+![image](https://github.com/user-attachments/assets/9a8d2e87-04ba-48a1-84a7-7fa1d21a3f69)
 
 ### Follow these steps:
 
