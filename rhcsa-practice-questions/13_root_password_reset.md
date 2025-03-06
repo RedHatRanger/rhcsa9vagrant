@@ -51,7 +51,6 @@ You do not know the root password on ```Node2```, but You have physical access t
    - Follow the prompts to enter and confirm the new password.
 
 <br><br>
-
 5. **Force SELinux to Relabel**
    - Force SELinux to relabel during the next boot.
      ```bash
