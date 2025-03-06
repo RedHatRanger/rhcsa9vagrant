@@ -12,26 +12,20 @@ You do not know the root password on ```Node2```, but You have physical access t
 
 ### ANSWER #13:
 
-# Resetting the Root Password (RHEL 8 and RHEL 9)
+# Resetting the Root Password (RHEL 9)
 
 ## Objectives
-- Reset the root password.
+- Reset the root password using this technique:
+![image](https://github.com/user-attachments/assets/4038fca8-a13a-4eb0-bf97-2e238f75ce57)
 
-### Resetting the Root Password (RHEL 9):
-
-#### Resetting the Root Password without External Media
-When the external boot media method is not available or unsuccessful, an administrator can use the systemd startup sequence to halt the initial ramdisk (initramfs) startup sequence. This method requires physical console access, or access through a remote management card or KVM switch, and knowledge of passwords for disk encryption and the boot loader, if configured.
-
-This method for resetting a root password consists of these steps:
+### Follow these steps:
 
 1. **Reboot the System**
-   - Reboot the system and interrupt the boot loader timer by pressing any key except **Enter**.
 
 2. **Edit the GRUB Boot Parameters**
-   - Find the entry that is normally booted, and change it so that it halts execution during the initial ramdisk startup sequence.
-   - Use the cursor keys to highlight the entry that would normally be booted, and press **e**. \
+   - Use the cursor keys to highlight the first option, then press **e** to edit the `boot parameters`. \
    ![{85C2949A-91EC-444D-BF95-45DABA2BF78E}](https://github.com/user-attachments/assets/be371bea-352a-4f04-ab7d-3614e3f7d835)
-   - Use the cursor keys to move to the line that has the kernel and the kernel arguments. This line normally starts with `linux`.
+   - Now, move the cursor to the 3rd line that starts with `linux`.
    - At the end of this line, add the following parameters:
      ```
      rw.break
