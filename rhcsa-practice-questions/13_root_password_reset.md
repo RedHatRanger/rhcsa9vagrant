@@ -15,7 +15,7 @@ You do not know the root password on ```Node2```, but You have physical access t
 # Resetting the Root Password (RHEL 9)
 
 ## Objectives
-- Reset the root password using this technique:
+- Reset the root password using this technique: \
 ![image](https://github.com/user-attachments/assets/4038fca8-a13a-4eb0-bf97-2e238f75ce57)
 
 ### Follow these steps:
