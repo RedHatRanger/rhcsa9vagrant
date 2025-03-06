@@ -34,7 +34,7 @@ You do not know the root password on ```Node2```, but You have physical access t
      # Also don't forget to change the 'ro' to 'rw' in the middle of that line.
      ```
    
-    ![image](https://github.com/user-attachments/assets/351f17d2-aa52-4f1e-a327-6d08382c197a)
+   ![image](https://github.com/user-attachments/assets/351f17d2-aa52-4f1e-a327-6d08382c197a)
 
    - Press **Ctrl+x** to boot with the modified parameters.
 
