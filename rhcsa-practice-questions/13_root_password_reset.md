@@ -25,7 +25,7 @@ You do not know the root password on ```Node2```, but You have physical access t
 
 <br><br>
 2. **Edit the GRUB Boot Parameters**
-   - Use the cursor keys to highlight the first option, then press **e** to edit the `boot parameters`. \
+   - Use the cursor keys to highlight the first option, then press `e` to edit the `boot parameters`. \
    ![{85C2949A-91EC-444D-BF95-45DABA2BF78E}](https://github.com/user-attachments/assets/be371bea-352a-4f04-ab7d-3614e3f7d835)
    - Now, move the cursor to the 3rd line that starts with `linux`.
    - At the end of this line, add the following parameters:
