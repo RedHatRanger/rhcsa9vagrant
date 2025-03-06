@@ -21,7 +21,7 @@ You do not know the root password on ```Node2```, but You have physical access t
 ## Instructions:
 
 <br>
-1. Reboot the System
+1. **Reboot the System**
 
 <br><br>
 2. **Edit the GRUB Boot Parameters**
