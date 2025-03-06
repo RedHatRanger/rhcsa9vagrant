@@ -59,14 +59,15 @@ You do not know the root password on ```Node2```, but You have physical access t
 
    **Important:** The SELinux relabel in this method is required. SELinux detects whether an alternative access sequence occurred because the SELinux contexts are no longer present on the modified files. To trust the system again, SELinux will not boot until all files are properly relabeled.
 
+<br><br>
 6. **Reboot the System**
 ```
 exec /sbin/init
 ```
 
+<br><br>
 7. **Verify the Root Password**
    - Verify that the root password access is reset by either logging in as `root` or by logging in as a non-privileged user and switching to root with any method that requires entering the root password.
 
 <br><br>
-
 * SUCCESS!!
