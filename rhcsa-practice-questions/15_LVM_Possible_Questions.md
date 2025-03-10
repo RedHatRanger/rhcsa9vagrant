@@ -44,9 +44,9 @@ vdd            252:18   0    4G  0 disk
 ### Step 2: Prepare Disks with parted
 Execute these commands for each new disk (`/dev/vdb`, `/dev/vdc`, `/dev/vdd`):
 ```bash
-parted /dev/vdb mklabel gpt
-parted -a opt /dev/vdb mkpart primary ext4 0% 100%
-parted /dev/vdb set 1 lvm on
+[root@node2 ~]# parted /dev/vdb mklabel gpt
+[root@node2 ~]# parted -a opt /dev/vdb mkpart primary xfs 0% 100%
+[root@node2 ~]# parted /dev/vdb set 1 lvm on
 ```
 >Repeat similarly for `/dev/vdc` and `/dev/vdd`.
 
