@@ -4,8 +4,8 @@
 
 ### QUESTION #14:
 Configure Your Node2 VM repository installed the packages distribution is available via YUM: \
-     - baseos url=https://download.rockylinux.org/pub/rocky/8/BaseOS/x86_64/os/ \
-     - appstream url=https://download.rockylinux.org/pub/rocky/8/AppStream/x86_64/os/ 
+     - baseos url=https://download.rockylinux.org/pub/rocky/9/BaseOS/x86_64/os/ \
+     - appstream url=https://download.rockylinux.org/pub/rocky/9/AppStream/x86_64/os/ 
 
 ***
 (scroll down for an answer)
@@ -21,13 +21,13 @@ Configure Your Node2 VM repository installed the packages distribution is availa
 
 [BaseOS]
 name=BaseOS
-baseurl=https://download.rockylinux.org/pub/rocky/8/BaseOS/x86_64/os/
+baseurl=https://download.rockylinux.org/pub/rocky/9/BaseOS/x86_64/os/
 gpgcheck=0
 enabled=1
 
 [AppStream]
 name=AppStream
-baseurl=https://download.rockylinux.org/pub/rocky/8/AppStream/x86_64/os/
+baseurl=https://download.rockylinux.org/pub/rocky/9/AppStream/x86_64/os/
 gpgcheck=0
 enabled=1
 
