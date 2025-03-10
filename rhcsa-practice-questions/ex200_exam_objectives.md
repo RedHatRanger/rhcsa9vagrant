@@ -10,7 +10,7 @@ RHCSA exam candidates should be able to accomplish the tasks below without assis
 - Archive, compress, unpack, and uncompress files using tar, gzip, and bzip2 <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/08_tar_bz2_tar_tgz_archive.md">LAB #8</a>
 - Create and edit text files (ALL THE LABS PRETTY MUCH)
 - Create, delete, copy, and move files and directories (ALL THE LABS PRETTY MUCH)
-- Create hard and soft links <a href="https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/22_soft_links.md">LAB #22</a>
+- Create hard and soft links [Lab #22](https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/22_soft_links.md)
 - List, set, and change standard ugo/rwx permissions
 - Locate, read, and use system documentation including man, info, and files in /usr/share/doc <a href="https://youtu.be/QOYgWxTcmjA?si=5FbtuyTdooElUfuk">(See this video)</a>
 ### Create simple shell scripts
@@ -22,7 +22,7 @@ RHCSA exam candidates should be able to accomplish the tasks below without assis
 ### Operate running systems
 - Boot, reboot, and shut down a system normally
 - Boot systems into different targets manually
-- Interrupt the boot process in order to gain access to a system
+- Interrupt the boot process in order to gain access to a system [Lab #13](https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/23_grub_bootloader_password.md)
 - Identify CPU/memory intensive processes and kill processes
 - Adjust process scheduling
 - Manage tuning profiles (SEE LAB #18)
