@@ -1,6 +1,7 @@
-## UPDATE 2025-03-10
+## UPDATE 2025-03-10:
 - Red Hat now provides a [FREE LAB](https://www.redhat.com/en/configure-a-rootless-podman-service) for this task
 
+<br><br>
 ***On Node2***
 # Container Service
 
