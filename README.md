@@ -1,9 +1,9 @@
-# Red Hat Enterprise Linux RHCSA 9 Vagrant Lab for Exam EX200 using Rocky 9.4
+# Red Hat Enterprise Linux RHCSA 9 Vagrant Lab for Exam EX200 using Rocky 9.5
 
-# Updated on 2024-11-18
+# Updated on 2025-03-10
 
 # How to use this lab
-- install virtualbox (https://download.virtualbox.org/virtualbox/7.1.4/VirtualBox-7.1.4-165100-Win.exe)
+- install virtualbox (https://download.virtualbox.org/virtualbox/7.1.6/VirtualBox-7.1.6-167084-Win.exe)
 - install vagrant (https://releases.hashicorp.com/vagrant/2.4.3/vagrant_2.4.3_windows_amd64.msi)
 - Open a PowerShell Terminal Window
   ```
@@ -68,6 +68,6 @@ https://youtu.be/gbzAVB8ie3Y?si=H_k48QkYJZGAbSnm
 
 Create a lab for ssh-keygen
 
-Special Thanks to: https://github.com/gitmpr for providing the original Vagrantfile.  I've optimized it to most up-to-date version of Rocky 9 for use with Virtualbox and Windows 10/11.
+Special Thanks to: https://github.com/gitmpr for providing the original Vagrantfile.  I've optimized it to most up-to-date version of Rocky 9 for use with Virtualbox and Windows 11.
 
 Please refer to the official Vagrant documentation here: https://developer.hashicorp.com/vagrant/tutorials/getting-started/getting-started-boxes
