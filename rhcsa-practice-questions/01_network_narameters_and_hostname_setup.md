@@ -39,7 +39,7 @@ Option 2: One-liner Command:
 
 * Then:
 ```
-[root@node1 ~]# nmcli con down eth1 && nmcli con up eth1
+[root@node1 ~]# nmcli con up eth1
 ```
 * Use ```ip addr``` to confirm the IPs are correct.  Then ```ssh root@172.24.40.40``` 
 
