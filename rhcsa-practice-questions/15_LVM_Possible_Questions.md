@@ -119,11 +119,38 @@ Again, DexTutor's tutorial can be found <a href="https://www.youtube.com/watch?v
 
 ### ANSWER #15.2:
 
-* We will need to check if we have to make additional space on the Volume Group, VG1 for 2GB, so lets just see what we have:
-```
+### Step 1: Extend Logical Volume by 2GB
+Check available space first:
+```bash
 [root@node2 ~]# vgs
 VG   #PV  #LV #SN   Attr     VSize   VFree
 VG1  2    1   0     wz--n-   10.99g  2.99g
+```
+
+>If space permits:
+```bash
+lvextend -r -L +2G /dev/VG1/LV1
+lvs
+```
+
+### Step 2: Extend Volume Group (if necessary)
+If you need more space:
+```bash
+vgextend VG1 /dev/vdd
+lvextend -r -L +2G /dev/VG1/LV1
+```
+
+### Step 3: Verify New Size
+```bash
+df -h
+```
+
+
+
+
+* We will need to check if we have to make additional space on the Volume Group, VG1 for 2GB, so lets just see what we have:
+```
+
 ```
 
 * This will work in this case because we have pretty close to 3GB left in the Volume Group, so we will simply use ```lvextend```:
@@ -285,28 +312,7 @@ Again, DexTutor's tutorial can be found <a href="https://www.youtube.com/watch?v
 
 
 
-### Step 9: Extend Logical Volume by 2GB
-Check available space first:
-```bash
-vgs
-```
-If space permits:
-```bash
-lvextend -r -L +2G /dev/VG1/LV1
-lvs
-```
 
-### Step 10: Extend Volume Group (if necessary)
-If you need more space:
-```bash
-vgextend VG1 /dev/vdd
-lvextend -r -L +2G /dev/VG1/LV1
-```
-
-### Step 11: Verify New Size
-```bash
-df -h
-```
 
 ### Step 12: Create Logical Volume with Custom Extent Size (8MB)
 Remove existing configuration if required and recreate:
