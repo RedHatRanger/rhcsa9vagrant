@@ -152,7 +152,7 @@ If you need more space:
 ### QUESTION #15.3:
 Create a Logical Volume named LV2 with 10 extent where the size of each extent is 8MB.
 <br/><br/>
-Again, DexTutor's tutorial can be found <a href="https://www.youtube.com/watch?v=N3HFDvV-d-w">here</a>
+DexTutor's tutorial can be found <a href="https://www.youtube.com/watch?v=N3HFDvV-d-w">here</a>
 ***
 (scroll down for an answer)
 
@@ -160,95 +160,49 @@ Again, DexTutor's tutorial can be found <a href="https://www.youtube.com/watch?v
 
 ### ANSWER #15.3:
 
-* Let's first have a look at our volume group:
-```
-[root@node2 ~]# vdisplay
-  --- Volume group ---
-  VG Name               UG1
-  System ID             
-  Format                lvm2
-  Metadata Areas        3
-  Metadata Sequence No  5
-  VG Access             read/write
-  VG Status             resizable
-  MAX LV                0
-  Cur LV                1
-  Open LV               1
-  Max PV                3
-  Cur PV                3
-  Act PV                3
-  VG Size               14.99 GiB
-  PE Size               4.00 MiB
-  Total PE              3837
-  Alloc PE / Size       3072 / <12.88 GiB
-  Free  PE / Size       765 / <2.99 GiB
-  VG UUID               URDhJh-QMzL-mWJY-1PKT-0FNC-a2UB-A1XyvP
+**Step 1: Check Current Volume Group Configuration**
+
+```bash
+[root@node2 ~]# vgdisplay
 ```
 
-* By default, the PE or "Physical Extents" size is 4MB, but since the question is calling for extents to be 8MB in size:
-```
+**Step 2: If current PE size isn't 8MB, recreate the volume group:**
+
+```bash
 [root@node2 ~]# umount -l /lv
 [root@node2 ~]# lvchange -an /dev/VG1/LV1
 [root@node2 ~]# lvremove /dev/VG1/LV1
-  Logical volume "LV1" successfully removed
 [root@node2 ~]# vgremove VG1
-  Volume group "VG1" successfully removed
-[root@node2 ~]# vgs
-[root@node2 ~]#
-[root@node2 ~]# vgcreate -s 8MB VG1 /dev/sda
-  Volume group "VG1" successfully created
-[root@node2 ~]# vgdisplay
-  --- Volume group ---
-  VG Name               UG1
-  System ID             
-  Format                lvm2
-  Metadata Areas        1
-  Metadata Sequence No  1
-  VG Access             read/write
-  VG Status             resizable
-  MAX LV                0
-  Cur LV                0
-  Open LV               0
-  Max PV                1
-  Cur PV                1
-  Act PV                1
-  VG Size               5.99 GiB
-  PE Size               8.00 MiB
-  Total PE              767
-  Alloc PE / Size       0 / 0
-  Free  PE / Size       767 / 5.99 GiB
-  VG UUID               cmrSly-Yd61-aqua-mtTS-Fkcl-dN1b-NICrPJ
 ```
 
-* Notice in the above output that the Extents have changed to 8MB (PE):
+**Step 3: Create a new Volume Group with 8MB extents:**
 
+```bash
+[root@node2 ~]# vgcreate -s 8MB VG1 /dev/vdb
+[root@node2 ~]# vgdisplay VG1
+```
 
+**Step 4: Create Logical Volume `LV2` with 10 extents:**
 
+```bash
+[root@node2 ~]# lvcreate -l 10 -n LV2 VG1
+[root@node2 ~]# lvs
+```
 
+Your Logical Volume `LV2` is now set up successfully with custom extent size.
 
+* SUCCESS!!
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+<br><br><br>
 ### Troubleshooting:
 Remove existing configuration if required and recreate:
 ```bash
-umount -l /lv
-lvchange -an /dev/VG1/LV1
-lvremove /dev/VG1/LV1
-vgremove VG1
-vgcreate -s 8MB VG1 /dev/vdb
-vgdisplay VG1
+[root@node2 ~]# umount -l /lv
+[root@node2 ~]# lvchange -an /dev/VG1/LV1
+[root@node2 ~]# lvremove /dev/VG1/LV1
+[root@node2 ~]# vgremove VG1
+[root@node2 ~]# vgcreate -s 8MB VG1 /dev/vdb
+[root@node2 ~]# vgdisplay VG1
 ```
 
 ---
