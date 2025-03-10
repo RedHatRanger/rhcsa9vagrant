@@ -57,12 +57,7 @@ lsblk
 
 ### Step 4: Create Physical Volumes
 ```bash
-[root@node2 ~]# pvcreate /dev/vdb
-  Physical volume "/dev/vdb1" successfully created.
-[root@node2 ~]# pvcreate /dev/vdc
-  Physical volume "/dev/vdc" successfully created.
-[root@node2 ~]# pvcreate /dev/vdd
-  Physical volume "/dev/vdd" successfully created.
+[root@node2 ~]# pvcreate /dev/vdb /dev/vdc /dev/vdd
 
 # We can verify that they are available:
 [root@node2 ~]# pvs
