@@ -1,6 +1,13 @@
+## UPDATED 2025-03-10:
+
+
+<br><br>
 ***On Node2***
 
-# Logical Volume Management
+# Lab #15: Logical Volume Management (LVM)
+
+## Objective:
+Create and manage Logical Volumes using parted
 
 ### QUESTION #15.1:
 Create a Logical Volume named LV1 of size 8GB using the extra storage provided.  Here is what you will learn:
@@ -18,9 +25,8 @@ DexTutor's tutorial can be found <a href="https://www.youtube.com/watch?v=N3HFDv
 * First, if you are running virtual machines, you will need to add an additional storage device here...6GB,5GB, and 4GB "Hard Disks"
 * You can shut down the virtual machine and then add the additional storage as needed.
 
-* Let's start by running ```lsblk``` to see what physically attached devices we have.
-
-```
+### Step 1: Verify Attached Storage
+```bash
 [root@node2 ~]# lsblk
 NAME           MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
 sro              11:0    1 1024M  0 rom
@@ -35,18 +41,30 @@ vdd            252:18   0    4G  0 disk
 [root@node2 ~]#
 ```
 
-* The first step is to create the **physical volumes**: 
+### Step 2: Prepare Disks with parted
+Execute these commands for each new disk (`/dev/vdb`, `/dev/vdc`, `/dev/vdd`):
+```bash
+parted /dev/vdb mklabel gpt
+parted -a opt /dev/vdb mkpart primary ext4 0% 100%
+parted /dev/vdb set 1 lvm on
 ```
+>Repeat similarly for `/dev/vdc` and `/dev/vdd`.
+
+### Step 3: Verify Partitioning
+```bash
+lsblk
+```
+
+### Step 4: Create Physical Volumes
+```bash
 [root@node2 ~]# pvcreate /dev/vdb
   Physical volume "/dev/vdb1" successfully created.
 [root@node2 ~]# pvcreate /dev/vdc
   Physical volume "/dev/vdc" successfully created.
 [root@node2 ~]# pvcreate /dev/vdd
   Physical volume "/dev/vdd" successfully created.
-```
 
-* We can verify that they are available:
-```
+# We can verify that they are available:
 [root@node2 ~]# pvs
 PU           VG      Fmt    Attr    PSize   PFree
 /dev/sdb             1um2   ---     6.00g   6.00g
@@ -54,70 +72,47 @@ PU           VG      Fmt    Attr    PSize   PFree
 /dev/sdd             1um2   ---     4.00g   4.00g
 ```
 
-* Next, we create the Volume Group ```LV1``` using two of our extra disks (11GB) because the 1st one was too small for 8GB:
-```
+### Step 5: Create Volume Group
+```bash
 [root@node2 ~]# vgcreate VG1 /dev/sdb /dev/sdc
   Volume group "VG1" successfully created
+
+# Verify the new VG1 has been created:
 [root@node2 ~]# vgs
 VG   #PU  #LV #SN Attr     VSize   VFree
 VG1  2    0   0   wz--n-   10.99g  10.99g
 ```
 
-* Now, we create the Logical Volume:
-```
+### Step 6: Create Logical Volume (LV1) using 8GB
+```bash
 [root@node2 ~]# lvcreate -L 8Gb -n LV1 VG1
   Logical volume "LV1" created.
-```
 
-* We can verify that the Logical Volume has been created:
-```
+# Verify:
 [root@node2 ~]# lvs
 LV     VG     Attr      LSize  Pool Origin Data Metax Move Log Cy Sync Convert
 LV1    VG1    wi-a--    8.00g
 ```
 
-* Next, we will create an auto mount point in /etc/fstab:
-```
-[root@node2 ~]# vim /etc/fstab
-
-# /etc/fstab
-# Created by anaconda on Fri Dec 30 16:18:12 2022
-#
-# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
-# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
-#
-# After editing this file, run 'systemctl daemon-reload' to update systemd
-# units generated from this file.
-#
-/dev/mapper/rhel_192-root /                       xfs     defaults        0 0
-UUID=0efecb9e-7ecd-47e0-ad64-507f7c994e18 /boot  xfs     defaults        0 0
-/dev/mapper/rhel_192-swap none                    swap    defaults        0 0
-/dev/VG1/LV1             /lv                      xfs     defaults        0 0
-
-
-:wq
-```
-
-* Create the mountpoint and then run ```mount -a``` to mount the /etc/fstab mounts:
-```
-[root@node2 ~]# mkdir /lv
+### Step 7: Format and Mount Logical Volume
+```bash
 [root@node2 ~]# mkfs.xfs /dev/VG1/LV1
-meta-data=/dev/vg1/lv1 isize=512 agcount=4, agsize=524288 blks
-         =                       sectsz=512 attr=2, projid32bit=1
-         =                       crc=1 finobt=1, sparse=1, rmapbt=0
-data     =                       bsize=4096 blocks=2097152, imaxpct=25
-         =                       sunit=0 swidth=0 blks
-naming   =version 2              bsize=4096 ascii-ci=0, ftype=1
-log      =internal log           bsize=4096 blocks=2560, version=2
-         =                       sectsz=512 sunit=0 blks, lazy-count=1
-realtime =none                   extsz=4096 blocks=0, rtextents=0
-[root@node2 ~]# 
+[root@node2 ~]# mkdir /lv
+```
+
+### Step 8: Automate Mounting with `/etc/fstab`
+```bash
+echo "/dev/VG1/LV1 /lv xfs defaults 0 0" >> /etc/fstab
+```
+
+### Step 9: Instantly mount the LVM without a reboot
+```bash
 [root@node2 ~]# mount -a
 ```
 
 * SUCCESS!!
 
-
+<br><br><br>
 ### QUESTION #15.2:
 Extend the Logical Volume you created, LV1 by 2GB. 
 <br/><br/>
@@ -266,3 +261,76 @@ Again, DexTutor's tutorial can be found <a href="https://www.youtube.com/watch?v
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Step-by-Step Instructions:
+
+
+
+
+
+
+
+
+
+
+### Step 9: Extend Logical Volume by 2GB
+Check available space first:
+```bash
+vgs
+```
+If space permits:
+```bash
+lvextend -r -L +2G /dev/VG1/LV1
+lvs
+```
+
+### Step 10: Extend Volume Group (if necessary)
+If you need more space:
+```bash
+vgextend VG1 /dev/vdd
+lvextend -r -L +2G /dev/VG1/LV1
+```
+
+### Step 11: Verify New Size
+```bash
+df -h
+```
+
+### Step 12: Create Logical Volume with Custom Extent Size (8MB)
+Remove existing configuration if required and recreate:
+```bash
+umount -l /lv
+lvchange -an /dev/VG1/LV1
+lvremove /dev/VG1/LV1
+vgremove VG1
+vgcreate -s 8MB VG1 /dev/vdb
+vgdisplay VG1
+```
+
+Now create the Logical Volume with 10 extents:
+```bash
+lvcreate -l 10 -n LV2 VG1
+lvs
+```
+
+---
+
+## Conclusion
+You've successfully configured Logical Volume Management using parted, managing and adjusting logical volumes as required.
