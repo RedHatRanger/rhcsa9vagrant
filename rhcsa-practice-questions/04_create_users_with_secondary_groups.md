@@ -1,3 +1,7 @@
+## UPDATED ON 2025-03-13:
+
+Official Red Hat Practice Lab [Here](https://zero.apps.open.redhat.com/interactive-labs/zt-rhel.zt-user-basics.prod)
+
 ***On Node1***
 
 # Create users and assign them to secondary groups
