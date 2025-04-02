@@ -88,7 +88,7 @@ firewall-cmd --add-port=8080/tcp --permanent
 firewall-cmd --reload 
 ```
 
-### Alternate lab:
+### BONUS: Alternate lab from Red Hat:
 ```
 yum install -y podman
 mkdir -p ~/.config/containers/systemd/
