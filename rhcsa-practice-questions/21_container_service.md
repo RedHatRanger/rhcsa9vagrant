@@ -80,9 +80,52 @@ Linger=yes
 ### Additional Information:
 
 Syntax: 
+```
 $ podman run -v <src>:<dst>:Z <image> 
 
-* Add port to the firewall 
+# Add port to the firewall 
+firewall-cmd --add-port=8080/tcp --permanent 
+firewall-cmd --reload 
+```
 
-# firewall-cmd --add-port=8080/tcp --permanent 
-# firewall-cmd --reload 
+### Alternate lab:
+```
+yum install -y podman
+mkdir -p ~/.config/containers/systemd/
+
+cat << EOF > ~/.config/containers/systemd/httpd.container
+[Service]
+Restart=always
+
+[Container]
+ContainerName=httpd
+Image=docker.io/library/httpd
+Label="io.containers.autoupdate=registry"
+Environment=TZ=America/Vancouver
+Environment=VERSION=docker
+Volume=httpd-data.volume:/usr/local/apache2/htdocs:Z
+PublishPort=8080:80/tcp
+
+[Install]
+WantedBy=default.target
+EOF
+
+cat << EOF > ~/.config/containers/systemd/httpd-data.volume
+[Volume]
+User=garfield
+Group=garfield
+EOF
+
+systemctl --user daemon-reload
+
+systemctl --user start httpd.service
+
+podman ps
+
+systemctl --user status httpd --no-pager
+
+systemctl --user stop httpd
+
+curl http://localhost:8080
+```
+
