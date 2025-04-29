@@ -18,6 +18,11 @@ FIX SELINUX PORT ISSUES:
 * You first try to troubleshoot the issue by restarting httpd:
 
 ```
+# THE SETUP:
+vim /etc/httpd/conf/httpd.conf
+# change the port number from 80 to 82
+:wq
+
 [root@node1 ~]# systemctl restart httpd
 Job for httpd.service failed because the control process exited with error code.
 See "systemctl status httpd.service" and "journalctl -xeu httpd.service" for details.
