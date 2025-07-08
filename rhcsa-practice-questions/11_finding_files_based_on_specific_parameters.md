@@ -85,8 +85,6 @@ On Node1, find all files in the system that have the setgid bit set and save the
 ```bash
 find / -type f -perm -2000 -print > /root/setgid_files.txt 2>/dev/null
 ```
-* **Note**: The `2>/dev/null` redirects permission-denied errors to avoid cluttering the output.
-* 
 
 * SUCCESS!!
 
