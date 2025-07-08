@@ -42,7 +42,7 @@ Configure autofs to automount the home directories of remoteuserx user. Note the
 :wq
 ```
 
-* Create and Edit the Indirect Map File: Create and edit the ```/etc/auto.ourhome``` file. This file will define the specific automount for remoteuserx within the ```/ourhome``` base path.
+* Create and Edit the Indirect Map File: Create and edit the ```/etc/auto.ourhome``` file. This file will define the specific automount for ```remoteuserx``` within the ```/ourhome``` base path.
 ```
 [root@node1 ~]# vim /etc/auto.ourhome
 
