@@ -1,5 +1,5 @@
 ***On Node1***
-# Configure autofs on Node1
+# Configure autofs on Node1 (Updated on 7/8/2025)
 
 ### QUESTION #7 [See Lab #00](https://github.com/RedHatRanger/rhcsa9vagrant/blob/main/rhcsa-practice-questions/00_ansible-nfs_server_configuring.md) YOU MUST SET THIS UP PRIOR TO STARTING THIS ONE!
 Configure autofs to automount the home directories of remoteuserx user. Note the following: 
