@@ -1,4 +1,4 @@
-## (UPDATED on 2025-03-10):
+## (UPDATE 2025-03-10):
 Red Hat now has a [lab](https://www.redhat.com/en/interactive-labs/networking-basics-admin-101) for this to practice for the exam
 
 <br><br>
