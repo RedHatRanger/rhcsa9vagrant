@@ -1,4 +1,5 @@
 Special Thanks to: \
+Brett P. for his assistance in preparing for these labs \
 ch1ebik for these practice labs: https://github.com/chlebik/rhcsa-practice-questions/tree/master \
 YouTuber: CodeXchange https://www.youtube.com/@codexchangee \
 YouTuber: Dextutor https://www.youtube.com/watch?v=D5JOJoD7iJ4 \
