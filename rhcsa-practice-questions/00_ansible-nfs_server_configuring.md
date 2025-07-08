@@ -40,7 +40,7 @@
 [root@ansible ~]# firewall-cmd --reload
 ```
 
-* Create netuserx for Lab #7:
+* Create ```remoteuserx``` for Lab #7:
 ```
 [root@ansible ~]# groupadd -g 1234 autofsusers
 [root@ansible ~]# useradd -d /ourhome/remoteuserx -u 1234 -g autofsusers remoteuserx  
