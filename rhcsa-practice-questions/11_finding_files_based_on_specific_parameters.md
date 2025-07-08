@@ -53,10 +53,6 @@ chmod 755 /opt/filesearch.sh
 cp /opt/filesearch.sh /usr/local/bin/
 ```
 
-* SUCCESS!!
-
----
-
 ### QUESTION #11 (Part 3):
 On Node1, find all files in the system that have the setuid bit set and save their paths to `/root/setuid_files.txt`.
 
@@ -90,6 +86,9 @@ On Node1, find all files in the system that have the setgid bit set and save the
 find / -type f -perm -2000 -print > /root/setgid_files.txt 2>/dev/null
 ```
 * **Note**: The `2>/dev/null` redirects permission-denied errors to avoid cluttering the output.
+* 
+
+* SUCCESS!!
 
 ---
 
