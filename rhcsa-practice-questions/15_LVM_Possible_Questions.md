@@ -96,7 +96,7 @@ LV1    VG1    wi-a--    8.00g
 
 ### Step 8: Automate Mounting with `/etc/fstab`
 ```bash
-[root@node2 ~]# echo "/dev/VG1/LV1 /lv xfs defaults 0 0" >> /etc/fstab
+[root@node2 ~]# echo "/dev/VG1/LV1 /lv xfs defaults,nodev 0 0" >> /etc/fstab
 ```
 
 ### Step 9: Instantly mount the LVM without a reboot
